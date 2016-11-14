@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.funny.cbg.dao.RoleCalcMapper" >
+  <resultMap id="BaseResultMap" type="com.funny.cbg.entity.RoleCalcEntity" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="role_id" property="roleId" jdbcType="VARCHAR" />
+    <result column="lianhu" property="lianhu" jdbcType="INTEGER" />
+    <result column="haizi_lv" property="haiziLv" jdbcType="INTEGER" />
+    <result column="haizi_zizhi" property="haiziZizhi" jdbcType="INTEGER" />
+    <result column="haizi_wuxue" property="haiziWuxue" jdbcType="INTEGER" />
+    <result column="lignt_menpai" property="ligntMenpai" jdbcType="INTEGER" />
+    <result column="awake_lv" property="awakeLv" jdbcType="INTEGER" />
+    <result column="release_lv" property="releaseLv" jdbcType="INTEGER" />
+    <result column="awake_value" property="awakeValue" jdbcType="INTEGER" />
+    <result column="minglian" property="minglian" jdbcType="INTEGER" />
+    <result column="qinghua" property="qinghua" jdbcType="INTEGER" />
+    <result column="xuansu" property="xuansu" jdbcType="INTEGER" />
+    <result column="guhong" property="guhong" jdbcType="INTEGER" />
+    <result column="xiangyun" property="xiangyun" jdbcType="INTEGER" />
+    <result column="tinglan" property="tinglan" jdbcType="INTEGER" />
+    <result column="haitang" property="haitang" jdbcType="INTEGER" />
+    <result column="feihuhuaqiu" property="feihuhuaqiu" jdbcType="INTEGER" />
+    <result column="tianhulishang" property="tianhulishang" jdbcType="INTEGER" />
+    <result column="xianhucaijue" property="xianhucaijue" jdbcType="INTEGER" />
+    <result column="canghaisangtian" property="canghaisangtian" jdbcType="INTEGER" />
+    <result column="yeyujiangnan" property="yeyujiangnan" jdbcType="INTEGER" />
+    <result column="huikanfanghu" property="huikanfanghu" jdbcType="INTEGER" />
+    <result column="duncifanghu" property="duncifanghu" jdbcType="INTEGER" />
+    <result column="huoyuanfanghu" property="huoyuanfanghu" jdbcType="INTEGER" />
+    <result column="shuifengdufanghu" property="shuifengdufanghu" jdbcType="INTEGER" />
+    <result column="wanfeng" property="wanfeng" jdbcType="INTEGER" />
+    <result column="huxin" property="huxin" jdbcType="INTEGER" />
+    <result column="douzhuanbian" property="douzhuanbian" jdbcType="INTEGER" />
+    <result column="yixinghuanying" property="yixinghuanying" jdbcType="INTEGER" />
+    <result column="taichu" property="taichu" jdbcType="INTEGER" />
+    <result column="shilifushou" property="shilifushou" jdbcType="INTEGER" />
+    <result column="xiyangyang" property="xiyangyang" jdbcType="INTEGER" />
+    <result column="mawangye" property="mawangye" jdbcType="INTEGER" />
+    <result column="wangshengtianzun" property="wangshengtianzun" jdbcType="INTEGER" />
+    <result column="yehuo" property="yehuo" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, role_id, lianhu, haizi_lv, haizi_zizhi, haizi_wuxue, lignt_menpai, awake_lv, 
+    release_lv, awake_value, minglian, qinghua, xuansu, guhong, xiangyun, tinglan, haitang, 
+    feihuhuaqiu, tianhulishang, xianhucaijue, canghaisangtian, yeyujiangnan, huikanfanghu, 
+    duncifanghu, huoyuanfanghu, shuifengdufanghu, wanfeng, huxin, douzhuanbian, yixinghuanying, 
+    taichu, shilifushou, xiyangyang, mawangye, wangshengtianzun, yehuo
+  </sql>
+  <select id="findByCondition" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from role_calc
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+</mapper>

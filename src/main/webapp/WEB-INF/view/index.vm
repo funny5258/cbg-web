@@ -1,0 +1,312 @@
+<style>
+    .duiqi {
+        vertical-align: initial;
+    }
+</style>
+
+<div style="margin-left: 50px;margin-top: 30px;">
+    <form name="search-form" role="form" class="form-horizontal">
+        <div class="col-md-12">
+            <label >门派:</label>
+
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">荒火教
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="2" name="school">天机营
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="3" name="school">翎羽山庄
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="4" name="school">魍魉
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="5" name="school">太虚观
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="6" name="school">云麓仙居
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="7" name="school">冰心堂
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="8" name="school">奕剑听雨阁
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="9" name="school">鬼墨
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="10" name="school">龙巫宫
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="11" name="school">幽篁国
+            </label>
+        </div>
+
+        <div class="col-md-12">
+            <div style="display: inline-block">
+                <label>基础属性:</label>
+
+                <label for="hp" class="control-label">生命值>=</label>
+                <input type="text" id="hp" size="5">
+
+                <label for="mp" class="control-label">技力值>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">敏>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">力>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">魂>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">念>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">疾>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">体>=</label>
+                <input type="text" id="mp" size="5">
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div style="display: inline-block">
+                <label>攻击属性:</label>
+
+                <label for="hp" class="control-label">命中>=</label>
+                <input type="text" id="hp" size="5">
+
+                <label for="mp" class="control-label">重击>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">会心>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">附伤>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">最大物攻>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">最小物攻>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">最大法攻>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">最小法攻>=</label>
+                <input type="text" id="mp" size="5">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div style="display: inline-block">
+                <label>防御属性:</label>
+
+                <label for="hp" class="control-label">防御>=</label>
+                <input type="text" id="hp" size="5">
+
+                <label for="mp" class="control-label">回避>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">法防>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">神明>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">身法>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">定力>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">坚韧>=</label>
+                <input type="text" id="mp" size="5">
+            </div>
+        </div>
+
+
+        <div class="col-md-12">
+            <div style="display: inline-block">
+                <label>高级属性:</label>
+
+                <label for="hp" class="control-label">追电>=</label>
+                <input type="text" id="hp" size="5">
+
+                <label for="mp" class="control-label">骤雨>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">疾语>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">人祸>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">知彼>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">诛心>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">御心>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">万钧>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">铁壁>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">破阵>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">磐石>=</label>
+                <input type="text" id="mp" size="5">
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <div style="display: inline-block">
+                <label>真有钱:</label>
+
+                <input type="text" id="mp" size="6">
+                <label for="mp" class="control-label"><=价钱<=</label>
+                <input type="text" id="mp" size="6">
+
+                <label for="mp" class="control-label">加护>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">炼护>=</label>
+                <input type="text" id="mp" size="5">
+
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div style="display: inline-block">
+                <label>孩子:</label>
+
+                <label for="mp" class="control-label">孩子等级>=</label>
+                <input type="text" id="mp" size="6">
+
+                <label for="mp" class="control-label">孩子资质>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">孩子武学>=</label>
+                <input type="text" id="mp" size="5">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div style="display: inline-block">
+                <label>觉醒:</label>
+
+                <label for="mp" class="control-label">觉醒等级>=</label>
+                <input type="text" id="mp" size="6">
+
+                <label for="mp" class="control-label">觉醒度>=</label>
+                <input type="text" id="mp" size="5">
+
+                <label for="mp" class="control-label">溟炼值>=</label>
+                <input type="text" id="mp" size="5">
+            </div>
+        </div>
+        <div class="col-md-12">
+            <label>特技:</label>
+            <label class="checkbox-inline duiqi ">
+                <input type="checkbox" value="1" name="school">护心
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">完封
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">火元防护
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">水风毒防护
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">挥砍防护
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">钝刺防护
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">斗转变
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">移形换影
+            </label>
+        </div>
+        <div class="col-md-12">
+            <label>元魂珠:</label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">马王爷
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">喜气洋洋
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">万胜天尊
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">业火
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">九尾
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">毒浪鬼
+            </label>
+        </div>
+        <div class="col-md-12">
+            <label>时装:</label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">玄素天成
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">黛染青花
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">孤鸿月影
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">海棠未雨
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">岸芷汀兰
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">绛云思暖
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">飞狐华裘
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">天狐霓裳
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">仙狐彩袂
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">沧海桑田
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">夜雨江南
+            </label>
+        </div>
+        <div class="col-md-12">
+            <label>其他:</label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">太初
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="school">势力副手
+            </label>
+        </div>
+    </form>
+
+</div>
