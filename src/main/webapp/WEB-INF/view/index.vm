@@ -308,6 +308,11 @@
                 <input type="checkbox" value="1" name="school">势力副手
             </label>
         </div>
+
+        <div class="col-md-12" align="center">
+            <input type="reset" class="btn btn-circle">
+            <a class="btn btn-circle blue"><i class="fa fa-search"></i>搜索</a>
+        </div>
     </form>
 
 </div>
