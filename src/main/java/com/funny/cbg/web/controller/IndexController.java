@@ -13,6 +13,22 @@ public class IndexController {
     @RequestMapping("/index")
     public ModelAndView index(){
         ModelAndView modelAndView = new ModelAndView("/index");
+
+
+
+
+        return  modelAndView;
+    }
+
+
+    @RequestMapping("/page")
+    public ModelAndView page(){
+        ModelAndView modelAndView = new ModelAndView("/page");
+
+
+
+
+
         return  modelAndView;
     }
 

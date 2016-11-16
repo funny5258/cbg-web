@@ -3,9 +3,11 @@
         vertical-align: initial;
     }
 </style>
+<script src="/assets/js/role.js" type="text/javascript"></script>
+
 
 <div style="margin-left: 50px;margin-top: 30px;">
-    <form name="search-form" role="form" class="form-horizontal">
+    <form id="search-form" role="form" class="form-horizontal">
         <div class="col-md-12">
             <label >门派:</label>
 
@@ -310,9 +312,19 @@
         </div>
 
         <div class="col-md-12" align="center">
-            <input type="reset" class="btn btn-circle">
-            <a class="btn btn-circle blue"><i class="fa fa-search"></i>搜索</a>
+            <input type="reset" class="btn btn-default">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-info green" id="js-query-btn"><i class="fa fa-search"></i>搜索</a>
         </div>
     </form>
 
+
+    <div class="col-md-12" id="js-page-body">
+
+
+    </div>
+
+    <script type="text/javascript">
+        RoleJS.init();
+    </script>
 </div>
