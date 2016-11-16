@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.funny.cbg.dao.RoleDataMapper" >
+  <resultMap id="BaseResultMap" type="com.funny.cbg.entity.RoleDataEntity" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="role_id" property="roleId" jdbcType="VARCHAR" />
+    <result column="lv" property="lv" jdbcType="INTEGER" />
+    <result column="jiahu" property="jiahu" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="server_id" property="serverId" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="INTEGER" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="fly_soul_phase" property="flySoulPhase" jdbcType="INTEGER" />
+    <result column="fly_soul_lv" property="flySoulLv" jdbcType="VARCHAR" />
+    <result column="xiuwei" property="xiuwei" jdbcType="INTEGER" />
+    <result column="equ_xiuwei" property="equXiuwei" jdbcType="INTEGER" />
+    <result column="sch" property="sch" jdbcType="INTEGER" />
+    <result column="pattack_max" property="pattackMax" jdbcType="INTEGER" />
+    <result column="mattack_max" property="mattackMax" jdbcType="INTEGER" />
+    <result column="pattack_min" property="pattackMin" jdbcType="INTEGER" />
+    <result column="mattack_min" property="mattackMin" jdbcType="INTEGER" />
+    <result column="hit" property="hit" jdbcType="INTEGER" />
+    <result column="modadd" property="modadd" jdbcType="INTEGER" />
+    <result column="attadd" property="attadd" jdbcType="INTEGER" />
+    <result column="cri_add_p" property="criAddP" jdbcType="INTEGER" />
+    <result column="cri_sub_p" property="criSubP" jdbcType="INTEGER" />
+    <result column="mdef" property="mdef" jdbcType="INTEGER" />
+    <result column="pdef" property="pdef" jdbcType="INTEGER" />
+    <result column="absolutely_attack" property="absolutelyAttack" jdbcType="INTEGER" />
+    <result column="absolutely_defence" property="absolutelyDefence" jdbcType="INTEGER" />
+    <result column="inprotect" property="inprotect" jdbcType="INTEGER" />
+    <result column="avoid" property="avoid" jdbcType="INTEGER" />
+    <result column="attdef" property="attdef" jdbcType="INTEGER" />
+    <result column="defhuman" property="defhuman" jdbcType="INTEGER" />
+    <result column="attackhuman" property="attackhuman" jdbcType="INTEGER" />
+    <result column="sract" property="sract" jdbcType="INTEGER" />
+    <result column="srbody" property="srbody" jdbcType="INTEGER" />
+    <result column="srmind" property="srmind" jdbcType="INTEGER" />
+    <result column="movespeed" property="movespeed" jdbcType="INTEGER" />
+    <result column="castspeed" property="castspeed" jdbcType="INTEGER" />
+    <result column="attackspeed" property="attackspeed" jdbcType="INTEGER" />
+    <result column="thump_add_p" property="thumpAddP" jdbcType="INTEGER" />
+    <result column="thump_sub_p" property="thumpSubP" jdbcType="INTEGER" />
+    <result column="strong" property="strong" jdbcType="INTEGER" />
+    <result column="body" property="body" jdbcType="INTEGER" />
+    <result column="quick" property="quick" jdbcType="INTEGER" />
+    <result column="dodge" property="dodge" jdbcType="INTEGER" />
+    <result column="soul" property="soul" jdbcType="INTEGER" />
+    <result column="mind" property="mind" jdbcType="INTEGER" />
+    <result column="lianhu" property="lianhu" jdbcType="INTEGER" />
+    <result column="haizi_lv" property="haiziLv" jdbcType="INTEGER" />
+    <result column="haizi_zizhi" property="haiziZizhi" jdbcType="INTEGER" />
+    <result column="haizi_wuxue" property="haiziWuxue" jdbcType="INTEGER" />
+    <result column="lignt_menpai" property="ligntMenpai" jdbcType="INTEGER" />
+    <result column="awake_lv" property="awakeLv" jdbcType="INTEGER" />
+    <result column="release_lv" property="releaseLv" jdbcType="INTEGER" />
+    <result column="awake_value" property="awakeValue" jdbcType="INTEGER" />
+    <result column="minglian" property="minglian" jdbcType="INTEGER" />
+    <result column="qinghua" property="qinghua" jdbcType="INTEGER" />
+    <result column="xuansu" property="xuansu" jdbcType="INTEGER" />
+    <result column="guhong" property="guhong" jdbcType="INTEGER" />
+    <result column="xiangyun" property="xiangyun" jdbcType="INTEGER" />
+    <result column="tinglan" property="tinglan" jdbcType="INTEGER" />
+    <result column="haitang" property="haitang" jdbcType="INTEGER" />
+    <result column="feihuhuaqiu" property="feihuhuaqiu" jdbcType="INTEGER" />
+    <result column="tianhulishang" property="tianhulishang" jdbcType="INTEGER" />
+    <result column="xianhucaijue" property="xianhucaijue" jdbcType="INTEGER" />
+    <result column="canghaisangtian" property="canghaisangtian" jdbcType="INTEGER" />
+    <result column="yeyujiangnan" property="yeyujiangnan" jdbcType="INTEGER" />
+    <result column="huikanfanghu" property="huikanfanghu" jdbcType="INTEGER" />
+    <result column="duncifanghu" property="duncifanghu" jdbcType="INTEGER" />
+    <result column="huoyuanfanghu" property="huoyuanfanghu" jdbcType="INTEGER" />
+    <result column="shuifengdufanghu" property="shuifengdufanghu" jdbcType="INTEGER" />
+    <result column="wanfeng" property="wanfeng" jdbcType="INTEGER" />
+    <result column="huxin" property="huxin" jdbcType="INTEGER" />
+    <result column="douzhuanbian" property="douzhuanbian" jdbcType="INTEGER" />
+    <result column="yixinghuanying" property="yixinghuanying" jdbcType="INTEGER" />
+    <result column="taichu" property="taichu" jdbcType="INTEGER" />
+    <result column="shilifushou" property="shilifushou" jdbcType="INTEGER" />
+    <result column="xiyangyang" property="xiyangyang" jdbcType="INTEGER" />
+    <result column="mawangye" property="mawangye" jdbcType="INTEGER" />
+    <result column="wangshengtianzun" property="wangshengtianzun" jdbcType="INTEGER" />
+    <result column="yehuo" property="yehuo" jdbcType="INTEGER" />
+    <result column="critical" property="critical" jdbcType="INTEGER" />
+    <result column="mhp" property="mhp" jdbcType="INTEGER" />
+    <result column="msp" property="msp" jdbcType="INTEGER" />
+    <result column="sex" property="sex" jdbcType="INTEGER" />
+  </resultMap>
+
+  <select id="findByCondition" resultMap="BaseResultMap" parameterType="com.funny.cbg.entity.RoleSearch" >
+    select r.name,r.url,r.price,r.jiahu,r.exp_time,
+    from role r left join role_data d on r.role_id =d.role_id
+    where r.yn =1
+    <if test="schoolList != null and schoolList.size() > 0 " >
+      and sch in
+      <foreach collection="schoolList" open="(" close=")" separator="," item="id">
+          #{id}
+      </foreach>
+    </if>
+    <if test="jiahu != null " >
+       and jiahu &gt;= #{jiahu}
+    </if>
+    <if test="pricemin != null " >
+      and price &gt;= #{pricemin}
+    </if>
+    <if test="pricemax != null " >
+      and price &lt;= #{pricemax}
+    </if>
+    <if test="lvmin != null " >
+      and lv &gt;= #{lvmin}
+    </if>
+    <if test="lvmax != null " >
+      and lv &lt;= #{lvmax}
+    </if>
+    <if test="xiuwei != null " >
+      and xiuwei &gt;= #{xiuwei}
+    </if>
+    <if test="equXiuwei != null " >
+      and equ_xiuwei &gt;= #{equXiuwei}
+    </if>
+
+    <if test="pattackMax != null " >
+      and pattack_max &gt;= #{equXiuwei}
+    </if>
+    <if test="mattackMax != null " >
+      and mattack_max &gt;= #{mattackMax}
+    </if>
+    <if test="pattackMin != null " >
+      and pattack_min &gt;= #{pattackMin}
+    </if>
+    <if test="mattackMin != null " >
+      and mattack_min &gt;= #{mattackMin}
+    </if>
+    <if test="hit != null " >
+      and hit &gt;= #{hit}
+    </if>
+    <if test="modadd != null " >
+      and modadd &gt;= #{modadd}
+    </if>
+    <if test="attadd != null " >
+      and attadd &gt;= #{attadd}
+    </if>
+    <if test="criAddP != null " >
+      and cri_add_p &gt;= #{criAddP}
+    </if>
+    <if test="criSubP != null " >
+      and cri_sub_p &gt;= #{criSubP}
+    </if>
+    <if test="mdef != null " >
+      and mdef &gt;= #{mdef}
+    </if>
+    <if test="pdef != null " >
+      and pdef &gt;= #{pdef}
+    </if>
+    <if test="absolutelyAttack != null " >
+      and absolutely_attack &gt;= #{absolutelyAttack}
+    </if>
+    <if test="absolutelyDefence != null " >
+      and absolutely_defence &gt;= #{absolutelyDefence}
+    </if>
+    <if test="inprotect != null " >
+      and inprotect &gt;= #{inprotect}
+    </if>
+    <if test="avoid != null " >
+      and avoid &gt;= #{avoid}
+    </if>
+    <if test="attdef != null " >
+      and attdef &gt;= #{attdef}
+    </if>
+    <if test="defhuman != null " >
+      and defhuman &gt;= #{defhuman}
+    </if>
+    <if test="attackhuman != null " >
+      and attackhuman &gt;= #{attackhuman}
+    </if>
+
+    <if test="inprotect != null " >
+      and inprotect &gt;= #{inprotect}
+    </if>
+    <if test="sract != null " >
+      and sract &gt;= #{sract}
+    </if>
+    <if test="srbody != null " >
+      and srbody &gt;= #{srbody}
+    </if>
+    <if test="srmind != null " >
+      and srmind &gt;= #{srmind}
+    </if>
+    <if test="movespeed != null " >
+      and movespeed &gt;= #{movespeed}
+    </if>
+    <if test="castspeed != null " >
+      and castspeed &gt;= #{castspeed}
+    </if>
+    <if test="attackspeed != null " >
+      and attackspeed &gt;= #{attackspeed}
+    </if>
+    <if test="thumpAddP != null " >
+      and thump_add_p &gt;= #{thumpAddP}
+    </if>
+    <if test="thumpSubP != null " >
+      and thump_sub_p &gt;= #{thumpSubP}
+    </if>
+    <if test="strong != null " >
+      and strong &gt;= #{strong}
+    </if>
+    <if test="body != null " >
+      and body &gt;= #{body}
+    </if>
+    <if test="quick != null " >
+      and quick &gt;= #{quick}
+    </if>
+    <if test="dodge != null " >
+      and dodge &gt;= #{dodge}
+    </if>
+    <if test="soul != null " >
+      and soul &gt;= #{soul}
+    </if>
+    <if test="mind != null " >
+      and mind &gt;= #{mind}
+    </if>
+    <if test="lianhu != null " >
+      and lianhu &gt;= #{lianhu}
+    </if>
+    <if test="haiziLv != null " >
+      and haizi_lv &gt;= #{haiziLv}
+    </if>
+    <if test="haiziZizhi != null " >
+      and haizi_zizhi &gt;= #{haiziZizhi}
+    </if>
+    <if test="haiziWuxue != null " >
+      and haizi_wuxue &gt;= #{haiziWuxue}
+    </if>
+
+    <if test="awakeLv != null " >
+      and awake_lv &gt;= #{awakeLv}
+    </if>
+    <if test="releaseLv != null " >
+      and release_lv &gt;= #{releaseLv}
+    </if>
+    <if test="awakeValue != null " >
+      and awake_value &gt;= #{awakeValue}
+    </if>
+    <if test="awakeLv != null " >
+      and awake_lv &gt;= #{awakeLv}
+    </if>
+    <if test="releaseLv != null " >
+      and release_lv &gt;= #{releaseLv}
+    </if>
+    <if test="awakeValue != null " >
+      and awake_value &gt;= #{awakeValue}
+    </if>
+    <if test="minglian != null " >
+      and minglian &gt;= #{minglian}
+    </if>
+
+    <if test="qinghua != null " >
+      and qinghua =1
+    </if>
+    <if test="xuansu != null " >
+      and xuansu =1
+    </if>
+    <if test="guhong != null " >
+      and guhong =1
+    </if>
+    <if test="xiangyun != null " >
+      and xiangyun =1
+    </if>
+    <if test="tinglan != null " >
+      and tinglan =1
+    </if>
+    <if test="haitang != null " >
+      and haitang =1
+    </if>
+    <if test="feihuhuaqiu != null " >
+      and feihuhuaqiu =1
+    </if>
+    <if test="tianhulishang != null " >
+      and tianhulishang =1
+    </if>
+    <if test="xianhucaijue != null " >
+      and xianhucaijue =1
+    </if>
+    <if test="canghaisangtian != null " >
+      and canghaisangtian =1
+    </if>
+    <if test="yeyujiangnan != null " >
+      and yeyujiangnan =1
+    </if>
+    <if test="huikanfanghu != null " >
+      and huikanfanghu =1
+    </if>
+    <if test="duncifanghu != null " >
+      and duncifanghu =1
+    </if>
+    <if test="huoyuanfanghu != null " >
+      and huoyuanfanghu =1
+    </if>
+    <if test="shuifengdufanghu != null " >
+      and shuifengdufanghu =1
+    </if>
+
+
+    <if test="wanfeng != null " >
+      and wanfeng =1
+    </if>
+    <if test="huxin != null " >
+      and huxin =1
+    </if>
+    <if test="taichu != null " >
+      and taichu =1
+    </if>
+    <if test="xiyangyang != null " >
+      and xiyangyang =1
+    </if>
+    <if test="mawangye != null " >
+      and mawangye =1
+    </if>
+    <if test="wangshengtianzun != null " >
+      and wangshengtianzun =1
+    </if>
+    <if test="yehuo != null " >
+      and yehuo =1
+    </if>
+    <if test="dulanggui != null " >
+      and dulanggui =1
+    </if>
+    <if test="ligntMenpai != null " >
+      and lignt_menpai =1
+    </if>
+  </select>
+</mapper>

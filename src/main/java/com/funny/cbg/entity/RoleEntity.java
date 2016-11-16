@@ -6,7 +6,7 @@ public class RoleEntity {
     /**
     * 角色id
     */
-    private String equipId;
+    private String roleId;
 
     /**
     * 加护
@@ -39,14 +39,6 @@ public class RoleEntity {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public void setEquipId(String equipId) {
-        this.equipId = equipId == null ? null : equipId.trim();
-    }
-
-    public String getEquipId() {
-        return equipId;
     }
 
     public void setJiahu(Integer jiahu) {
