@@ -13,10 +13,10 @@
             <label >门派:</label>
 
             <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="sch">荒火教
+                <input type="checkbox" value="1" name="school">荒火教
             </label>
             <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="2" name="sch">天机营
+                <input type="checkbox" value="2" name="school">天机营
             </label>
             <label class="checkbox-inline duiqi">
                 <input type="checkbox" value="3" name="school">翎羽山庄

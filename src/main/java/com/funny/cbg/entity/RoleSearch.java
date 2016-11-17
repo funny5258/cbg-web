@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class RoleSearch{
     private Integer pageNo;
-    private Integer pageSize;
+    private Integer pageSize = 10;
     private List<Integer> schoolList;
     /**
      * 加护

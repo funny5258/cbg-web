@@ -1,9 +1,13 @@
 package com.funny.cbg.web.controller;
 
+import com.alibaba.fastjson.JSON;
 import com.funny.cbg.entity.RoleDataEntity;
 import com.github.pagehelper.PageInfo;
+import com.google.common.collect.Lists;
 import org.apache.commons.collections.CollectionUtils;
+import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.parsing.SourceExtractor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -31,6 +35,15 @@ public class IndexController {
     @RequestMapping("/page")
     public ModelAndView page(RoleSearch roleSearch) {
         ModelAndView modelAndView = new ModelAndView("/page");
+        if(Strings.isNotBlank(roleSearch.getSchool())){
+            List<Integer> sch = Lists.newArrayList();
+            String[] schArray = roleSearch.getSchool().split(",");
+            for(String id : schArray){
+                sch.add(Integer.parseInt(id));
+            }
+            roleSearch.setSchoolList(sch);
+        }
+
         PageInfo<RoleDataEntity> pageInfo = roleService.findByCondition(roleSearch);
         modelAndView.addObject("pageBean", pageInfo);
         List<RoleDataEntity> roleList = pageInfo.getList();
