@@ -9,15 +9,16 @@
         white-space:nowrap;/* 不换行 */
         overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
         text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+        height: auto;
+        vertical-align: middle;
     }
 </style>
 <table class="table table-hover table-bordered margin-bottom-5">
     <thead>
     <tr>
         <th style="text-align: center;width: 10%;">角色</th>
-        <th style="text-align: center;width: 10%;">门派</th>
         <th style="text-align: center;width: 10%;">等级</th>
-        <th style="text-align: center;width: 10%;">价格</th>
+        <th style="text-align: center;width: 15%;">价格</th>
         <th style="text-align: center;width: 15%;">装备评价</th>
         <th style="text-align: center;width: 10%;">修为</th>
         <th style="text-align: center;width: 10%;">加护</th>
@@ -28,25 +29,41 @@
         <th style="text-align: center;width: 10%;">法攻</th>
         <th style="text-align: center;width: 10%;">会心</th>
         <th style="text-align: center;width: 10%;">重击</th>
-        <th style="text-align: center;width: 10%;">人祸</th>
         <th style="text-align: center;width: 10%;">回避</th>
         <th style="text-align: center;width: 10%;">神明</th>
         <th style="text-align: center;width: 10%;">时装</th>
-        <th style="text-align: center;width: 10%;">太初</th>
         <th style="text-align: center;width: 10%;">特技</th>
+        <th style="text-align: center;width: 10%;">元魂珠</th>
+        <th style="text-align: center;width: 10%;">其他</th>
         <th style="text-align: center;width: 15%;">截止日期</th>
         <th style="text-align: center;width: 10%;">购买</th>
     </tr>
     </thead>
     <tbody>
-        #if($!pageBean && $!pageBean.currentSize > 0)
-            #foreach($item in $!itemList)
+        #if($!pageBean && $!pageBean.total > 0)
+            #foreach($role in $!roleList)
             <tr>
-                <td style="text-align: center;">$!item.itemId</td>
-                <td style="text-align: center;">$!item.itemName</td>
-                <td style="text-align: center;">$!item.brandId</td>
-                <td style="text-align: center;">$!item.brandName</td>
-                <td style="text-align: center;">$!item.typeText</td>
+                <td style="text-align: center;"><img src="/assets/img/$!role.sch$!{role.sex}.jpg"></td>
+                <td style="text-align: center;">$!role.lv</td>
+                <td style="text-align: center;">¥ $!role.price</td>
+                <td style="text-align: center;">$!role.equXiuwei</td>
+                <td style="text-align: center;">$!role.xiuwei</td>
+                <td style="text-align: center;">$!role.jiahu</td>
+                <td style="text-align: center;">$!role.lianhu</td>
+                <td style="text-align: center;">$!role.movespeed</td>
+                <td style="text-align: center;">$!role.castspeed</td>
+                <td style="text-align: center;">$!role.pattackMin/$!role.pattackMax</td>
+                <td style="text-align: center;">$!role.mattackMin/$!role.mattackMax</td>
+                <td style="text-align: center;">$!role.critical</td>
+                <td style="text-align: center;">$!role.modadd</td>
+                <td style="text-align: center;">$!role.avoid</td>
+                <td style="text-align: center;">$!role.inprotect</td>
+                <td style="text-align: center;" title="$!role.shizhuang">$!role.shizhuang</td>
+                <td style="text-align: center;">$!role.teji</td>
+                <td style="text-align: center;">$!role.yuanhun</td>
+                <td style="text-align: center;">$!role.other</td>
+                <td style="text-align: center;">$!role.exp_time</td>
+                <td style="text-align: center;"><a class="btn btn-danger" href="$!role.url">购买</a></td>
             </tr>
             #end
         #else
@@ -56,16 +73,16 @@
         #end
     </tbody>
 </table>
-#if($!pageBean && $!pageBean.totalSize > 0)
+#if($!pageBean && $!pageBean.total > 0)
 <div class="row">
     <div class="col-md-6 pull-left">
-        <p style="margin-bottom: 0px;line-height: 55px;">总共$!pageBean.totalSize个记录&nbsp;每页$!pageBean.currentSize
-            &nbsp;当前$!pageBean.pageNum/$!pageBean.totalPage</p>
+        <p style="margin-bottom: 0px;line-height: 55px;">总共$!pageBean.total个记录&nbsp;每页$!pageBean.pageSize
+            &nbsp;当前$!pageBean.pageNum/$!pageBean.pages</p>
     </div>
     <div class="col-md-6 pull-right" id="js-bootpag" style="text-align: right;"></div>
 
     <script type="text/javascript">
-        RoleJS.initPage('$!pageBean.totalPage', '$!pageBean.pageNum');
+        RoleJS.initPage('$!pageBean.pages', '$!pageBean.pageNum');
     </script>
 </div>
 #end

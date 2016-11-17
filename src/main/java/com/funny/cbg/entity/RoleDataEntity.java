@@ -1,26 +1,28 @@
 package com.funny.cbg.entity;
 
+import com.alibaba.fastjson.annotation.JSONField;
+
+import java.util.Date;
 
 public class RoleDataEntity {
-    private Long id;
     /**
-    * 编号
-    */
-    private String roleId;
+     * 门派
+     */
+    private Integer sch;
+    /**
+     * 性别
+     */
+    private Integer sex;
     /**
      * 加护
      */
     private Integer jiahu;
+    private Integer lianhu;
 
     /**
      * 角色名
      */
     private String name;
-
-    /**
-     * 服务器
-     */
-    private String serverId;
 
     /**
      * 价钱
@@ -33,702 +35,187 @@ public class RoleDataEntity {
     private String url;
 
     /**
-    * 等级
-    */
+     * 等级
+     */
     private Integer lv;
 
     /**
-    * 神启境界
-    */
-    private Integer flySoulPhase;
-
-    /**
-    * 神启等级
-    */
-    private String flySoulLv;
-
-    /**
-    * 修为
-    */
+     * 修为
+     */
     private Integer xiuwei;
 
     /**
-    * 装备评价
-    */
+     * 装备评价
+     */
     private Integer equXiuwei;
 
     /**
-    * 门派
-    */
-    private Integer sch;
+     * 追电
+     */
+    private Integer movespeed;
 
     /**
-    * 最大物攻
-    */
+     * 疾语
+     */
+    private Integer castspeed;
+
+    /**
+     * 最大物攻
+     */
     private Integer pattackMax;
 
     /**
-    * 最大法攻
-    */
+     * 最大法攻
+     */
     private Integer mattackMax;
 
     /**
-    * 最小物攻
-    */
+     * 最小物攻
+     */
     private Integer pattackMin;
 
     /**
-    * 最小法攻
-    */
+     * 最小法攻
+     */
     private Integer mattackMin;
 
     /**
-    * 命中
-    */
+     * 命中
+     */
     private Integer hit;
 
     /**
-    * 重击
-    */
+     * 重击
+     */
     private Integer modadd;
     /**
      * 会心
      */
     private Integer critical;
     /**
-     * 生命值
+     * 人祸
      */
-    private Integer mhp;
-    /**
-     * 技力值
-     */
-    private Integer msp;
-    /**
-     * 性别
-     */
-    private Integer sex;
-
-    /**
-    * 附伤
-    */
-    private Integer attadd;
-
-    /**
-    * 诛心
-    */
-    private Integer criAddP;
-
-    /**
-    * 御心
-    */
-    private Integer criSubP;
-
-    /**
-    * 法防
-    */
-    private Integer mdef;
-
-    /**
-    * 物防
-    */
-    private Integer pdef;
-
-    /**
-    * 破阵
-    */
-    private Integer absolutelyAttack;
-
-    /**
-    * 磐石
-    */
-    private Integer absolutelyDefence;
-
-    /**
-    * 神明
-    */
-    private Integer inprotect;
-
-    /**
-    * 回避
-    */
-    private Integer avoid;
-
-    /**
-    * 化解
-    */
-    private Integer attdef;
-
-    /**
-    * 知彼
-    */
-    private Integer defhuman;
-
-    /**
-    * 人祸
-    */
     private Integer attackhuman;
 
     /**
-    * 身份
-    */
-    private Integer sract;
-
-    /**
-    * 坚韧
-    */
-    private Integer srbody;
-
-    /**
-    * 定力
-    */
-    private Integer srmind;
-
-    /**
-    * 追电
-    */
-    private Integer movespeed;
-
-    /**
-    * 疾语
-    */
-    private Integer castspeed;
-
-    /**
-    * 骤雨
-    */
-    private Integer attackspeed;
-
-    /**
-    * 万钧
-    */
-    private Integer thumpAddP;
-
-    /**
-    * 铁壁
-    */
-    private Integer thumpSubP;
-
-    /**
-    * 力
-    */
-    private Integer strong;
-
-    /**
-    * 体
-    */
-    private Integer body;
-
-    /**
-    * 敏
-    */
-    private Integer quick;
-
-    /**
-    * 疾
-    */
-    private Integer dodge;
-
-    /**
-    * 魂
-    */
-    private Integer soul;
-
-    /**
-    * 念
-    */
-    private Integer mind;
-    /**
-     * 炼护
+     * 附伤
      */
-    private Integer lianhu;
+    private Integer attadd;
 
     /**
-     * 孩子最大等级
+     * 诛心
      */
-    private Integer haiziLv;
+    private Integer criAddP;
 
     /**
-     * 孩子最大资质
+     * 御心
      */
-    private Integer haiziZizhi;
+    private Integer criSubP;
 
     /**
-     * 孩子最大武学
+     * 法防
      */
-    private Integer haiziWuxue;
+    private Integer mdef;
 
     /**
-     * 御风行等级
+     * 物防
      */
-    private Integer ligntMenpai;
+    private Integer pdef;
 
     /**
-     * 觉醒等级
+     * 神明
      */
-    private Integer awakeLv;
+    private Integer inprotect;
 
     /**
-     * 封禁之力等级
+     * 回避
      */
-    private Integer releaseLv;
+    private Integer avoid;
 
-    /**
-     * 觉醒度
-     */
-    private Integer awakeValue;
+    private String shizhuang;
 
-    /**
-     * 溟炼值
-     */
-    private Integer minglian;
+    private String teji;
 
-    /**
-     * 黛染青花
-     */
+    private String other;
+
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    private Date expTime;
+
+    private Integer lightMenpai;
+
     private Integer qinghua;
-
-    /**
-     * 玄素天成
-     */
     private Integer xuansu;
-
-    /**
-     * 孤鸿月影
-     */
     private Integer guhong;
-
-    /**
-     * 降云思暖
-     */
     private Integer xiangyun;
-
-    /**
-     * 岸芷汀兰
-     */
     private Integer tinglan;
-
-    /**
-     * 海棠未雨
-     */
     private Integer haitang;
-
-    /**
-     * 飞天华裘
-     */
     private Integer feihuhuaqiu;
-
-    /**
-     * 天狐霓裳
-     */
     private Integer tianhulishang;
-
-    /**
-     * 仙狐彩诀
-     */
     private Integer xianhucaijue;
-
-    /**
-     * 沧海桑田
-     */
     private Integer canghaisangtian;
-
-    /**
-     * 夜雨江南
-     */
     private Integer yeyujiangnan;
-
-    /**
-     * 挥砍防护
-     */
     private Integer huikanfanghu;
-
-    /**
-     * 盾刺防护
-     */
     private Integer duncifanghu;
-
-    /**
-     * 火元防护
-     */
     private Integer huoyuanfanghu;
-
-    /**
-     * 水风毒防护
-     */
     private Integer shuifengdufanghu;
-
-    /**
-     * 完封
-     */
     private Integer wanfeng;
-
-    /**
-     * 护心
-     */
     private Integer huxin;
-
-    /**
-     * 斗转变
-     */
-    private Integer douzhuanbian;
-
-    /**
-     * 移形换影
-     */
-    private Integer yixinghuanying;
-
-    /**
-     * 是否有太初
-     */
     private Integer taichu;
-
-    /**
-     * 是否有势力副手
-     */
     private Integer shilifushou;
-
-    /**
-     * 喜洋洋
-     */
     private Integer xiyangyang;
-
-    /**
-     * 马王爷
-     */
     private Integer mawangye;
-
-    /**
-     * 万胜天尊
-     */
-    private Integer wangshengtianzun;
-
-    /**
-     * 业火
-     */
+    private Integer wanshengtianzun;
     private Integer yehuo;
-    /**
-     * 毒浪鬼
-     */
     private Integer dulanggui;
 
-    public Long getId() {
-        return id;
+    private String yuanhun;
+
+    public String getYuanhun() {
+        return yuanhun;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setYuanhun(String yuanhun) {
+        this.yuanhun = yuanhun;
     }
 
-    public void setRoleId(String roleId) {
-        this.roleId = roleId == null ? null : roleId.trim();
+    public Integer getDulanggui() {
+        return dulanggui;
     }
 
-    public String getRoleId() {
-        return roleId;
+    public void setDulanggui(Integer dulanggui) {
+        this.dulanggui = dulanggui;
     }
 
-    public void setLv(Integer lv) {
-        this.lv = lv;
+    public Integer getLightMenpai() {
+        return lightMenpai;
     }
 
-    public Integer getLv() {
-        return lv;
+    public void setLightMenpai(Integer lightMenpai) {
+        this.lightMenpai = lightMenpai;
     }
 
-    public void setFlySoulPhase(Integer flySoulPhase) {
-        this.flySoulPhase = flySoulPhase;
+    public Integer getLianhu() {
+        return lianhu;
     }
 
-    public Integer getFlySoulPhase() {
-        return flySoulPhase;
-    }
-
-    public void setFlySoulLv(String flySoulLv) {
-        this.flySoulLv = flySoulLv == null ? null : flySoulLv.trim();
-    }
-
-    public String getFlySoulLv() {
-        return flySoulLv;
-    }
-
-    public void setXiuwei(Integer xiuwei) {
-        this.xiuwei = xiuwei;
-    }
-
-    public Integer getXiuwei() {
-        return xiuwei;
-    }
-
-    public void setEquXiuwei(Integer equXiuwei) {
-        this.equXiuwei = equXiuwei;
-    }
-
-    public Integer getEquXiuwei() {
-        return equXiuwei;
-    }
-
-    public void setSch(Integer sch) {
-        this.sch = sch;
+    public void setLianhu(Integer lianhu) {
+        this.lianhu = lianhu;
     }
 
     public Integer getSch() {
         return sch;
     }
 
-    public void setPattackMax(Integer pattackMax) {
-        this.pattackMax = pattackMax;
+    public void setSch(Integer sch) {
+        this.sch = sch;
     }
 
-    public Integer getPattackMax() {
-        return pattackMax;
+    public Integer getSex() {
+        return sex;
     }
 
-    public void setMattackMax(Integer mattackMax) {
-        this.mattackMax = mattackMax;
-    }
-
-    public Integer getMattackMax() {
-        return mattackMax;
-    }
-
-    public void setPattackMin(Integer pattackMin) {
-        this.pattackMin = pattackMin;
-    }
-
-    public Integer getPattackMin() {
-        return pattackMin;
-    }
-
-    public void setMattackMin(Integer mattackMin) {
-        this.mattackMin = mattackMin;
-    }
-
-    public Integer getMattackMin() {
-        return mattackMin;
-    }
-
-    public void setHit(Integer hit) {
-        this.hit = hit;
-    }
-
-    public Integer getHit() {
-        return hit;
-    }
-
-    public void setModadd(Integer modadd) {
-        this.modadd = modadd;
-    }
-
-    public Integer getModadd() {
-        return modadd;
-    }
-
-    public void setAttadd(Integer attadd) {
-        this.attadd = attadd;
-    }
-
-    public Integer getAttadd() {
-        return attadd;
-    }
-
-    public void setCriAddP(Integer criAddP) {
-        this.criAddP = criAddP;
-    }
-
-    public Integer getCriAddP() {
-        return criAddP;
-    }
-
-    public void setCriSubP(Integer criSubP) {
-        this.criSubP = criSubP;
-    }
-
-    public Integer getCriSubP() {
-        return criSubP;
-    }
-
-    public void setMdef(Integer mdef) {
-        this.mdef = mdef;
-    }
-
-    public Integer getMdef() {
-        return mdef;
-    }
-
-    public void setPdef(Integer pdef) {
-        this.pdef = pdef;
-    }
-
-    public Integer getPdef() {
-        return pdef;
-    }
-
-    public void setAbsolutelyAttack(Integer absolutelyAttack) {
-        this.absolutelyAttack = absolutelyAttack;
-    }
-
-    public Integer getAbsolutelyAttack() {
-        return absolutelyAttack;
-    }
-
-    public void setAbsolutelyDefence(Integer absolutelyDefence) {
-        this.absolutelyDefence = absolutelyDefence;
-    }
-
-    public Integer getAbsolutelyDefence() {
-        return absolutelyDefence;
-    }
-
-    public void setInprotect(Integer inprotect) {
-        this.inprotect = inprotect;
-    }
-
-    public Integer getInprotect() {
-        return inprotect;
-    }
-
-    public void setAvoid(Integer avoid) {
-        this.avoid = avoid;
-    }
-
-    public Integer getAvoid() {
-        return avoid;
-    }
-
-    public void setAttdef(Integer attdef) {
-        this.attdef = attdef;
-    }
-
-    public Integer getAttdef() {
-        return attdef;
-    }
-
-    public void setDefhuman(Integer defhuman) {
-        this.defhuman = defhuman;
-    }
-
-    public Integer getDefhuman() {
-        return defhuman;
-    }
-
-    public void setAttackhuman(Integer attackhuman) {
-        this.attackhuman = attackhuman;
-    }
-
-    public Integer getAttackhuman() {
-        return attackhuman;
-    }
-
-    public void setSract(Integer sract) {
-        this.sract = sract;
-    }
-
-    public Integer getSract() {
-        return sract;
-    }
-
-    public void setSrbody(Integer srbody) {
-        this.srbody = srbody;
-    }
-
-    public Integer getSrbody() {
-        return srbody;
-    }
-
-    public void setSrmind(Integer srmind) {
-        this.srmind = srmind;
-    }
-
-    public Integer getSrmind() {
-        return srmind;
-    }
-
-    public void setMovespeed(Integer movespeed) {
-        this.movespeed = movespeed;
-    }
-
-    public Integer getMovespeed() {
-        return movespeed;
-    }
-
-    public void setCastspeed(Integer castspeed) {
-        this.castspeed = castspeed;
-    }
-
-    public Integer getCastspeed() {
-        return castspeed;
-    }
-
-    public void setAttackspeed(Integer attackspeed) {
-        this.attackspeed = attackspeed;
-    }
-
-    public Integer getAttackspeed() {
-        return attackspeed;
-    }
-
-    public void setThumpAddP(Integer thumpAddP) {
-        this.thumpAddP = thumpAddP;
-    }
-
-    public Integer getThumpAddP() {
-        return thumpAddP;
-    }
-
-    public void setThumpSubP(Integer thumpSubP) {
-        this.thumpSubP = thumpSubP;
-    }
-
-    public Integer getThumpSubP() {
-        return thumpSubP;
-    }
-
-    public void setStrong(Integer strong) {
-        this.strong = strong;
-    }
-
-    public Integer getStrong() {
-        return strong;
-    }
-
-    public void setBody(Integer body) {
-        this.body = body;
-    }
-
-    public Integer getBody() {
-        return body;
-    }
-
-    public void setQuick(Integer quick) {
-        this.quick = quick;
-    }
-
-    public Integer getQuick() {
-        return quick;
-    }
-
-    public void setDodge(Integer dodge) {
-        this.dodge = dodge;
-    }
-
-    public Integer getDodge() {
-        return dodge;
-    }
-
-    public void setSoul(Integer soul) {
-        this.soul = soul;
-    }
-
-    public Integer getSoul() {
-        return soul;
-    }
-
-    public void setMind(Integer mind) {
-        this.mind = mind;
-    }
-
-    public Integer getMind() {
-        return mind;
+    public void setSex(Integer sex) {
+        this.sex = sex;
     }
 
     public Integer getJiahu() {
@@ -747,14 +234,6 @@ public class RoleDataEntity {
         this.name = name;
     }
 
-    public String getServerId() {
-        return serverId;
-    }
-
-    public void setServerId(String serverId) {
-        this.serverId = serverId;
-    }
-
     public Integer getPrice() {
         return price;
     }
@@ -771,6 +250,94 @@ public class RoleDataEntity {
         this.url = url;
     }
 
+    public Integer getLv() {
+        return lv;
+    }
+
+    public void setLv(Integer lv) {
+        this.lv = lv;
+    }
+
+    public Integer getXiuwei() {
+        return xiuwei;
+    }
+
+    public void setXiuwei(Integer xiuwei) {
+        this.xiuwei = xiuwei;
+    }
+
+    public Integer getEquXiuwei() {
+        return equXiuwei;
+    }
+
+    public void setEquXiuwei(Integer equXiuwei) {
+        this.equXiuwei = equXiuwei;
+    }
+
+    public Integer getMovespeed() {
+        return movespeed;
+    }
+
+    public void setMovespeed(Integer movespeed) {
+        this.movespeed = movespeed;
+    }
+
+    public Integer getCastspeed() {
+        return castspeed;
+    }
+
+    public void setCastspeed(Integer castspeed) {
+        this.castspeed = castspeed;
+    }
+
+    public Integer getPattackMax() {
+        return pattackMax;
+    }
+
+    public void setPattackMax(Integer pattackMax) {
+        this.pattackMax = pattackMax;
+    }
+
+    public Integer getMattackMax() {
+        return mattackMax;
+    }
+
+    public void setMattackMax(Integer mattackMax) {
+        this.mattackMax = mattackMax;
+    }
+
+    public Integer getPattackMin() {
+        return pattackMin;
+    }
+
+    public void setPattackMin(Integer pattackMin) {
+        this.pattackMin = pattackMin;
+    }
+
+    public Integer getMattackMin() {
+        return mattackMin;
+    }
+
+    public void setMattackMin(Integer mattackMin) {
+        this.mattackMin = mattackMin;
+    }
+
+    public Integer getHit() {
+        return hit;
+    }
+
+    public void setHit(Integer hit) {
+        this.hit = hit;
+    }
+
+    public Integer getModadd() {
+        return modadd;
+    }
+
+    public void setModadd(Integer modadd) {
+        this.modadd = modadd;
+    }
+
     public Integer getCritical() {
         return critical;
     }
@@ -779,100 +346,100 @@ public class RoleDataEntity {
         this.critical = critical;
     }
 
-    public Integer getMhp() {
-        return mhp;
+    public Integer getAttackhuman() {
+        return attackhuman;
     }
 
-    public void setMhp(Integer mhp) {
-        this.mhp = mhp;
+    public void setAttackhuman(Integer attackhuman) {
+        this.attackhuman = attackhuman;
     }
 
-    public Integer getMsp() {
-        return msp;
+    public Integer getAttadd() {
+        return attadd;
     }
 
-    public void setMsp(Integer msp) {
-        this.msp = msp;
+    public void setAttadd(Integer attadd) {
+        this.attadd = attadd;
     }
 
-    public Integer getSex() {
-        return sex;
+    public Integer getCriAddP() {
+        return criAddP;
     }
 
-    public void setSex(Integer sex) {
-        this.sex = sex;
+    public void setCriAddP(Integer criAddP) {
+        this.criAddP = criAddP;
     }
 
-    public Integer getLianhu() {
-        return lianhu;
+    public Integer getCriSubP() {
+        return criSubP;
     }
 
-    public void setLianhu(Integer lianhu) {
-        this.lianhu = lianhu;
+    public void setCriSubP(Integer criSubP) {
+        this.criSubP = criSubP;
     }
 
-    public Integer getHaiziLv() {
-        return haiziLv;
+    public Integer getMdef() {
+        return mdef;
     }
 
-    public void setHaiziLv(Integer haiziLv) {
-        this.haiziLv = haiziLv;
+    public void setMdef(Integer mdef) {
+        this.mdef = mdef;
     }
 
-    public Integer getHaiziZizhi() {
-        return haiziZizhi;
+    public Integer getPdef() {
+        return pdef;
     }
 
-    public void setHaiziZizhi(Integer haiziZizhi) {
-        this.haiziZizhi = haiziZizhi;
+    public void setPdef(Integer pdef) {
+        this.pdef = pdef;
     }
 
-    public Integer getHaiziWuxue() {
-        return haiziWuxue;
+    public Integer getInprotect() {
+        return inprotect;
     }
 
-    public void setHaiziWuxue(Integer haiziWuxue) {
-        this.haiziWuxue = haiziWuxue;
+    public void setInprotect(Integer inprotect) {
+        this.inprotect = inprotect;
     }
 
-    public Integer getLigntMenpai() {
-        return ligntMenpai;
+    public Integer getAvoid() {
+        return avoid;
     }
 
-    public void setLigntMenpai(Integer ligntMenpai) {
-        this.ligntMenpai = ligntMenpai;
+    public void setAvoid(Integer avoid) {
+        this.avoid = avoid;
     }
 
-    public Integer getAwakeLv() {
-        return awakeLv;
+    public String getShizhuang() {
+        return shizhuang;
     }
 
-    public void setAwakeLv(Integer awakeLv) {
-        this.awakeLv = awakeLv;
+    public void setShizhuang(String shizhuang) {
+        this.shizhuang = shizhuang;
     }
 
-    public Integer getReleaseLv() {
-        return releaseLv;
+    public String getTeji() {
+        return teji;
     }
 
-    public void setReleaseLv(Integer releaseLv) {
-        this.releaseLv = releaseLv;
+    public void setTeji(String teji) {
+        this.teji = teji;
     }
 
-    public Integer getAwakeValue() {
-        return awakeValue;
+    public String getOther() {
+        return other;
     }
 
-    public void setAwakeValue(Integer awakeValue) {
-        this.awakeValue = awakeValue;
+    public void setOther(String other) {
+        this.other = other;
     }
 
-    public Integer getMinglian() {
-        return minglian;
+    public Date getExpTime() {
+        return expTime;
     }
 
-    public void setMinglian(Integer minglian) {
-        this.minglian = minglian;
+    public void setExpTime(Date expTime) {
+        this.expTime = expTime;
     }
 
     public Integer getQinghua() {
@@ -1011,22 +578,6 @@ public class RoleDataEntity {
         this.huxin = huxin;
     }
 
-    public Integer getDouzhuanbian() {
-        return douzhuanbian;
-    }
-
-    public void setDouzhuanbian(Integer douzhuanbian) {
-        this.douzhuanbian = douzhuanbian;
-    }
-
-    public Integer getYixinghuanying() {
-        return yixinghuanying;
-    }
-
-    public void setYixinghuanying(Integer yixinghuanying) {
-        this.yixinghuanying = yixinghuanying;
-    }
-
     public Integer getTaichu() {
         return taichu;
     }
@@ -1059,12 +610,12 @@ public class RoleDataEntity {
         this.mawangye = mawangye;
     }
 
-    public Integer getWangshengtianzun() {
-        return wangshengtianzun;
+    public Integer getWanshengtianzun() {
+        return wanshengtianzun;
     }
 
-    public void setWangshengtianzun(Integer wangshengtianzun) {
-        this.wangshengtianzun = wangshengtianzun;
+    public void setWanshengtianzun(Integer wanshengtianzun) {
+        this.wanshengtianzun = wanshengtianzun;
     }
 
     public Integer getYehuo() {
@@ -1073,13 +624,5 @@ public class RoleDataEntity {
 
     public void setYehuo(Integer yehuo) {
         this.yehuo = yehuo;
-    }
-
-    public Integer getDulanggui() {
-        return dulanggui;
-    }
-
-    public void setDulanggui(Integer dulanggui) {
-        this.dulanggui = dulanggui;
     }
 }

@@ -6,6 +6,8 @@ import java.util.List;
  * Created by fangli@autohome.com.cn on 2016/11/16.
  */
 public class RoleSearch{
+    private Integer pageNo;
+    private Integer pageSize;
     private List<Integer> schoolList;
     /**
      * 加护
@@ -959,5 +961,21 @@ public class RoleSearch{
 
     public void setDulanggui(Integer dulanggui) {
         this.dulanggui = dulanggui;
+    }
+
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 }

@@ -2,16 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.funny.cbg.dao.RoleDataMapper" >
   <resultMap id="BaseResultMap" type="com.funny.cbg.entity.RoleDataEntity" >
-    <id column="id" property="id" jdbcType="BIGINT" />
-    <result column="role_id" property="roleId" jdbcType="VARCHAR" />
-    <result column="lv" property="lv" jdbcType="INTEGER" />
     <result column="jiahu" property="jiahu" jdbcType="INTEGER" />
     <result column="name" property="name" jdbcType="VARCHAR" />
-    <result column="server_id" property="serverId" jdbcType="VARCHAR" />
     <result column="price" property="price" jdbcType="INTEGER" />
     <result column="url" property="url" jdbcType="VARCHAR" />
-    <result column="fly_soul_phase" property="flySoulPhase" jdbcType="INTEGER" />
-    <result column="fly_soul_lv" property="flySoulLv" jdbcType="VARCHAR" />
+    <result column="exp_time" property="expTime" jdbcType="TIMESTAMP" />
+
+    <result column="lv" property="lv" jdbcType="INTEGER" />
     <result column="xiuwei" property="xiuwei" jdbcType="INTEGER" />
     <result column="equ_xiuwei" property="equXiuwei" jdbcType="INTEGER" />
     <result column="sch" property="sch" jdbcType="INTEGER" />
@@ -21,41 +18,15 @@
     <result column="mattack_min" property="mattackMin" jdbcType="INTEGER" />
     <result column="hit" property="hit" jdbcType="INTEGER" />
     <result column="modadd" property="modadd" jdbcType="INTEGER" />
-    <result column="attadd" property="attadd" jdbcType="INTEGER" />
-    <result column="cri_add_p" property="criAddP" jdbcType="INTEGER" />
-    <result column="cri_sub_p" property="criSubP" jdbcType="INTEGER" />
     <result column="mdef" property="mdef" jdbcType="INTEGER" />
     <result column="pdef" property="pdef" jdbcType="INTEGER" />
-    <result column="absolutely_attack" property="absolutelyAttack" jdbcType="INTEGER" />
-    <result column="absolutely_defence" property="absolutelyDefence" jdbcType="INTEGER" />
     <result column="inprotect" property="inprotect" jdbcType="INTEGER" />
     <result column="avoid" property="avoid" jdbcType="INTEGER" />
-    <result column="attdef" property="attdef" jdbcType="INTEGER" />
     <result column="defhuman" property="defhuman" jdbcType="INTEGER" />
     <result column="attackhuman" property="attackhuman" jdbcType="INTEGER" />
-    <result column="sract" property="sract" jdbcType="INTEGER" />
-    <result column="srbody" property="srbody" jdbcType="INTEGER" />
-    <result column="srmind" property="srmind" jdbcType="INTEGER" />
     <result column="movespeed" property="movespeed" jdbcType="INTEGER" />
     <result column="castspeed" property="castspeed" jdbcType="INTEGER" />
-    <result column="attackspeed" property="attackspeed" jdbcType="INTEGER" />
-    <result column="thump_add_p" property="thumpAddP" jdbcType="INTEGER" />
-    <result column="thump_sub_p" property="thumpSubP" jdbcType="INTEGER" />
-    <result column="strong" property="strong" jdbcType="INTEGER" />
-    <result column="body" property="body" jdbcType="INTEGER" />
-    <result column="quick" property="quick" jdbcType="INTEGER" />
-    <result column="dodge" property="dodge" jdbcType="INTEGER" />
-    <result column="soul" property="soul" jdbcType="INTEGER" />
-    <result column="mind" property="mind" jdbcType="INTEGER" />
     <result column="lianhu" property="lianhu" jdbcType="INTEGER" />
-    <result column="haizi_lv" property="haiziLv" jdbcType="INTEGER" />
-    <result column="haizi_zizhi" property="haiziZizhi" jdbcType="INTEGER" />
-    <result column="haizi_wuxue" property="haiziWuxue" jdbcType="INTEGER" />
-    <result column="lignt_menpai" property="ligntMenpai" jdbcType="INTEGER" />
-    <result column="awake_lv" property="awakeLv" jdbcType="INTEGER" />
-    <result column="release_lv" property="releaseLv" jdbcType="INTEGER" />
-    <result column="awake_value" property="awakeValue" jdbcType="INTEGER" />
-    <result column="minglian" property="minglian" jdbcType="INTEGER" />
     <result column="qinghua" property="qinghua" jdbcType="INTEGER" />
     <result column="xuansu" property="xuansu" jdbcType="INTEGER" />
     <result column="guhong" property="guhong" jdbcType="INTEGER" />
@@ -73,22 +44,26 @@
     <result column="shuifengdufanghu" property="shuifengdufanghu" jdbcType="INTEGER" />
     <result column="wanfeng" property="wanfeng" jdbcType="INTEGER" />
     <result column="huxin" property="huxin" jdbcType="INTEGER" />
-    <result column="douzhuanbian" property="douzhuanbian" jdbcType="INTEGER" />
-    <result column="yixinghuanying" property="yixinghuanying" jdbcType="INTEGER" />
     <result column="taichu" property="taichu" jdbcType="INTEGER" />
     <result column="shilifushou" property="shilifushou" jdbcType="INTEGER" />
     <result column="xiyangyang" property="xiyangyang" jdbcType="INTEGER" />
     <result column="mawangye" property="mawangye" jdbcType="INTEGER" />
-    <result column="wangshengtianzun" property="wangshengtianzun" jdbcType="INTEGER" />
+    <result column="wanshengtianzun" property="wanshengtianzun" jdbcType="INTEGER" />
     <result column="yehuo" property="yehuo" jdbcType="INTEGER" />
     <result column="critical" property="critical" jdbcType="INTEGER" />
-    <result column="mhp" property="mhp" jdbcType="INTEGER" />
-    <result column="msp" property="msp" jdbcType="INTEGER" />
     <result column="sex" property="sex" jdbcType="INTEGER" />
+    <result column="lignt_menpai" property="lightMenpai" jdbcType="INTEGER" />
+    <result column="dulanggui" property="dulanggui" jdbcType="INTEGER" />
   </resultMap>
 
   <select id="findByCondition" resultMap="BaseResultMap" parameterType="com.funny.cbg.entity.RoleSearch" >
     select r.name,r.url,r.price,r.jiahu,r.exp_time,
+    lv,xiuwei,equ_xiuwei,sch,pattack_max,mattack_max,pattack_min,mattack_min,
+    hit,modadd,cri_add_p,cri_sub_p,mdef,pdef,inprotect,avoid,critical,sex,
+    attackhuman,movespeed,castspeed,lianhu,qinghua,xuansu,guhong,
+    xiangyun,tinglan,haitang,feihuhuaqiu,tianhulishang,xianhucaijue,canghaisangtian,yeyujiangnan,
+    huikanfanghu,duncifanghu,huoyuanfanghu,shuifengdufanghu,wanfeng,huxin,
+    taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui
     from role r left join role_data d on r.role_id =d.role_id
     where r.yn =1
     <if test="schoolList != null and schoolList.size() > 0 " >

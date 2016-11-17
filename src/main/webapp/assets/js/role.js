@@ -1,6 +1,5 @@
 var RoleJS = function(){
     var submitForm = function(){
-        console.log('aaa')
         $("#search-form").ajaxSubmit({
             type: 'post', // 提交方式 get/post
             url: "/page.do",
