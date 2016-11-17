@@ -8,7 +8,7 @@
 
 <div style="margin-left: 20px;margin-top: 30px;margin-right: 20px;">
     <form id="search-form" role="form" class="form-horizontal">
-        <input type="hidden" value="1" name="pageNo">
+        <input type="hidden" value="1" name="pageNo" id="js-bootpag-num">
         <div class="col-md-12">
             <label >门派:</label>
 
@@ -322,8 +322,6 @@
 
 
     <div class="col-md-12" id="js-page-body">
-
-
     </div>
 
     <script type="text/javascript">

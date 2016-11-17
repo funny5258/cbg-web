@@ -1,37 +1,27 @@
 #set($layout="layout/none.vm")
 <style>
-    table{
-        table-layout:fixed;/* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
-        margin-top: 15px;
+    table {
+        table-layout: fixed; /* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
+        font-size: 12px;
     }
-    td{
-        word-break:keep-all;/* 不换行 */
-        white-space:nowrap;/* 不换行 */
-        overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
-        text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+
+    td {
         height: auto;
-        vertical-align: middle;
     }
 </style>
 <table class="table table-hover table-bordered margin-bottom-5">
     <thead>
     <tr>
-        <th style="text-align: center;width: 10%;">角色</th>
-        <th style="text-align: center;width: 10%;">等级</th>
-        <th style="text-align: center;width: 15%;">价格</th>
-        <th style="text-align: center;width: 15%;">装备评价</th>
-        <th style="text-align: center;width: 10%;">修为</th>
-        <th style="text-align: center;width: 10%;">加护</th>
-        <th style="text-align: center;width: 10%;">炼护</th>
-        <th style="text-align: center;width: 10%;">追电</th>
-        <th style="text-align: center;width: 10%;">疾语</th>
-        <th style="text-align: center;width: 10%;">物攻</th>
-        <th style="text-align: center;width: 10%;">法攻</th>
-        <th style="text-align: center;width: 10%;">会心</th>
-        <th style="text-align: center;width: 10%;">重击</th>
-        <th style="text-align: center;width: 10%;">回避</th>
-        <th style="text-align: center;width: 10%;">神明</th>
-        <th style="text-align: center;width: 10%;">时装</th>
+        <th style="text-align: center;width: 8%;">角色</th>
+        <th style="text-align: center;width: 5%;">等级</th>
+        <th style="text-align: center;width: 6%;">价格</th>
+        <th style="text-align: center;width: 6%;">装评</th>
+        <th style="text-align: center;width: 5%;">修为</th>
+        <th style="text-align: center;width: 5%;">加护</th>
+        <th style="text-align: center;width: 5%;">炼护</th>
+        <th style="text-align: center;width: 5%;">追电</th>
+        <th style="text-align: center;width: 5%;">疾语</th>
+        <th style="text-align: center;width: 20%;">时装</th>
         <th style="text-align: center;width: 10%;">特技</th>
         <th style="text-align: center;width: 10%;">元魂珠</th>
         <th style="text-align: center;width: 10%;">其他</th>
@@ -43,27 +33,32 @@
         #if($!pageBean && $!pageBean.total > 0)
             #foreach($role in $!roleList)
             <tr>
-                <td style="text-align: center;"><img src="/assets/img/$!role.sch$!{role.sex}.jpg"></td>
+                <td style="text-align: center;">
+                    <img src="/assets/img/$!role.sch$!{role.sex}.jpg">
+                    <div style="display: none">
+                        物攻:$!role.pattackMin/$!role.pattackMax<br>
+                        法攻:$!role.mattackMin/$!role.mattackMax<br>
+                        会心:$!role.critical 重击:$!role.modadd<br>
+                        回避:$!role.avoid 神明:$!role.inprotect<br>
+                        人祸: 知彼: <br>
+                        诛心: 御心: <br>
+                        万钧: 铁壁:
+                    </div>
+                </td>
                 <td style="text-align: center;">$!role.lv</td>
-                <td style="text-align: center;">¥ $!role.price</td>
+                <td style="text-align: center;">¥ <font color="red">$!role.price</font></td>
                 <td style="text-align: center;">$!role.equXiuwei</td>
                 <td style="text-align: center;">$!role.xiuwei</td>
                 <td style="text-align: center;">$!role.jiahu</td>
                 <td style="text-align: center;">$!role.lianhu</td>
                 <td style="text-align: center;">$!role.movespeed</td>
                 <td style="text-align: center;">$!role.castspeed</td>
-                <td style="text-align: center;">$!role.pattackMin/$!role.pattackMax</td>
-                <td style="text-align: center;">$!role.mattackMin/$!role.mattackMax</td>
-                <td style="text-align: center;">$!role.critical</td>
-                <td style="text-align: center;">$!role.modadd</td>
-                <td style="text-align: center;">$!role.avoid</td>
-                <td style="text-align: center;">$!role.inprotect</td>
-                <td style="text-align: center;" title="$!role.shizhuang">$!role.shizhuang</td>
+                <td style="text-align: center;">$!role.shizhuang</td>
                 <td style="text-align: center;">$!role.teji</td>
                 <td style="text-align: center;">$!role.yuanhun</td>
                 <td style="text-align: center;">$!role.other</td>
-                <td style="text-align: center;">$!role.exp_time</td>
-                <td style="text-align: center;"><a class="btn btn-danger" href="$!role.url">购买</a></td>
+                <td style="text-align: center;">$!role.expTime</td>
+                <td style="text-align: center;"><a class="btn btn-danger" onclick="window.open('$!role.url')">购买</a></td>
             </tr>
             #end
         #else

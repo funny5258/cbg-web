@@ -138,8 +138,7 @@ public class RoleDataEntity {
 
     private String other;
 
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    private Date expTime;
+    private String expTime;
 
     private Integer lightMenpai;
 
@@ -434,11 +433,12 @@ public class RoleDataEntity {
         this.other = other;
     }
 
-    public Date getExpTime() {
+
+    public String getExpTime() {
         return expTime;
     }
 
-    public void setExpTime(Date expTime) {
+    public void setExpTime(String expTime) {
         this.expTime = expTime;
     }
 

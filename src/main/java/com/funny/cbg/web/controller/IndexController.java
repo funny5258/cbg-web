@@ -50,7 +50,7 @@ public class IndexController {
                     shizhuang.append("孤鸿;");
                 }
                 if (entity.getXiangyun() == 1) {
-                    shizhuang.append("绛云;");
+                    shizhuang.append("绛云思暖;");
                 }
                 if (entity.getTinglan() == 1) {
                     shizhuang.append("岸芷汀兰;");
@@ -74,23 +74,20 @@ public class IndexController {
                 if (entity.getHuxin() == 1) {
                     teji.append("护心;");
                 }
-                if (entity.getFeihuhuaqiu() == 1) {
+                if (entity.getWanfeng()== 1) {
                     teji.append("完封;");
                 }
-                if (entity.getFeihuhuaqiu() == 1) {
+                if (entity.getHuikanfanghu() == 1) {
                     teji.append("挥砍防护;");
                 }
-                if (entity.getFeihuhuaqiu() == 1) {
+                if (entity.getDuncifanghu() == 1) {
                     teji.append("钝刺防护;");
                 }
-                if (entity.getFeihuhuaqiu() == 1) {
+                if (entity.getHuoyuanfanghu() == 1) {
                     teji.append("火元防护;");
                 }
-                if (entity.getFeihuhuaqiu() == 1) {
+                if (entity.getShuifengdufanghu() == 1) {
                     teji.append("水风毒防护;");
-                }
-                if (entity.getFeihuhuaqiu() == 1) {
-                    teji.append("飞狐华裘;");
                 }
                 StringBuffer other = new StringBuffer();
                 if (entity.getTaichu() == 1) {

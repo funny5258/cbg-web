@@ -6,7 +6,7 @@
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="price" property="price" jdbcType="INTEGER" />
     <result column="url" property="url" jdbcType="VARCHAR" />
-    <result column="exp_time" property="expTime" jdbcType="TIMESTAMP" />
+    <result column="exp_time" property="expTime" jdbcType="VARCHAR" />
 
     <result column="lv" property="lv" jdbcType="INTEGER" />
     <result column="xiuwei" property="xiuwei" jdbcType="INTEGER" />

@@ -37,7 +37,6 @@ var RoleJS = function(){
         $("#js-query-btn").click(function(){
             submitForm();
         });
-        submitForm();
     };
     return {
         init: function () {
