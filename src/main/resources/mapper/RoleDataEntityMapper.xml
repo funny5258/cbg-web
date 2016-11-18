@@ -306,5 +306,11 @@
     <if test="ligntMenpai != null " >
       and lignt_menpai =1
     </if>
+    <if test="haiziTianyu != null " >
+      and haizi_tianyu =1
+    </if>
+    <if test="vip9 != null " >
+      and vip9 =1
+    </if>
   </select>
 </mapper>

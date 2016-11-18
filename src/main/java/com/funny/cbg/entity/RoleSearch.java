@@ -368,6 +368,26 @@ public class RoleSearch{
      */
     private Integer dulanggui;
 
+    private Integer haiziTianyu;
+
+    private Integer vip9;
+
+    public Integer getHaiziTianyu() {
+        return haiziTianyu;
+    }
+
+    public void setHaiziTianyu(Integer haiziTianyu) {
+        this.haiziTianyu = haiziTianyu;
+    }
+
+    public Integer getVip9() {
+        return vip9;
+    }
+
+    public void setVip9(Integer vip9) {
+        this.vip9 = vip9;
+    }
+
     public List<Integer> getSchoolList() {
         return schoolList;
     }

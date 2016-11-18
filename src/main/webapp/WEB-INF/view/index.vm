@@ -197,6 +197,10 @@
         <div class="col-md-12">
             <div style="display: inline-block">
                 <label>孩子:</label>
+                <label class="checkbox-inline duiqi">
+                    <input type="checkbox" value="1" name="haiziTianyu">孩子天域
+                </label>
+                &nbsp;&nbsp;&nbsp;
 
                 <label for="haiziLv" class="control-label">孩子等级>=</label>
                 <input type="text" name="haiziLv" size="4">
@@ -310,6 +314,9 @@
             </label>
             <label class="checkbox-inline duiqi">
                 <input type="checkbox" value="1" name="ligntMenpai">门派轻功
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="vip9">vip9
             </label>
         </div>
 
