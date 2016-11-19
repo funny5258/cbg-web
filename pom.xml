@@ -189,5 +189,13 @@
                 </filters>
             </build>
         </profile>
+        <profile>
+            <id>product</id>
+            <build>
+                <filters>
+                    <filter>src/main/resources/filters/product.properties</filter>
+                </filters>
+            </build>
+        </profile>
     </profiles>
 </project>
