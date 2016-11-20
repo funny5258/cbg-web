@@ -372,6 +372,36 @@ public class RoleSearch{
 
     private Integer vip9;
 
+    private Integer bihai;
+
+    private Integer changkong;
+
+    private Integer changong;
+
+    public Integer getBihai() {
+        return bihai;
+    }
+
+    public void setBihai(Integer bihai) {
+        this.bihai = bihai;
+    }
+
+    public Integer getChangkong() {
+        return changkong;
+    }
+
+    public void setChangkong(Integer changkong) {
+        this.changkong = changkong;
+    }
+
+    public Integer getChangong() {
+        return changong;
+    }
+
+    public void setChangong(Integer changong) {
+        this.changong = changong;
+    }
+
     public Integer getHaiziTianyu() {
         return haiziTianyu;
     }

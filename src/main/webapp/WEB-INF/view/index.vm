@@ -303,6 +303,17 @@
             <label class="checkbox-inline duiqi">
                 <input type="checkbox" value="1" name="yeyujiangnan">夜雨江南
             </label>
+            <br>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="bihai">碧海惊涛
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="changkong">鹰击长空
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="changong">蟾宫折桂
+            </label>
         </div>
         <div class="col-md-12">
             <label>其他:</label>

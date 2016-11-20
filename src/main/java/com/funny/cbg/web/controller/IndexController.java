@@ -83,6 +83,15 @@ public class IndexController {
                 if (entity.getYeyujiangnan() == 1) {
                     shizhuang.append("夜雨江南;");
                 }
+                if (entity.getBihai() == 1) {
+                    shizhuang.append("碧海惊涛;");
+                }
+                if (entity.getChangong() == 1) {
+                    shizhuang.append("蟾宫折桂;");
+                }
+                if (entity.getChangkong() == 1) {
+                    shizhuang.append("鹰击长空;");
+                }
                 StringBuffer teji = new StringBuffer();
                 if (entity.getHuxin() == 1) {
                     teji.append("护心;");
@@ -112,6 +121,12 @@ public class IndexController {
                 if (entity.getLightMenpai() != null && entity.getLightMenpai() == 1) {
                     other.append("门派轻功;");
                 }
+                if (entity.getVip9() == 1) {
+                    other.append("vip9;");
+                }
+                if (entity.getHaiziTianyu() == 1) {
+                    other.append("孩子天域;");
+                }
                 StringBuffer yuanhun = new StringBuffer();
                 if (entity.getMawangye() == 1) {
                     yuanhun.append("马王爷;");
@@ -133,9 +148,7 @@ public class IndexController {
                 entity.setOther(other.toString());
                 entity.setYuanhun(yuanhun.toString());
             }
-
         }
-
         modelAndView.addObject("roleList", roleList);
         return modelAndView;
     }
