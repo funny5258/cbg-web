@@ -54,7 +54,7 @@
     <result column="sex" property="sex" jdbcType="INTEGER" />
     <result column="lignt_menpai" property="lightMenpai" jdbcType="INTEGER" />
     <result column="dulanggui" property="dulanggui" jdbcType="INTEGER" />
-    <result column="haizi_tianyu" property="haiziTianyu" jdbcType="INTEGER" />
+    <result column="haizi_tiayu" property="haiziTianyu" jdbcType="INTEGER" />
     <result column="vip9" property="vip9" jdbcType="INTEGER" />
     <result column="bihai" property="bihai" jdbcType="INTEGER" />
     <result column="changong" property="changong" jdbcType="INTEGER" />
@@ -68,7 +68,7 @@
     attackhuman,movespeed,castspeed,lianhu,qinghua,xuansu,guhong,
     xiangyun,tinglan,haitang,feihuhuaqiu,tianhulishang,xianhucaijue,canghaisangtian,yeyujiangnan,
     huikanfanghu,duncifanghu,huoyuanfanghu,shuifengdufanghu,wanfeng,huxin,
-    taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui,haizi_tianyu,vip9,bihai,changong,changkong
+    taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui,haizi_tiayu,vip9,bihai,changong,changkong
     from role r left join role_data d on r.role_id =d.role_id
     where r.yn =1
     <if test="schoolList != null and schoolList.size() > 0 " >
@@ -312,7 +312,7 @@
     and lignt_menpai =1
   </if>
     <if test="haiziTianyu != null " >
-      and haizi_tianyu =1
+      and haizi_tiayu =1
     </if>
     <if test="vip9 != null " >
       and vip9 =1
