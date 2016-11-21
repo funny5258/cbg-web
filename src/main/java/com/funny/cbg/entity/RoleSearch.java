@@ -7,7 +7,7 @@ import java.util.List;
  */
 public class RoleSearch{
     private Integer pageNo;
-    private Integer pageSize;
+    private Integer pageSize = 10;
     private List<Integer> schoolList;
     /**
      * 加护
@@ -367,6 +367,56 @@ public class RoleSearch{
      * 毒浪鬼
      */
     private Integer dulanggui;
+
+    private Integer haiziTianyu;
+
+    private Integer vip9;
+
+    private Integer bihai;
+
+    private Integer changkong;
+
+    private Integer changong;
+
+    public Integer getBihai() {
+        return bihai;
+    }
+
+    public void setBihai(Integer bihai) {
+        this.bihai = bihai;
+    }
+
+    public Integer getChangkong() {
+        return changkong;
+    }
+
+    public void setChangkong(Integer changkong) {
+        this.changkong = changkong;
+    }
+
+    public Integer getChangong() {
+        return changong;
+    }
+
+    public void setChangong(Integer changong) {
+        this.changong = changong;
+    }
+
+    public Integer getHaiziTianyu() {
+        return haiziTianyu;
+    }
+
+    public void setHaiziTianyu(Integer haiziTianyu) {
+        this.haiziTianyu = haiziTianyu;
+    }
+
+    public Integer getVip9() {
+        return vip9;
+    }
+
+    public void setVip9(Integer vip9) {
+        this.vip9 = vip9;
+    }
 
     public List<Integer> getSchoolList() {
         return schoolList;

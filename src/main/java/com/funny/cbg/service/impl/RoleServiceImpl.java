@@ -22,7 +22,8 @@ public class RoleServiceImpl implements RoleService {
 
     @Override
     public PageInfo<RoleDataEntity> findByCondition(RoleSearch roleSearch) {
-        PageHelper.startPage(roleSearch.getPageNo(), 10);
+        PageHelper.startPage(roleSearch.getPageNo(), roleSearch.getPageSize());
+        PageHelper.orderBy("r.id desc");
         List<RoleDataEntity> roleDataEntities = roleDataMapper.findByCondition(roleSearch);
         return new PageInfo<>(roleDataEntities);
     }

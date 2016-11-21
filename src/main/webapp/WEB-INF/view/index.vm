@@ -6,17 +6,24 @@
 <script src="/assets/js/role.js" type="text/javascript"></script>
 
 
-<div style="margin-left: 20px;margin-top: 30px;margin-right: 20px;">
+<div style="margin-left: 20px;margin-right: 20px;">
+
+    <div class="col-md-12" align="right">
+        <label><a href="#">auther@逐日追风</a></label>
+        <br>
+        <label>交流QQ群:524580307</label>
+    </div>
+
     <form id="search-form" role="form" class="form-horizontal">
         <input type="hidden" value="1" name="pageNo" id="js-bootpag-num">
         <div class="col-md-12">
             <label >门派:</label>
 
             <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="sch">荒火教
+                <input type="checkbox" value="1" name="school">荒火教
             </label>
             <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="2" name="sch">天机营
+                <input type="checkbox" value="2" name="school">天机营
             </label>
             <label class="checkbox-inline duiqi">
                 <input type="checkbox" value="3" name="school">翎羽山庄
@@ -197,6 +204,10 @@
         <div class="col-md-12">
             <div style="display: inline-block">
                 <label>孩子:</label>
+                <label class="checkbox-inline duiqi">
+                    <input type="checkbox" value="1" name="haiziTianyu">孩子天域
+                </label>
+                &nbsp;&nbsp;&nbsp;
 
                 <label for="haiziLv" class="control-label">孩子等级>=</label>
                 <input type="text" name="haiziLv" size="4">
@@ -299,6 +310,17 @@
             <label class="checkbox-inline duiqi">
                 <input type="checkbox" value="1" name="yeyujiangnan">夜雨江南
             </label>
+            <br>
+            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="bihai">碧海惊涛
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="changkong">鹰击长空
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="changong">蟾宫折桂
+            </label>
         </div>
         <div class="col-md-12">
             <label>其他:</label>
@@ -310,6 +332,9 @@
             </label>
             <label class="checkbox-inline duiqi">
                 <input type="checkbox" value="1" name="ligntMenpai">门派轻功
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="vip9">vip9
             </label>
         </div>
 
@@ -323,6 +348,7 @@
 
     <div class="col-md-12" id="js-page-body">
     </div>
+
 
     <script type="text/javascript">
         RoleJS.init();

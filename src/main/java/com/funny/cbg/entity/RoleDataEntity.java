@@ -166,8 +166,54 @@ public class RoleDataEntity {
     private Integer wanshengtianzun;
     private Integer yehuo;
     private Integer dulanggui;
-
     private String yuanhun;
+    private Integer bihai;
+
+    private Integer changkong;
+
+    private Integer changong;
+    private Integer vip9;
+    private Integer haiziTianyu;
+
+    public Integer getVip9() {
+        return vip9;
+    }
+
+    public void setVip9(Integer vip9) {
+        this.vip9 = vip9;
+    }
+
+    public Integer getHaiziTianyu() {
+        return haiziTianyu;
+    }
+
+    public void setHaiziTianyu(Integer haiziTianyu) {
+        this.haiziTianyu = haiziTianyu;
+    }
+
+    public Integer getBihai() {
+        return bihai;
+    }
+
+    public void setBihai(Integer bihai) {
+        this.bihai = bihai;
+    }
+
+    public Integer getChangkong() {
+        return changkong;
+    }
+
+    public void setChangkong(Integer changkong) {
+        this.changkong = changkong;
+    }
+
+    public Integer getChangong() {
+        return changong;
+    }
+
+    public void setChangong(Integer changong) {
+        this.changong = changong;
+    }
 
     public String getYuanhun() {
         return yuanhun;
