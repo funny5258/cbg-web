@@ -103,14 +103,12 @@ public class RoleSearch{
     private Integer pdef;
 
     /**
-     * 破阵
      */
-    private Integer absolutelyAttack;
+    private Integer xiaogong;
 
     /**
-     * 磐石
      */
-    private Integer absolutelyDefence;
+    private Integer xiaofa;
 
     /**
      * 神明
@@ -582,20 +580,20 @@ public class RoleSearch{
         this.pdef = pdef;
     }
 
-    public Integer getAbsolutelyAttack() {
-        return absolutelyAttack;
+    public Integer getXiaogong() {
+        return xiaogong;
     }
 
-    public void setAbsolutelyAttack(Integer absolutelyAttack) {
-        this.absolutelyAttack = absolutelyAttack;
+    public void setXiaogong(Integer xiaogong) {
+        this.xiaogong = xiaogong;
     }
 
-    public Integer getAbsolutelyDefence() {
-        return absolutelyDefence;
+    public Integer getXiaofa() {
+        return xiaofa;
     }
 
-    public void setAbsolutelyDefence(Integer absolutelyDefence) {
-        this.absolutelyDefence = absolutelyDefence;
+    public void setXiaofa(Integer xiaofa) {
+        this.xiaofa = xiaofa;
     }
 
     public Integer getInprotect() {

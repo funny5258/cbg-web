@@ -173,11 +173,11 @@
                 <label for="thumpSubP" class="control-label">铁壁>=</label>
                 <input type="text" name="thumpSubP" size="5">
 
-                <label for="absolutelyAttack" class="control-label">破阵>=</label>
-                <input type="text" name="absolutelyAttack" size="5">
+                <label for="xiaogong" class="control-label">大攻-小攻<=</label>
+                <input type="text" name="xiaogong" size="4">
 
-                <label for="absolutelyDefence" class="control-label">磐石>=</label>
-                <input type="text" name="absolutelyDefence" size="5">
+                <label for="xiaofa" class="control-label">大法-小法<=</label>
+                <input type="text" name="xiaofa" size="4">
             </div>
         </div>
 
@@ -336,6 +336,7 @@
             <label class="checkbox-inline duiqi">
                 <input type="checkbox" value="1" name="vip9">vip9
             </label>
+
         </div>
 
         <div class="col-md-12" align="center">

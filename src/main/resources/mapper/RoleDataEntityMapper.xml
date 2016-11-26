@@ -132,12 +132,14 @@
     <if test="pdef != null " >
       and pdef &gt;= #{pdef}
     </if>
-    <if test="absolutelyAttack != null " >
-      and absolutely_attack &gt;= #{absolutelyAttack}
+
+    <if test="xiaogong != null " >
+      and pattack_max - pattack_min &lt;= #{xiaogong}
     </if>
-    <if test="absolutelyDefence != null " >
-      and absolutely_defence &gt;= #{absolutelyDefence}
+    <if test="xiaofa != null " >
+      and mattack_max - mattack_min &lt;= #{xiaofa}
     </if>
+
     <if test="inprotect != null " >
       and inprotect &gt;= #{inprotect}
     </if>
