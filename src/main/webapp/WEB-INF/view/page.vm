@@ -14,7 +14,7 @@
     <tr>
         <th style="text-align: center;width: 8%;">角色</th>
         <th style="text-align: center;width: 5%;">等级</th>
-        <th style="text-align: center;width: 6%;">价格</th>
+        <th style="text-align: center;width: 7%;">价格</th>
         <th style="text-align: center;width: 6%;">装评</th>
         <th style="text-align: center;width: 5%;">修为</th>
         <th style="text-align: center;width: 5%;">加护</th>

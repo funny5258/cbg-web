@@ -141,6 +141,9 @@
     <if test="inprotect != null " >
       and inprotect &gt;= #{inprotect}
     </if>
+    <if test="critical != null " >
+      and critical &gt;= #{critical}
+    </if>
     <if test="avoid != null " >
       and avoid &gt;= #{avoid}
     </if>

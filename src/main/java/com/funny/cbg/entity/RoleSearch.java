@@ -26,6 +26,7 @@ public class RoleSearch{
      * 等级
      */
     private Integer lvmin;
+    private Integer critical;
 
     /**
      * 等级
@@ -1027,5 +1028,13 @@ public class RoleSearch{
 
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+    }
+
+    public Integer getCritical() {
+        return critical;
+    }
+
+    public void setCritical(Integer critical) {
+        this.critical = critical;
     }
 }
