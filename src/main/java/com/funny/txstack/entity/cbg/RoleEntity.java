@@ -1,8 +1,12 @@
-package com.funny.cbg.entity;
+package com.funny.txstack.entity.cbg;
 
+import com.funny.txstack.common.BaseEntity;
 
-public class RoleEntity {
-    private Long id;
+import java.util.Date;
+
+public class RoleEntity extends BaseEntity {
+    private static final long serialVersionUID = 1480294569860L;
+
     /**
     * 角色id
     */
@@ -33,12 +37,22 @@ public class RoleEntity {
     */
     private String url;
 
-    public Long getId() {
-        return id;
+    /**
+    * 
+    */
+    private Date expTime;
+
+    /**
+    * 
+    */
+    private Integer craw;
+
+    public void setRoleId(String roleId) {
+        this.roleId = roleId == null ? null : roleId.trim();
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public String getRoleId() {
+        return roleId;
     }
 
     public void setJiahu(Integer jiahu) {
@@ -79,5 +93,21 @@ public class RoleEntity {
 
     public String getUrl() {
         return url;
+    }
+
+    public void setExpTime(Date expTime) {
+        this.expTime = expTime;
+    }
+
+    public Date getExpTime() {
+        return expTime;
+    }
+
+    public void setCraw(Integer craw) {
+        this.craw = craw;
+    }
+
+    public Integer getCraw() {
+        return craw;
     }
 }

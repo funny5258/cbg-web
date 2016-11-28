@@ -1,10 +1,8 @@
-package com.funny.cbg.service;
+package com.funny.txstack.service;
 
-import com.funny.cbg.entity.RoleDataEntity;
-import com.funny.cbg.entity.RoleSearch;
+import com.funny.txstack.entity.cbg.RoleDataEntity;
+import com.funny.txstack.entity.cbg.RoleSearch;
 import com.github.pagehelper.PageInfo;
-
-import java.util.List;
 
 /**
  * Created by funny on 16/11/17.

@@ -1,4 +1,4 @@
-package com.funny.cbg.entity;
+package com.funny.txstack.entity.cbg;
 
 import java.util.List;
 

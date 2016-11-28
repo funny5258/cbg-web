@@ -1,4 +1,4 @@
-package com.funny.cbg.common;
+package com.funny.txstack.common;
 
 /**
  * 对外提供接口返回的json结果类

@@ -1,4 +1,4 @@
-package com.funny.cbg.web.listener;
+package com.funny.txstack.web.listener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

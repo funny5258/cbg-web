@@ -1,4 +1,4 @@
-package com.funny.cbg.web.interceptor;
+package com.funny.txstack.web.interceptor;
 
 
 import javax.servlet.http.HttpServletRequest;

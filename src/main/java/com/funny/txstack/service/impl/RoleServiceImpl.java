@@ -1,13 +1,13 @@
-package com.funny.cbg.service.impl;
+package com.funny.txstack.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.funny.cbg.dao.RoleDataMapper;
-import com.funny.cbg.entity.RoleDataEntity;
-import com.funny.cbg.entity.RoleSearch;
-import com.funny.cbg.service.RoleService;
+import com.funny.txstack.dao.cbg.RoleDataMapper;
+import com.funny.txstack.entity.cbg.RoleDataEntity;
+import com.funny.txstack.entity.cbg.RoleSearch;
+import com.funny.txstack.service.RoleService;
 import com.github.pagehelper.PageInfo;
 
 import java.util.List;
@@ -17,6 +17,8 @@ import java.util.List;
  */
 @Service
 public class RoleServiceImpl implements RoleService {
+
+
     @Autowired
     private RoleDataMapper roleDataMapper;
 

@@ -1,4 +1,4 @@
-package com.funny.cbg.web.interceptor;
+package com.funny.txstack.web.interceptor;
 
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 

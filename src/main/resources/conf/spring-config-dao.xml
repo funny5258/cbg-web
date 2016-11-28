@@ -55,7 +55,7 @@
 
     <!-- 注册Mapper 可不指定特定mapper，而使用自动扫描包的方式来注册各种Mapper ，配置如下： -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.funny.cbg.dao"/>
+        <property name="basePackage" value="com.funny.txstack.dao"/>
         <property name="sqlSessionFactoryBeanName" value="readerWriteSqlSessionFactory"/>
     </bean>
 

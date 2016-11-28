@@ -26,7 +26,7 @@
     <!-- Xss攻击过滤器 start -->
     <filter>
         <filter-name>XssFilter</filter-name>
-        <filter-class>com.funny.cbg.web.interceptor.XssFilter</filter-class>
+        <filter-class>com.funny.txstack.web.interceptor.XssFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>XssFilter</filter-name>
@@ -103,6 +103,7 @@
         <error-code>404</error-code>
         <location>/404.do</location>
     </error-page>
+
 
 </web-app>
         
