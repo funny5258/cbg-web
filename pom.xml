@@ -5,9 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>war</packaging>
 
-    <name>cbg-web</name>
+    <name>txstack</name>
+    <description>天下客栈</description>
+
     <groupId>com.funny</groupId>
-    <artifactId>cbg-web</artifactId>
+    <artifactId>txstack</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -144,7 +146,7 @@
     </dependencies>
 
     <build>
-        <finalName>cbg-web</finalName>
+        <finalName>txstack</finalName>
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
