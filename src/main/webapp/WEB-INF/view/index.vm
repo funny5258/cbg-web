@@ -9,9 +9,9 @@
 <div style="margin-left: 20px;margin-right: 20px;">
 
     <div class="col-md-12" align="right">
-        <label><a href="#">auther@逐日追风</a></label>
+        <label><a href="#">author@方小栈</a></label>
         <br>
-        <label>交流QQ群:524580307</label>
+        <label>广告招商问题建议QQ群:524580307</label>
     </div>
 
     <form id="search-form" role="form" class="form-horizontal">
