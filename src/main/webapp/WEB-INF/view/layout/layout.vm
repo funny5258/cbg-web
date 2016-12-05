@@ -1,5 +1,4 @@
 <html lang="zh_CN">
-<title>天下3藏宝阁高级查询</title>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -12,21 +11,19 @@
 <meta http-equiv="expires" content="0">
 <!-- BEGIN GLOBAL MANDATORY STYLES -->
 <link rel="shortcut icon" href="favicon.ico"/>
-<link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-<link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<link href="/assets/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+<link href="//cdn.bootcss.com/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="/assets/plugins/respond.min.js"></script>
-<script src="/assets/plugins/excanvas.min.js"></script>
+<script src="/assets/js/excanvas.min.js"></script>
 <![endif]-->
 
-<script src="/assets/plugins/jquery.min.js" type="text/javascript"></script>
-<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-<script src="/assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-<script src="/assets/plugins/jquery.form.js" type="text/javascript"></script>
-<script src="/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script src="/assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-<script src="/assets/plugins/jquery-bootpag/jquery.bootpag.js" type="text/javascript" ></script>
+<script src="//cdn.bootcss.com/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
+<script src="//cdn.bootcss.com/jquery.form/3.51/jquery.form.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap-switch/3.3.2/js/bootstrap-switch.min.js"></script>
+<script src="/assets/js/jquery.bootpag.js" type="text/javascript" ></script>
 
 <body style="background-color: #eef1f5">
     $screen_content

@@ -48,7 +48,7 @@
     </if>
 
     <if test="pattackMax != null " >
-      and pattack_max &gt;= #{equXiuwei}
+      and pattack_max &gt;= #{pattackMax}
     </if>
     <if test="mattackMax != null " >
       and mattack_max &gt;= #{mattackMax}
