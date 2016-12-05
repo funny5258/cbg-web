@@ -10,7 +10,7 @@
   </resultMap>
   
   <select id="findByCondition" resultMap="extResultMap" parameterType="com.funny.txstack.entity.cbg.RoleSearch" >
-    select r.name,r.url,r.price,r.jiahu,r.exp_time,
+    select r.name,r.url,r.price,r.jiahu,
     lv,xiuwei,equ_xiuwei,sch,pattack_max,mattack_max,pattack_min,mattack_min,
     hit,modadd,cri_add_p,cri_sub_p,mdef,pdef,inprotect,avoid,critical,sex,
     attackhuman,movespeed,castspeed,lianhu,qinghua,xuansu,guhong,

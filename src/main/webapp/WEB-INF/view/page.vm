@@ -1,32 +1,21 @@
 #set($layout="layout/none.vm")
-<style>
-    table {
-        table-layout: fixed; /* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
-        font-size: 12px;
-    }
-
-    td {
-        height: auto;
-    }
-</style>
 <table class="table table-hover table-bordered margin-bottom-5">
     <thead>
     <tr>
         <th style="text-align: center;width: 8%;">角色</th>
         <th style="text-align: center;width: 11%;">名字</th>
-        <th style="text-align: center;width: 5%;">等级</th>
-        <th style="text-align: center;width: 7%;">价格</th>
-        <th style="text-align: center;width: 6%;">装评</th>
-        <th style="text-align: center;width: 5%;">修为</th>
-        <th style="text-align: center;width: 5%;">加护</th>
-        <th style="text-align: center;width: 5%;">炼护</th>
-        <th style="text-align: center;width: 5%;">追电</th>
-        <th style="text-align: center;width: 5%;">疾语</th>
+        <th class="hidden-sm" style="text-align: center;width: 5%;">等级</th>
+        <th class="hidden-sm" style="text-align: center;width: 7%;">价格</th>
+        <th class="hidden-sm" style="text-align: center;width: 6%;">装评</th>
+        <th class="hidden-sm" style="text-align: center;width: 5%;">修为</th>
+        <th class="hidden-sm" style="text-align: center;width: 5%;">加护</th>
+        <th class="hidden-sm" style="text-align: center;width: 5%;">炼护</th>
+        <th class="hidden-sm" style="text-align: center;width: 5%;">追电</th>
+        <th class="hidden-sm" style="text-align: center;width: 5%;">疾语</th>
         <th style="text-align: center;width: 20%;">时装</th>
         <th style="text-align: center;width: 10%;">特技</th>
         <th style="text-align: center;width: 10%;">元魂珠</th>
         <th style="text-align: center;width: 10%;">其他</th>
-        <th style="text-align: center;width: 10%;">截止日期</th>
         <th style="text-align: center;width: 8%;">购买</th>
     </tr>
     </thead>
@@ -38,19 +27,18 @@
                     <img src="http://res.tx3.cbg.163.com/images/role/smallface/$!role.sch$!{role.sex}.jpg">
                 </td>
                 <td style="text-align: center;">$!role.name</td>
-                <td style="text-align: center;">$!role.lv</td>
-                <td style="text-align: center;">¥ <font color="red">$!role.price</font></td>
-                <td style="text-align: center;">$!role.equXiuwei</td>
-                <td style="text-align: center;">$!role.xiuwei</td>
-                <td style="text-align: center;">$!role.jiahu</td>
-                <td style="text-align: center;">$!role.lianhu</td>
-                <td style="text-align: center;">$!role.movespeed</td>
-                <td style="text-align: center;">$!role.castspeed</td>
+                <td class="hidden-sm" style="text-align: center;">$!role.lv</td>
+                <td class="hidden-sm" style="text-align: center;">¥ <font color="red">$!role.price</font></td>
+                <td class="hidden-sm" style="text-align: center;">$!role.equXiuwei</td>
+                <td class="hidden-sm" style="text-align: center;">$!role.xiuwei</td>
+                <td class="hidden-sm" style="text-align: center;">$!role.jiahu</td>
+                <td class="hidden-sm" style="text-align: center;">$!role.lianhu</td>
+                <td class="hidden-sm" style="text-align: center;">$!role.movespeed</td>
+                <td class="hidden-sm" style="text-align: center;">$!role.castspeed</td>
                 <td style="text-align: center;">$!role.shizhuang</td>
                 <td style="text-align: center;">$!role.teji</td>
                 <td style="text-align: center;">$!role.yuanhun</td>
                 <td style="text-align: center;">$!role.other</td>
-                <td style="text-align: center;">$!role.expTime</td>
                 <td style="text-align: center;"><a class="btn btn-danger" onclick="window.open('$!role.url')">购买</a></td>
             </tr>
             #end
