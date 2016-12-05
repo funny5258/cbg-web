@@ -1,9 +1,6 @@
 package com.funny.txstack.entity.cbg;
 
 import com.funny.txstack.common.BaseEntity;
-import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
-
-import java.util.Date;
 
 public class RoleDataEntity extends BaseEntity {
     private static final long serialVersionUID = 1480294573373L;
