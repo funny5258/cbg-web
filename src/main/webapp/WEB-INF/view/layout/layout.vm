@@ -16,7 +16,7 @@
 <link href="//cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 <link href="//cdn.bootcss.com/bootstrap-switch/3.3.2/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet">
 <!--[if lt IE 9]>
-<script src="/assets/plugins/respond.min.js"></script>
+<script src="/assets/js/respond.min.js"></script>
 <script src="/assets/js/excanvas.min.js"></script>
 <![endif]-->
 
