@@ -356,7 +356,7 @@ public class RoleSearch{
     /**
      * 万胜天尊
      */
-    private Integer wangshengtianzun;
+    private Integer wanshengtianzun;
 
     /**
      * 业火
@@ -988,12 +988,12 @@ public class RoleSearch{
         this.mawangye = mawangye;
     }
 
-    public Integer getWangshengtianzun() {
-        return wangshengtianzun;
+    public Integer getWanshengtianzun() {
+        return wanshengtianzun;
     }
 
-    public void setWangshengtianzun(Integer wangshengtianzun) {
-        this.wangshengtianzun = wangshengtianzun;
+    public void setWanshengtianzun(Integer wanshengtianzun) {
+        this.wanshengtianzun = wanshengtianzun;
     }
 
     public Integer getYehuo() {

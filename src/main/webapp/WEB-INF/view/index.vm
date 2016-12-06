@@ -266,7 +266,7 @@
                 <input type="checkbox" value="1" name="xiyangyang">喜气洋洋
             </label>
             <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="wangshengtianzun">万胜天尊
+                <input type="checkbox" value="1" name="wanshengtianzun">万胜天尊
             </label>
             <label class="checkbox-inline duiqi">
                 <input type="checkbox" value="1" name="yehuo">业火

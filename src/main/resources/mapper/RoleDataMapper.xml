@@ -252,8 +252,8 @@
     <if test="mawangye != null " >
       and mawangye =1
     </if>
-    <if test="wangshengtianzun != null " >
-      and wangshengtianzun =1
+    <if test="wanshengtianzun != null " >
+      and wanshengtianzun =1
     </if>
     <if test="yehuo != null " >
       and yehuo =1
