@@ -14,7 +14,7 @@ var RoleJS = function(){
         $('#js-bootpag').bootpag({
             total: totalPage,
             page: pageNum,
-            maxVisible: 10,
+            maxVisible: 5,
             leaps: false,
             firstLastUse: true,
             first: '首页',
