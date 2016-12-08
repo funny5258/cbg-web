@@ -1,8 +1,11 @@
 package com.funny.txstack.web.controller;
 
+import com.alibaba.fastjson.JSON;
+import com.funny.txstack.common.JsonResult;
 import com.funny.txstack.entity.cbg.RoleDataEntity;
 import com.github.pagehelper.PageInfo;
 import com.google.common.collect.Lists;
+import com.google.common.util.concurrent.ExecutionError;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.logging.log4j.util.Strings;
 import org.slf4j.Logger;
@@ -10,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.funny.txstack.entity.cbg.RoleSearch;
@@ -33,40 +37,70 @@ public class IndexController {
         return modelAndView;
     }
 
+    @RequestMapping("/query")
+    @ResponseBody
+    public JsonResult query(RoleSearch roleSearch) {
+        JsonResult jsonResult = new JsonResult();
+        try {
+            makeSearch(roleSearch);
+            PageInfo<RoleDataEntity> pageInfo = roleService.findByCondition(roleSearch);
+            List<RoleDataEntity> roleList = pageInfo.getList();
+            makeResult(roleList);
+            pageInfo.setList(roleList);
+            jsonResult.setSuccess(pageInfo);
+        } catch (Exception e) {
+            logger.error("查询异常,roleSearch={}", JSON.toJSONString(roleSearch), e);
+            jsonResult.setFail("查询异常");
+        }
+        return jsonResult;
+    }
+
     @RequestMapping("/page")
-    public ModelAndView page(RoleSearch roleSearch) throws Exception{
+    public ModelAndView page(RoleSearch roleSearch) throws Exception {
         ModelAndView modelAndView = new ModelAndView("/page");
-        if(Strings.isNotBlank(roleSearch.getSchool())){
+        makeSearch(roleSearch);
+        PageInfo<RoleDataEntity> pageInfo = roleService.findByCondition(roleSearch);
+        modelAndView.addObject("pageBean", pageInfo);
+        List<RoleDataEntity> roleList = pageInfo.getList();
+        makeResult(roleList);
+        modelAndView.addObject("roleList", roleList);
+        return modelAndView;
+    }
+
+    private void makeSearch(RoleSearch roleSearch) {
+        if (Strings.isNotBlank(roleSearch.getSchool())) {
             List<Integer> sch = Lists.newArrayList();
             String[] schArray = roleSearch.getSchool().split(",");
-            for(String id : schArray){
+            for (String id : schArray) {
                 sch.add(Integer.parseInt(id));
             }
             roleSearch.setSchoolList(sch);
         }
+        if (roleSearch.getLvmin() == null) {
+            roleSearch.setLvmin(69);
+        }
+    }
 
-        PageInfo<RoleDataEntity> pageInfo = roleService.findByCondition(roleSearch);
-        modelAndView.addObject("pageBean", pageInfo);
-        List<RoleDataEntity> roleList = pageInfo.getList();
+    private void makeResult(List<RoleDataEntity> roleList) {
         if (CollectionUtils.isNotEmpty(roleList)) {
             for (RoleDataEntity entity : roleList) {
                 StringBuffer shizhuang = new StringBuffer();
-                if (entity.getQinghua() == 1) {
+                if (entity.getQinghua() != null && entity.getQinghua() == 1) {
                     shizhuang.append("青花;");
                 }
-                if (entity.getXuansu() == 1) {
+                if (entity.getXuansu() != null && entity.getXuansu() == 1) {
                     shizhuang.append("玄素;");
                 }
-                if (entity.getHaitang() == 1) {
+                if (entity.getHaitang() != null && entity.getHaitang() == 1) {
                     shizhuang.append("海棠;");
                 }
-                if (entity.getGuhong() == 1) {
+                if (entity.getGuhong() != null && entity.getGuhong() == 1) {
                     shizhuang.append("孤鸿;");
                 }
-                if (entity.getXiangyun() == 1) {
+                if (entity.getXiangyun() != null && entity.getXiangyun() == 1) {
                     shizhuang.append("绛云思暖;");
                 }
-                if (entity.getTinglan() == 1) {
+                if (entity.getTinglan() != null && entity.getTinglan() == 1) {
                     shizhuang.append("岸芷汀兰;");
                 }
                 if (entity.getTianhulishang() == 1) {
@@ -97,7 +131,7 @@ public class IndexController {
                 if (entity.getHuxin() == 1) {
                     teji.append("护心;");
                 }
-                if (entity.getWanfeng()== 1) {
+                if (entity.getWanfeng() == 1) {
                     teji.append("完封;");
                 }
                 if (entity.getHuikanfanghu() == 1) {
@@ -150,8 +184,6 @@ public class IndexController {
                 entity.setYuanhun(yuanhun.toString());
             }
         }
-        modelAndView.addObject("roleList", roleList);
-        return modelAndView;
     }
 
     @RequestMapping("/404")

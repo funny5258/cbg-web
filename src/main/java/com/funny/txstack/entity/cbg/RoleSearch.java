@@ -5,8 +5,8 @@ import java.util.List;
 /**
  * Created by fangli@autohome.com.cn on 2016/11/16.
  */
-public class RoleSearch{
-    private Integer pageNo;
+public class RoleSearch {
+    private Integer pageNo = 1;
     private Integer pageSize = 10;
     private List<Integer> schoolList;
     /**
@@ -433,7 +433,6 @@ public class RoleSearch{
         this.jiahu = jiahu;
     }
 
-
     public Integer getPricemin() {
         return pricemin;
     }
@@ -449,8 +448,6 @@ public class RoleSearch{
     public void setPricemax(Integer pricemax) {
         this.pricemax = pricemax;
     }
-
-
 
     public Integer getLvmin() {
         return lvmin;
