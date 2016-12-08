@@ -26,9 +26,9 @@ public class IndexController {
     @Autowired
     private RoleService roleService;
 
-    @RequestMapping("/index")
+    @RequestMapping("/cbg")
     public ModelAndView index() {
-        ModelAndView modelAndView = new ModelAndView("/index");
+        ModelAndView modelAndView = new ModelAndView("/cbg");
 
         return modelAndView;
     }

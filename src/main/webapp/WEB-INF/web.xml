@@ -57,7 +57,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
-        <url-pattern>*.do</url-pattern>
+        <url-pattern>*.html</url-pattern>
     </servlet-mapping>
 
     <filter>
@@ -84,7 +84,7 @@
 
 
     <welcome-file-list>
-        <welcome-file>index.do</welcome-file>
+        <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
     <session-config>
@@ -93,15 +93,15 @@
 
     <error-page>
         <exception-type>java.lang.Throwable</exception-type>
-        <location>/500.do</location>
+        <location>/500.html</location>
     </error-page>
     <error-page>
         <error-code>500</error-code>
-        <location>/500.do</location>
+        <location>/500.html</location>
     </error-page>
     <error-page>
         <error-code>404</error-code>
-        <location>/404.do</location>
+        <location>/404.html</location>
     </error-page>
 
 
