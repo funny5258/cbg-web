@@ -36,7 +36,7 @@ public class IndexController {
         return modelAndView;
     }
 
-    @RequestMapping("/query")
+    @RequestMapping("/api/query")
     @ResponseBody
     public JsonResult query(RoleSearch roleSearch) {
         JsonResult jsonResult = new JsonResult();

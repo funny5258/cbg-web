@@ -57,7 +57,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>springmvc</servlet-name>
-        <url-pattern>*.html</url-pattern>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
 
     <filter>
@@ -93,15 +93,15 @@
 
     <error-page>
         <exception-type>java.lang.Throwable</exception-type>
-        <location>/500.html</location>
+        <location>/500</location>
     </error-page>
     <error-page>
         <error-code>500</error-code>
-        <location>/500.html</location>
+        <location>/500</location>
     </error-page>
     <error-page>
         <error-code>404</error-code>
-        <location>/404.html</location>
+        <location>/404</location>
     </error-page>
 
 
