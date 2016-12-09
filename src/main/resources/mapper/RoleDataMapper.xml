@@ -40,6 +40,14 @@
     <if test="lvmax != null " >
       and lv &lt;= #{lvmax}
     </if>
+
+    <if test="mhp != null " >
+      and mhp &gt;= #{mhp}
+    </if>
+    <if test="msp != null " >
+      and msp &gt;= #{msp}
+    </if>
+
     <if test="xiuwei != null " >
       and xiuwei &gt;= #{xiuwei}
     </if>

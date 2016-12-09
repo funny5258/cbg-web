@@ -8,30 +8,19 @@ import java.util.List;
 public class RoleSearch {
     private Integer pageNo = 1;
     private Integer pageSize = 10;
-    private List<Integer> schoolList;
     /**
-     * 加护
+     * 门派
      */
-    private Integer jiahu;
-    /**
-     * 价钱
-     */
-    private Integer pricemin;
-    /**
-     * 价钱
-     */
-    private Integer pricemax;
+    private String school;
 
     /**
-     * 等级
+     * 生命值
      */
-    private Integer lvmin;
-    private Integer critical;
-
+    private Integer mhp;
     /**
-     * 等级
+     * 技力值
      */
-    private Integer lvmax;
+    private Integer msp;
     /**
      * 修为
      */
@@ -41,140 +30,6 @@ public class RoleSearch {
      * 装备评价
      */
     private Integer equXiuwei;
-
-    /**
-     * 门派
-     */
-    private String school;
-
-    /**
-     * 最大物攻
-     */
-    private Integer pattackMax;
-
-    /**
-     * 最大法攻
-     */
-    private Integer mattackMax;
-
-    /**
-     * 最小物攻
-     */
-    private Integer pattackMin;
-
-    /**
-     * 最小法攻
-     */
-    private Integer mattackMin;
-
-    /**
-     * 命中
-     */
-    private Integer hit;
-
-    /**
-     * 重击
-     */
-    private Integer modadd;
-
-    /**
-     * 附伤
-     */
-    private Integer attadd;
-
-    /**
-     * 诛心
-     */
-    private Integer criAddP;
-
-    /**
-     * 御心
-     */
-    private Integer criSubP;
-
-    /**
-     * 法防
-     */
-    private Integer mdef;
-
-    /**
-     * 物防
-     */
-    private Integer pdef;
-
-    /**
-     */
-    private Integer xiaogong;
-
-    /**
-     */
-    private Integer xiaofa;
-
-    /**
-     * 神明
-     */
-    private Integer inprotect;
-
-    /**
-     * 回避
-     */
-    private Integer avoid;
-
-    /**
-     * 化解
-     */
-    private Integer attdef;
-
-    /**
-     * 知彼
-     */
-    private Integer defhuman;
-
-    /**
-     * 人祸
-     */
-    private Integer attackhuman;
-
-    /**
-     * 身份
-     */
-    private Integer sract;
-
-    /**
-     * 坚韧
-     */
-    private Integer srbody;
-
-    /**
-     * 定力
-     */
-    private Integer srmind;
-
-    /**
-     * 追电
-     */
-    private Integer movespeed;
-
-    /**
-     * 疾语
-     */
-    private Integer castspeed;
-
-    /**
-     * 骤雨
-     */
-    private Integer attackspeed;
-
-    /**
-     * 万钧
-     */
-    private Integer thumpAddP;
-
-    /**
-     * 铁壁
-     */
-    private Integer thumpSubP;
-
     /**
      * 力
      */
@@ -205,10 +60,164 @@ public class RoleSearch {
      */
     private Integer mind;
     /**
+     * 命中
+     */
+    private Integer hit;
+
+    /**
+     * 重击
+     */
+    private Integer modadd;
+    /**
+     * 会心
+     */
+    private Integer critical;
+
+    /**
+     * 附伤
+     */
+    private Integer attadd;
+    /**
+     * 最大物攻
+     */
+    private Integer pattackMax;
+
+    /**
+     * 最大法攻
+     */
+    private Integer mattackMax;
+
+    /**
+     * 最小物攻
+     */
+    private Integer pattackMin;
+
+    /**
+     * 最小法攻
+     */
+    private Integer mattackMin;
+    /**
+     * 法防
+     */
+    private Integer mdef;
+
+    /**
+     * 物防
+     */
+    private Integer pdef;
+    /**
+     * 神明
+     */
+    private Integer inprotect;
+
+    /**
+     * 回避
+     */
+    private Integer avoid;
+
+    /**
+     * 化解
+     */
+    private Integer attdef;
+    /**
+     * 身法
+     */
+    private Integer sract;
+
+    /**
+     * 坚韧
+     */
+    private Integer srbody;
+
+    /**
+     * 定力
+     */
+    private Integer srmind;
+
+
+    /**
+     * 追电
+     */
+    private Integer movespeed;
+
+    /**
+     * 疾语
+     */
+    private Integer castspeed;
+
+    /**
+     * 骤雨
+     */
+    private Integer attackspeed;
+    /**
+     * 知彼
+     */
+    private Integer defhuman;
+    /**
+     * 人祸
+     */
+    private Integer attackhuman;
+    /**
+     * 诛心
+     */
+    private Integer criAddP;
+
+    /**
+     * 御心
+     */
+    private Integer criSubP;
+    /**
+     * 万钧
+     */
+    private Integer thumpAddP;
+
+    /**
+     * 铁壁
+     */
+    private Integer thumpSubP;
+
+    /**
+     * 小攻
+     */
+    private Integer xiaogong;
+
+    /**
+     * 小法
+     */
+    private Integer xiaofa;
+
+
+
+    /**
+     * 最小等级
+     */
+    private Integer lvmin;
+    /**
+     * 最大等级
+     */
+    private Integer lvmax;
+    /**
+     * 最低价钱
+     */
+    private Integer pricemin;
+    /**
+     * 最高价钱
+     */
+    private Integer pricemax;
+
+    /**
+     * 加护
+     */
+    private Integer jiahu;
+
+    /**
      * 炼护
      */
     private Integer lianhu;
-
+    /**
+     * 孩子天域
+     */
+    private Integer haiziTianyu;
     /**
      * 孩子最大等级
      */
@@ -223,12 +232,6 @@ public class RoleSearch {
      * 孩子最大武学
      */
     private Integer haiziWuxue;
-
-    /**
-     * 御风行等级
-     */
-    private Integer ligntMenpai;
-
     /**
      * 觉醒等级
      */
@@ -248,6 +251,54 @@ public class RoleSearch {
      * 溟炼值
      */
     private Integer minglian;
+
+
+
+
+
+
+
+
+
+
+    /**
+     * 挥砍防护
+     */
+    private Integer huikanfanghu;
+
+    /**
+     * 盾刺防护
+     */
+    private Integer duncifanghu;
+
+    /**
+     * 火元防护
+     */
+    private Integer huoyuanfanghu;
+
+    /**
+     * 水风毒防护
+     */
+    private Integer shuifengdufanghu;
+
+    /**
+     * 完封
+     */
+    private Integer wanfeng;
+
+    /**
+     * 护心
+     */
+    private Integer huxin;
+
+
+
+    /**
+     * 御风行等级
+     */
+    private Integer ligntMenpai;
+
+
 
     /**
      * 黛染青花
@@ -305,35 +356,6 @@ public class RoleSearch {
     private Integer yeyujiangnan;
 
     /**
-     * 挥砍防护
-     */
-    private Integer huikanfanghu;
-
-    /**
-     * 盾刺防护
-     */
-    private Integer duncifanghu;
-
-    /**
-     * 火元防护
-     */
-    private Integer huoyuanfanghu;
-
-    /**
-     * 水风毒防护
-     */
-    private Integer shuifengdufanghu;
-
-    /**
-     * 完封
-     */
-    private Integer wanfeng;
-
-    /**
-     * 护心
-     */
-    private Integer huxin;
-    /**
      * 是否有太初
      */
     private Integer taichu;
@@ -366,16 +388,27 @@ public class RoleSearch {
      * 毒浪鬼
      */
     private Integer dulanggui;
-
-    private Integer haiziTianyu;
-
+    /**
+     * 是否vip9
+     */
     private Integer vip9;
-
+    /**
+     * 碧海惊涛
+     */
     private Integer bihai;
-
+    /**
+     * 鹰击长空
+     */
     private Integer changkong;
-
+    /**
+     * 蟾宫折桂
+     */
     private Integer changong;
+
+    /**
+     * 门派
+     */
+    private List<Integer> schoolList;
 
     public Integer getBihai() {
         return bihai;
@@ -1031,5 +1064,21 @@ public class RoleSearch {
 
     public void setCritical(Integer critical) {
         this.critical = critical;
+    }
+
+    public Integer getMhp() {
+        return mhp;
+    }
+
+    public void setMhp(Integer mhp) {
+        this.mhp = mhp;
+    }
+
+    public Integer getMsp() {
+        return msp;
+    }
+
+    public void setMsp(Integer msp) {
+        this.msp = msp;
     }
 }

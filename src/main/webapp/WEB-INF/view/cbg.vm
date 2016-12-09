@@ -57,6 +57,11 @@
         <div class="col-md-12">
             <div style="display: inline-block">
                 <label>基础属性:</label>
+                <label for="mhxiuweip" class="control-label">修为>=</label>
+                <input type="text" name="xiuwei" size="5">
+
+                <label for="equXiuwei" class="control-label">装评>=</label>
+                <input type="text" name="equXiuwei" size="5">
 
                 <label for="mhp" class="control-label">生命值>=</label>
                 <input type="text" name="mhp" size="5">
@@ -128,6 +133,9 @@
 
                 <label for="inprotect" class="control-label">神明>=</label>
                 <input type="text" name="inprotect" size="5">
+
+                <label for="inprotect" class="control-label">化解>=</label>
+                <input type="text" name="attdef" size="5">
 
                 <label for="sract" class="control-label">身法>=</label>
                 <input type="text" name="sract" size="5">
