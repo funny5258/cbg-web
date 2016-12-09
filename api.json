@@ -1,0 +1,325 @@
+{
+  "message": "成功", // 返回消息
+  "returncode": 0, // 0 成功 其他都是失败
+  "result": {
+    "firstPage": 1,
+    "hasNextPage": true,
+    "hasPreviousPage": false,
+    "isFirstPage": true,
+    "isLastPage": false,
+    "lastPage": 8,
+    "navigatePages": 8,
+    "nextPage": 2,
+    "pageNum": 1, // 当前多少页
+    "pageSize": 10, // 每页条数
+    "pages": 449, // 总页数
+    "total": 4489, // 总条数
+    "list": [
+      {
+        "attackhuman": 13,   //人祸
+        "avoid": 636, // 回避
+        "bihai": 0, // 碧海惊涛
+        "canghaisangtian": 1, // 沧海桑田
+        "castspeed": 0, // 疾语
+        "changkong": 1, // 鹰击长空
+        "changong": 0,// 蟾宫折桂
+        "criAddP": 0, // 诛心
+        "criSubP": 285, // 御心
+        "critical": 722, // 会心
+        "dulanggui": 1, // 毒浪鬼
+        "duncifanghu": 0, // 钝刺防护
+        "equXiuwei": 115786, // 装备评价
+        "feihuhuaqiu": 0, // 飞狐华裘
+        "guhong": 0, // 孤鸿月影
+        "haitang": 1, // 海棠未雨
+        "haiziTiayu": 1, // 孩子天域
+        "hit": 722, //
+        "huikanfanghu": 0, // 挥砍防护
+        "huoyuanfanghu": 1, // 火元防护
+        "huxin": 1, // 护心
+        "inprotect": 99, // 神明
+        "jiahu": 360, // 加护值
+        "lianhu": 271, // 炼护值
+        "lv": 88, // 等级
+        "mattackMax": 910, // 最大法攻
+        "mattackMin": 576, // 最小法攻
+        "mawangye": 0, // 马王爷
+        "mdef": 1939, // 法防
+        "modadd": 1653, // 重击
+        "movespeed": 488, // 移动速度
+        "name": "丷龙叁太子丶", // 名字
+        "other": "太初;孩子天域;", //
+        "pattackMax": 3831, // 最大物攻
+        "pattackMin": 1858, // 最小物攻
+        "pdef": 6408, // 物防
+        "price": 148000, // 价钱
+        "qinghua": 0,// 青花
+        "sch": 2, // 门派
+        "sex": 1, // 性别
+        "shilifushou": 0, // 势力副手
+        "shizhuang": "海棠;天狐霓裳;仙狐彩袂;沧海桑田;夜雨江南;鹰击长空;", //
+        "shuifengdufanghu": 1, // 水风毒防护
+        "taichu": 1, // 太初
+        "teji": "护心;完封;火元防护;水风毒防护;", //
+        "tianhulishang": 1, //天狐霓裳
+        "tinglan": 0, // 岸芷汀兰
+        "url": "http://tx3.cbg.163.com/cgi-bin/equipquery.py?act=overall_search_show_detail&equip_id=210922&serverid=161", //
+        "vip9": 0, // 是否vip9
+        "wanfeng": 1, // 完封
+        "wanshengtianzun": 0, // 万胜天尊
+        "xiangyun": 0, // 降云思暖
+        "xianhucaijue": 1, // 仙狐彩袂
+        "xiuwei": 67598, // 修为
+        "xiyangyang": 1, // 喜洋洋
+        "xuansu": 0, // 玄素
+        "yehuo": 1, // 业火
+        "yeyujiangnan":  1,// 夜雨江南
+        "yuanhun": "喜洋洋;业火;毒浪鬼;" //
+      },
+      {
+        "attackhuman": 5,
+        "avoid": 3902,
+        "bihai": 0,
+        "canghaisangtian": 0,
+        "castspeed": 44,
+        "changkong": 0,
+        "changong": 0,
+        "criAddP": 0,
+        "criSubP": 25,
+        "critical": 304,
+        "dulanggui": 0,
+        "duncifanghu": 1,
+        "equXiuwei": 88424,
+        "feihuhuaqiu": 0,
+        "guhong": 0,
+        "haitang": 0,
+        "haiziTiayu": 0,
+        "hit": 304,
+        "huikanfanghu": 1,
+        "huoyuanfanghu": 0,
+        "huxin": 0,
+        "inprotect": 1945,
+        "jiahu": 253,
+        "lianhu": 195,
+        "lv": 87,
+        "mattackMax": 1122,
+        "mattackMin": 741,
+        "mawangye": 0,
+        "mdef": 5281,
+        "modadd": 203,
+        "movespeed": 330,
+        "name": "乄翩若惊鸿丶雨",
+        "other": "",
+        "pattackMax": 496,
+        "pattackMin": 398,
+        "pdef": 4015,
+        "price": 140000,
+        "qinghua": 0,
+        "sch": 7,
+        "sex": 2,
+        "shilifushou": 0,
+        "shizhuang": "岸芷汀兰;",
+        "shuifengdufanghu": 0,
+        "taichu": 0,
+        "teji": "完封;挥砍防护;钝刺防护;",
+        "tianhulishang": 0,
+        "tinglan": 1,
+        "url": "http://tx3.cbg.163.com/cgi-bin/equipquery.py?act=overall_search_show_detail&equip_id=252276&serverid=11",
+        "vip9": 0,
+        "wanfeng": 1,
+        "wanshengtianzun": 0,
+        "xiangyun": 0,
+        "xianhucaijue": 0,
+        "xiuwei": 56555,
+        "xiyangyang": 0,
+        "xuansu": 0,
+        "yehuo": 0,
+        "yeyujiangnan": 0,
+        "yuanhun": ""
+      },
+      {
+        "attackhuman": 7,
+        "avoid": 1051,
+        "bihai": 0,
+        "canghaisangtian": 0,
+        "castspeed": 0,
+        "changkong": 0,
+        "changong": 0,
+        "criAddP": 571,
+        "criSubP": 0,
+        "critical": 3419,
+        "dulanggui": 0,
+        "duncifanghu": 1,
+        "equXiuwei": 110712,
+        "feihuhuaqiu": 0,
+        "guhong": 0,
+        "haitang": 0,
+        "haiziTiayu": 1,
+        "hit": 3419,
+        "huikanfanghu": 1,
+        "huoyuanfanghu": 0,
+        "huxin": 1,
+        "inprotect": 89,
+        "jiahu": 360,
+        "lianhu": 240,
+        "lv": 88,
+        "mattackMax": 607,
+        "mattackMin": 352,
+        "mawangye": 0,
+        "mdef": 1839,
+        "modadd": 70,
+        "movespeed": 477,
+        "name": "猴赛鹰",
+        "other": "太初;孩子天域;",
+        "pattackMax": 3307,
+        "pattackMin": 1047,
+        "pdef": 4330,
+        "price": 138000,
+        "qinghua": 0,
+        "sch": 4,
+        "sex": 1,
+        "shilifushou": 0,
+        "shizhuang": "玄素;",
+        "shuifengdufanghu": 0,
+        "taichu": 1,
+        "teji": "护心;完封;挥砍防护;钝刺防护;",
+        "tianhulishang": 0,
+        "tinglan": 0,
+        "url": "http://tx3.cbg.163.com/cgi-bin/equipquery.py?act=overall_search_show_detail&equip_id=203437&serverid=161",
+        "vip9": 0,
+        "wanfeng": 1,
+        "wanshengtianzun": 0,
+        "xiangyun": 0,
+        "xianhucaijue": 0,
+        "xiuwei": 69722,
+        "xiyangyang": 0,
+        "xuansu": 1,
+        "yehuo": 1,
+        "yeyujiangnan": 0,
+        "yuanhun": "业火;"
+      },
+      {
+        "attackhuman": 5,
+        "avoid": 4123,
+        "bihai": 0,
+        "canghaisangtian": 1,
+        "castspeed": 1,
+        "changkong": 0,
+        "changong": 0,
+        "criAddP": 197,
+        "criSubP": 60,
+        "critical": 2432,
+        "dulanggui": 0,
+        "duncifanghu": 0,
+        "equXiuwei": 112595,
+        "feihuhuaqiu": 0,
+        "guhong": 0,
+        "haitang": 0,
+        "haiziTiayu": 1,
+        "hit": 2432,
+        "huikanfanghu": 1,
+        "huoyuanfanghu": 0,
+        "huxin": 0,
+        "inprotect": 1371,
+        "jiahu": 328,
+        "lianhu": 270,
+        "lv": 88,
+        "mattackMax": 1575,
+        "mattackMin": 517,
+        "mawangye": 1,
+        "mdef": 4954,
+        "modadd": 401,
+        "movespeed": 486,
+        "name": "凉风秋月",
+        "other": "孩子天域;",
+        "pattackMax": 2416,
+        "pattackMin": 1119,
+        "pdef": 4519,
+        "price": 115000,
+        "qinghua": 0,
+        "sch": 8,
+        "sex": 1,
+        "shilifushou": 0,
+        "shizhuang": "天狐霓裳;沧海桑田;夜雨江南;",
+        "shuifengdufanghu": 1,
+        "taichu": 0,
+        "teji": "完封;挥砍防护;水风毒防护;",
+        "tianhulishang": 1,
+        "tinglan": 0,
+        "url": "http://tx3.cbg.163.com/cgi-bin/equipquery.py?act=overall_search_show_detail&equip_id=399419&serverid=15",
+        "vip9": 0,
+        "wanfeng": 1,
+        "wanshengtianzun": 1,
+        "xiangyun": 0,
+        "xianhucaijue": 0,
+        "xiuwei": 68693,
+        "xiyangyang": 1,
+        "xuansu": 0,
+        "yehuo": 1,
+        "yeyujiangnan": 1,
+        "yuanhun": "马王爷;喜洋洋;万圣天尊;业火;"
+      },
+      {
+        "attackhuman": 5,
+        "avoid": 1449,
+        "bihai": 0,
+        "canghaisangtian": 0,
+        "castspeed": 0,
+        "changkong": 0,
+        "changong": 0,
+        "criAddP": 452,
+        "criSubP": 0,
+        "critical": 3316,
+        "dulanggui": 1,
+        "duncifanghu": 0,
+        "equXiuwei": 115205,
+        "feihuhuaqiu": 0,
+        "guhong": 1,
+        "haitang": 0,
+        "haiziTiayu": 1,
+        "hit": 3316,
+        "huikanfanghu": 0,
+        "huoyuanfanghu": 0,
+        "huxin": 1,
+        "inprotect": 91,
+        "jiahu": 343,
+        "lianhu": 270,
+        "lv": 88,
+        "mattackMax": 571,
+        "mattackMin": 338,
+        "mawangye": 0,
+        "mdef": 2128,
+        "modadd": 110,
+        "movespeed": 452,
+        "name": "乀婼璃丶",
+        "other": "孩子天域;",
+        "pattackMax": 3185,
+        "pattackMin": 926,
+        "pdef": 4736,
+        "price": 110000,
+        "qinghua": 0,
+        "sch": 4,
+        "sex": 2,
+        "shilifushou": 0,
+        "shizhuang": "孤鸿;夜雨江南;",
+        "shuifengdufanghu": 0,
+        "taichu": 0,
+        "teji": "护心;完封;",
+        "tianhulishang": 0,
+        "tinglan": 0,
+        "url": "http://tx3.cbg.163.com/cgi-bin/equipquery.py?act=overall_search_show_detail&equip_id=18691&serverid=185",
+        "vip9": 0,
+        "wanfeng": 1,
+        "wanshengtianzun": 0,
+        "xiangyun": 0,
+        "xianhucaijue": 0,
+        "xiuwei": 68493,
+        "xiyangyang": 1,
+        "xuansu": 0,
+        "yehuo": 0,
+        "yeyujiangnan": 1,
+        "yuanhun": "喜洋洋;毒浪鬼;"
+      }
+    ]
+  }
+}

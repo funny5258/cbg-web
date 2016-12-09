@@ -381,17 +381,17 @@ public class RoleDataEntity extends BaseEntity {
     private Integer yehuo;
 
     /**
-    * 
+    * 毒浪鬼
     */
     private Integer dulanggui;
 
     /**
-    * 
+    * 是否vip9
     */
     private Integer vip9;
 
     /**
-    * 
+    * 孩子天域
     */
     private Integer haiziTiayu;
 
@@ -401,25 +401,51 @@ public class RoleDataEntity extends BaseEntity {
     private Integer bihai;
 
     /**
-    * 
+    * 蟾宫折桂
     */
     private Integer changong;
 
     /**
-    * 
+    * 鹰击长空
     */
     private Integer changkong;
 
 
-    /**--------------------------*/
+    /**--------------------------
+     * 时装
+     */
     private String shizhuang;
+    /**
+     * 元魂珠
+     */
     private String yuanhun;
+    /**
+     * 特技
+     */
     private String teji;
+    /**
+     * 其他
+     */
     private String other;
+    /**
+     * 藏宝阁地址
+     */
     private String url;
+    /**
+     *价格
+     */
     private Integer price;
+    /**
+     *加护值
+     */
     private Integer jiahu;
+    /**
+     *过期时间
+     */
     private String expTime;
+    /**
+     * 角色名
+     */
     private String name;
 
     public String getName() {
