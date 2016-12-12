@@ -206,7 +206,23 @@
 
                 <label for="lianhu" class="control-label">炼护>=</label>
                 <input type="text" name="lianhu" size="4">
-
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="1" name="lv_level">69战场
+                </label>
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="2" name="lv_level">74战场
+                </label>
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="3" name="lv_level">79战场
+                </label>
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="4" name="lv_level">地魂
+                </label>
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="5" name="lv_level">天魂
+                </label>
             </div>
         </div>
         <div class="col-md-12">

@@ -23,7 +23,15 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public PageInfo<RoleDataEntity> findByCondition(RoleSearch roleSearch) {
         PageHelper.startPage(roleSearch.getPageNo(), roleSearch.getPageSize());
-        PageHelper.orderBy("r.id desc");
+        if (roleSearch.getPrice_des() == null) {
+            PageHelper.orderBy("r.id desc");
+        } else {
+            if (roleSearch.getPrice_des() == 1) {
+                PageHelper.orderBy("r.price asc");
+            } else if (roleSearch.getPrice_des() == 2) {
+                PageHelper.orderBy("r.price desc");
+            }
+        }
         List<RoleDataEntity> roleDataEntities = roleDataMapper.findByCondition(roleSearch);
         return new PageInfo<>(roleDataEntities);
     }

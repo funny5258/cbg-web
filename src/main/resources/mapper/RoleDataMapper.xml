@@ -19,6 +19,36 @@
     taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui,haizi_tiayu,vip9,bihai,changong,changkong
     from role r left join role_data d on r.id =d.role_id
     where r.yn =1
+    <if test="lv_level != null " >
+      <choose>
+        <when test="lv_level == 1">
+          and lv = 69
+        </when>
+        <when test="lv_level == 2">
+          and lv &gt;= 70 and lv &lt;= 74
+        </when>
+        <when test="lv_level == 3">
+          and lv &gt;= 75 and lv &lt;= 79
+        </when>
+        <when test="lv_level == 4">
+          and lv &gt;= 80 and lv &lt;= 85
+        </when>
+        <when test="lv_level == 5">
+          and lv &gt;= 86 and lv &lt;= 90
+        </when>
+        <otherwise>
+          and lv &gt;= 69
+        </otherwise>
+      </choose>
+    </if>
+    <if test="lv_level == null " >
+      <if test="lvmin != null " >
+        and lv &gt;= #{lvmin}
+      </if>
+      <if test="lvmax != null " >
+        and lv &lt;= #{lvmax}
+      </if>
+    </if>
     <if test="schoolList != null and schoolList.size() > 0 " >
       and sch in
       <foreach collection="schoolList" open="(" close=")" separator="," item="id">
@@ -33,12 +63,6 @@
     </if>
     <if test="pricemax != null " >
       and price &lt;= #{pricemax}
-    </if>
-    <if test="lvmin != null " >
-      and lv &gt;= #{lvmin}
-    </if>
-    <if test="lvmax != null " >
-      and lv &lt;= #{lvmax}
     </if>
 
     <if test="mhp != null " >

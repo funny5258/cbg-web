@@ -409,6 +409,30 @@ public class RoleSearch {
      * 门派
      */
     private List<Integer> schoolList;
+    /**
+     *  1(升序),2(降序)
+     */
+    private Integer price_des;
+    /**
+     * 1：69战场 2：74战场 3：79战场 4：地魂 5：天魂
+     */
+    private Integer lv_level;
+
+    public Integer getLv_level() {
+        return lv_level;
+    }
+
+    public void setLv_level(Integer lv_level) {
+        this.lv_level = lv_level;
+    }
+
+    public Integer getPrice_des() {
+        return price_des;
+    }
+
+    public void setPrice_des(Integer price_des) {
+        this.price_des = price_des;
+    }
 
     public Integer getBihai() {
         return bihai;
