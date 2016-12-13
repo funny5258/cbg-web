@@ -17,7 +17,7 @@
     xiangyun,tinglan,haitang,feihuhuaqiu,tianhulishang,xianhucaijue,canghaisangtian,yeyujiangnan,
     huikanfanghu,duncifanghu,huoyuanfanghu,shuifengdufanghu,wanfeng,huxin,
     taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui,haizi_tiayu,vip9,bihai,changong,changkong,fengyuzihuang
-    from role r left join role_data d on r.id =d.role_id
+    from cbg_role r left join cbg_data d on r.id =d.role_id
     where r.yn =1
     <if test="lv_level != null " >
       <choose>

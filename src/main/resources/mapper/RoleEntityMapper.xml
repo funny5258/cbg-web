@@ -21,7 +21,7 @@
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into role (role_id, jiahu, name, 
+    insert into cbg_role (role_id, jiahu, name,
       server_id, price, url, 
       create_time, exp_time, yn, craw)
     values (#{roleId,jdbcType=VARCHAR}, #{jiahu,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, 
@@ -29,7 +29,7 @@
       now(), #{expTime,jdbcType=TIMESTAMP}, 1, #{craw,jdbcType=INTEGER})
   </insert>
   <update id="updateByIdSelected" parameterType="com.funny.txstack.entity.cbg.RoleEntity" >
-    update role
+    update cbg_role
     <set >
       <if test="roleId != null" >
         role_id = #{roleId,jdbcType=VARCHAR},
@@ -63,7 +63,7 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateById" parameterType="com.funny.txstack.entity.cbg.RoleEntity" >
-    update role
+    update cbg_role
     set role_id = #{roleId,jdbcType=VARCHAR},
       jiahu = #{jiahu,jdbcType=INTEGER},
       name = #{name,jdbcType=VARCHAR},
@@ -78,7 +78,7 @@
   <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from role
+    from cbg_role
     where id = #{id,jdbcType=BIGINT}
   </select>
 </mapper>

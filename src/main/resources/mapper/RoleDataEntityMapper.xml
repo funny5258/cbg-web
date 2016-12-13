@@ -100,7 +100,7 @@
   </sql>
 
   <update id="updateByIdSelected" parameterType="com.funny.txstack.entity.cbg.RoleDataEntity" >
-    update role_data
+    update cbg_data
     <set >
       <if test="roleId != null" >
         role_id = #{roleId,jdbcType=VARCHAR},
@@ -350,7 +350,7 @@
     where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateById" parameterType="com.funny.txstack.entity.cbg.RoleDataEntity" >
-    update role_data
+    update cbg_data
     set role_id = #{roleId,jdbcType=VARCHAR},
       lianhu = #{lianhu,jdbcType=INTEGER},
       sex = #{sex,jdbcType=INTEGER},
@@ -437,7 +437,7 @@
   <select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long" >
     select 
     <include refid="Base_Column_List" />
-    from role_data
+    from cbg_data
     where id = #{id,jdbcType=BIGINT}
   </select>
 </mapper>
