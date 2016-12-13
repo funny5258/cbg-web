@@ -11,4 +11,8 @@
     </if>
     from role where yn =1 
   </select>
+
+  <update id="deleteRole" parameterType="long" >
+    update role set yn = 0 where id = #{id}
+  </update>
 </mapper>

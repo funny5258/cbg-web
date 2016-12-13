@@ -6,14 +6,11 @@
         <th style="text-align: center;width: 11%;">名字</th>
         <th class="hidden-sm hidden-xs" style="text-align: center;width: 5%;">等级</th>
         <th class="hidden-sm hidden-xs" style="text-align: center;width: 7%;">价格</th>
-        <th class="hidden-sm hidden-xs" style="text-align: center;width: 6%;">装评</th>
-        <th class="hidden-sm hidden-xs" style="text-align: center;width: 5%;">修为</th>
-        <th class="hidden-sm hidden-xs" style="text-align: center;width: 5%;">加护</th>
-        <th class="hidden-sm hidden-xs" style="text-align: center;width: 5%;">炼护</th>
-        <th class="hidden-sm hidden-xs" style="text-align: center;width: 5%;">追电</th>
-        <th class="hidden-sm hidden-xs" style="text-align: center;width: 5%;">疾语</th>
-        <th style="text-align: center;width: 40%;">您关注的</th>
-        <th style="text-align: center;width: 8%;">购买</th>
+        <th class="hidden-sm hidden-xs" style="text-align: center;width: 8%;">装评/修为</th>
+        <th class="hidden-sm hidden-xs" style="text-align: center;width: 8%;">加护/炼护</th>
+        <th class="hidden-sm hidden-xs" style="text-align: center;width: 8%;">追电/疾语</th>
+        <th style="text-align: center;width: 30%;">您关注的</th>
+        <th style="text-align: center;width: 18%;">购买</th>
     </tr>
     </thead>
     <tbody>
@@ -26,18 +23,21 @@
                 <td style="text-align: center;">$!role.name</td>
                 <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.lv</td>
                 <td class="hidden-sm hidden-xs" style="text-align: center;">¥ <font color="red">$!role.price</font></td>
-                <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.equXiuwei</td>
-                <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.xiuwei</td>
-                <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.jiahu</td>
-                <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.lianhu</td>
-                <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.movespeed</td>
-                <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.castspeed</td>
+                <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.equXiuwei <br>$!role.xiuwei</td>
+                <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.jiahu<br>$!role.lianhu</td>
+                <td class="hidden-sm hidden-xs" style="text-align: center;">$!role.movespeed / $!role.castspeed</td>
                 <td style="text-align: center;">
                         $!role.shizhuang
                         $!role.teji
                         $!role.yuanhun
                         $!role.other
-                <td style="text-align: center;"><a class="btn btn-danger" onclick="window.open('$!role.url')">购买</a></td>
+                <td style="text-align: center;">
+                    <a class="btn btn-primary" onclick="window.open('$!role.url')">购买</a>
+                    <a class="btn btn-info" onclick="RoleJS.detail('$!role.name','$!role.lv','$!role.sch')">英雄榜</a>
+                    #if($!showDelBtn==1)
+                        <a class="btn btn-danger" onclick="RoleJS.soldOut('$!role.id')">下架</a>
+                    #end
+                </td>
             </tr>
             #end
         #else

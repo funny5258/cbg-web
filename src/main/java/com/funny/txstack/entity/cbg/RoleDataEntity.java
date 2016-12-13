@@ -409,6 +409,10 @@ public class RoleDataEntity extends BaseEntity {
     * 鹰击长空
     */
     private Integer changkong;
+    /**
+     * 凤羽紫凰
+     */
+    private Integer fengyuzihuang;
 
 
     /**--------------------------
@@ -447,6 +451,14 @@ public class RoleDataEntity extends BaseEntity {
      * 角色名
      */
     private String name;
+
+    public Integer getFengyuzihuang() {
+        return fengyuzihuang;
+    }
+
+    public void setFengyuzihuang(Integer fengyuzihuang) {
+        this.fengyuzihuang = fengyuzihuang;
+    }
 
     public String getName() {
         return name;

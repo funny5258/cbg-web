@@ -8,6 +8,7 @@ import java.util.List;
 public class RoleSearch {
     private Integer pageNo = 1;
     private Integer pageSize = 10;
+    private Integer showDelBtn = 0;
     /**
      * 门派
      */
@@ -134,7 +135,6 @@ public class RoleSearch {
      */
     private Integer srmind;
 
-
     /**
      * 追电
      */
@@ -185,8 +185,6 @@ public class RoleSearch {
      * 小法
      */
     private Integer xiaofa;
-
-
 
     /**
      * 最小等级
@@ -252,15 +250,6 @@ public class RoleSearch {
      */
     private Integer minglian;
 
-
-
-
-
-
-
-
-
-
     /**
      * 挥砍防护
      */
@@ -291,14 +280,10 @@ public class RoleSearch {
      */
     private Integer huxin;
 
-
-
     /**
      * 御风行等级
      */
     private Integer ligntMenpai;
-
-
 
     /**
      * 黛染青花
@@ -404,13 +389,17 @@ public class RoleSearch {
      * 蟾宫折桂
      */
     private Integer changong;
+    /**
+     * 凤羽紫凰
+     */
+    private Integer fengyuzihuang;
 
     /**
      * 门派
      */
     private List<Integer> schoolList;
     /**
-     *  1(升序),2(降序)
+     * 1(升序),2(降序)
      */
     private Integer price_des;
     /**
@@ -1104,5 +1093,21 @@ public class RoleSearch {
 
     public void setMsp(Integer msp) {
         this.msp = msp;
+    }
+
+    public Integer getFengyuzihuang() {
+        return fengyuzihuang;
+    }
+
+    public void setFengyuzihuang(Integer fengyuzihuang) {
+        this.fengyuzihuang = fengyuzihuang;
+    }
+
+    public Integer getShowDelBtn() {
+        return showDelBtn;
+    }
+
+    public void setShowDelBtn(Integer showDelBtn) {
+        this.showDelBtn = showDelBtn;
     }
 }

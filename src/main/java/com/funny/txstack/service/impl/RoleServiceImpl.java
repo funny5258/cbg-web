@@ -1,5 +1,6 @@
 package com.funny.txstack.service.impl;
 
+import com.funny.txstack.dao.cbg.RoleMapper;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,8 @@ import java.util.List;
 public class RoleServiceImpl implements RoleService {
     @Autowired
     private RoleDataMapper roleDataMapper;
+    @Autowired
+    private RoleMapper roleMapper;
 
     @Override
     public PageInfo<RoleDataEntity> findByCondition(RoleSearch roleSearch) {
@@ -34,5 +37,10 @@ public class RoleServiceImpl implements RoleService {
         }
         List<RoleDataEntity> roleDataEntities = roleDataMapper.findByCondition(roleSearch);
         return new PageInfo<>(roleDataEntities);
+    }
+
+    @Override
+    public int deleteRole(Long id) {
+        return roleMapper.deleteRole(id);
     }
 }

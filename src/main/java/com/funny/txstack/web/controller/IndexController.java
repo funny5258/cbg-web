@@ -30,9 +30,9 @@ public class IndexController {
     private RoleService roleService;
 
     @RequestMapping("/cbg")
-    public ModelAndView index() {
+    public ModelAndView index(Integer showDelBtn) {
         ModelAndView modelAndView = new ModelAndView("/cbg");
-
+        modelAndView.addObject("showDelBtn", showDelBtn == null ? 0 : showDelBtn);
         return modelAndView;
     }
 
@@ -54,6 +54,20 @@ public class IndexController {
         return jsonResult;
     }
 
+    @RequestMapping("/delete")
+    @ResponseBody
+    public JsonResult delete(Long id) {
+        JsonResult jsonResult = new JsonResult();
+        try {
+            roleService.deleteRole(id);
+            jsonResult.setSuccess();
+        } catch (Exception e) {
+            logger.error("删除异常,id={}", id, e);
+            jsonResult.setFail("删除异常");
+        }
+        return jsonResult;
+    }
+
     @RequestMapping("/page")
     public ModelAndView page(RoleSearch roleSearch) throws Exception {
         ModelAndView modelAndView = new ModelAndView("/page");
@@ -63,6 +77,7 @@ public class IndexController {
         List<RoleDataEntity> roleList = pageInfo.getList();
         makeResult(roleList);
         modelAndView.addObject("roleList", roleList);
+        modelAndView.addObject("showDelBtn", roleSearch.getShowDelBtn());
         return modelAndView;
     }
 
@@ -125,6 +140,9 @@ public class IndexController {
                 }
                 if (entity.getChangkong() == 1) {
                     shizhuang.append("鹰击长空;");
+                }
+                if (entity.getFengyuzihuang() == 1) {
+                    shizhuang.append("凤羽紫凰;");
                 }
                 StringBuffer teji = new StringBuffer();
                 if (entity.getHuxin() == 1) {

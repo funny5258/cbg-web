@@ -84,6 +84,7 @@
     <result column="bihai" property="bihai" jdbcType="INTEGER" />
     <result column="changong" property="changong" jdbcType="INTEGER" />
     <result column="changkong" property="changkong" jdbcType="INTEGER" />
+    <result column="fengyuzihuang" property="fengyuzihuang" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, role_id, lianhu, sex, lv, fly_soul_phase, fly_soul_lv, xiuwei, equ_xiuwei, sch, 
@@ -95,69 +96,9 @@
     minglian, qinghua, xuansu, guhong, xiangyun, tinglan, haitang, feihuhuaqiu, tianhulishang, 
     xianhucaijue, canghaisangtian, yeyujiangnan, huikanfanghu, duncifanghu, huoyuanfanghu, 
     shuifengdufanghu, wanfeng, huxin, taichu, shilifushou, xiyangyang, mawangye, wanshengtianzun, 
-    yehuo, dulanggui, vip9, haizi_tiayu, bihai, changong, changkong
+    yehuo, dulanggui, vip9, haizi_tiayu, bihai, changong, changkong,fengyuzihuang
   </sql>
-  <insert id="insert" parameterType="com.funny.txstack.entity.cbg.RoleDataEntity" >
-    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
-      SELECT LAST_INSERT_ID()
-    </selectKey>
-    insert into role_data (role_id, lianhu, sex, 
-      lv, fly_soul_phase, fly_soul_lv, 
-      xiuwei, equ_xiuwei, sch, 
-      mhp, msp, pattack_max, 
-      mattack_max, pattack_min, mattack_min, 
-      hit, modadd, critical, 
-      attadd, cri_add_p, cri_sub_p, 
-      mdef, pdef, absolutely_attack, 
-      absolutely_defence, inprotect, avoid, 
-      attdef, defhuman, attackhuman, 
-      sract, srbody, srmind, 
-      movespeed, castspeed, attackspeed, 
-      thump_add_p, thump_sub_p, strong, 
-      body, quick, dodge, 
-      soul, mind, haizi_lv, 
-      haizi_zizhi, haizi_wuxue, lignt_menpai, 
-      awake_lv, release_lv, awake_value, 
-      minglian, qinghua, xuansu, 
-      guhong, xiangyun, tinglan, 
-      haitang, feihuhuaqiu, tianhulishang, 
-      xianhucaijue, canghaisangtian, yeyujiangnan, 
-      huikanfanghu, duncifanghu, huoyuanfanghu, 
-      shuifengdufanghu, wanfeng, huxin, 
-      taichu, shilifushou, xiyangyang, 
-      mawangye, wanshengtianzun, yehuo, 
-      dulanggui, vip9, haizi_tiayu, 
-      bihai, changong, changkong
-      )
-    values (#{roleId,jdbcType=VARCHAR}, #{lianhu,jdbcType=INTEGER}, #{sex,jdbcType=INTEGER}, 
-      #{lv,jdbcType=INTEGER}, #{flySoulPhase,jdbcType=INTEGER}, #{flySoulLv,jdbcType=VARCHAR}, 
-      #{xiuwei,jdbcType=INTEGER}, #{equXiuwei,jdbcType=INTEGER}, #{sch,jdbcType=INTEGER}, 
-      #{mhp,jdbcType=INTEGER}, #{msp,jdbcType=INTEGER}, #{pattackMax,jdbcType=INTEGER}, 
-      #{mattackMax,jdbcType=INTEGER}, #{pattackMin,jdbcType=INTEGER}, #{mattackMin,jdbcType=INTEGER}, 
-      #{hit,jdbcType=INTEGER}, #{modadd,jdbcType=INTEGER}, #{critical,jdbcType=INTEGER}, 
-      #{attadd,jdbcType=INTEGER}, #{criAddP,jdbcType=INTEGER}, #{criSubP,jdbcType=INTEGER}, 
-      #{mdef,jdbcType=INTEGER}, #{pdef,jdbcType=INTEGER}, #{absolutelyAttack,jdbcType=INTEGER}, 
-      #{absolutelyDefence,jdbcType=INTEGER}, #{inprotect,jdbcType=INTEGER}, #{avoid,jdbcType=INTEGER}, 
-      #{attdef,jdbcType=INTEGER}, #{defhuman,jdbcType=INTEGER}, #{attackhuman,jdbcType=INTEGER}, 
-      #{sract,jdbcType=INTEGER}, #{srbody,jdbcType=INTEGER}, #{srmind,jdbcType=INTEGER}, 
-      #{movespeed,jdbcType=INTEGER}, #{castspeed,jdbcType=INTEGER}, #{attackspeed,jdbcType=INTEGER}, 
-      #{thumpAddP,jdbcType=INTEGER}, #{thumpSubP,jdbcType=INTEGER}, #{strong,jdbcType=INTEGER}, 
-      #{body,jdbcType=INTEGER}, #{quick,jdbcType=INTEGER}, #{dodge,jdbcType=INTEGER}, 
-      #{soul,jdbcType=INTEGER}, #{mind,jdbcType=INTEGER}, #{haiziLv,jdbcType=INTEGER}, 
-      #{haiziZizhi,jdbcType=INTEGER}, #{haiziWuxue,jdbcType=INTEGER}, #{ligntMenpai,jdbcType=INTEGER}, 
-      #{awakeLv,jdbcType=INTEGER}, #{releaseLv,jdbcType=INTEGER}, #{awakeValue,jdbcType=INTEGER}, 
-      #{minglian,jdbcType=INTEGER}, #{qinghua,jdbcType=INTEGER}, #{xuansu,jdbcType=INTEGER}, 
-      #{guhong,jdbcType=INTEGER}, #{xiangyun,jdbcType=INTEGER}, #{tinglan,jdbcType=INTEGER}, 
-      #{haitang,jdbcType=INTEGER}, #{feihuhuaqiu,jdbcType=INTEGER}, #{tianhulishang,jdbcType=INTEGER}, 
-      #{xianhucaijue,jdbcType=INTEGER}, #{canghaisangtian,jdbcType=INTEGER}, #{yeyujiangnan,jdbcType=INTEGER}, 
-      #{huikanfanghu,jdbcType=INTEGER}, #{duncifanghu,jdbcType=INTEGER}, #{huoyuanfanghu,jdbcType=INTEGER}, 
-      #{shuifengdufanghu,jdbcType=INTEGER}, #{wanfeng,jdbcType=INTEGER}, #{huxin,jdbcType=INTEGER}, 
-      #{taichu,jdbcType=INTEGER}, #{shilifushou,jdbcType=INTEGER}, #{xiyangyang,jdbcType=INTEGER}, 
-      #{mawangye,jdbcType=INTEGER}, #{wanshengtianzun,jdbcType=INTEGER}, #{yehuo,jdbcType=INTEGER}, 
-      #{dulanggui,jdbcType=INTEGER}, #{vip9,jdbcType=INTEGER}, #{haiziTiayu,jdbcType=INTEGER}, 
-      #{bihai,jdbcType=INTEGER}, #{changong,jdbcType=INTEGER}, #{changkong,jdbcType=INTEGER}
-      )
-  </insert>
+
   <update id="updateByIdSelected" parameterType="com.funny.txstack.entity.cbg.RoleDataEntity" >
     update role_data
     <set >

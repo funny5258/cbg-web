@@ -3,7 +3,7 @@
         vertical-align: initial;
     }
 </style>
-<script src="/assets/js/role.js?v=222" type="text/javascript"></script>
+<script src="/assets/js/role.js?v=444" type="text/javascript"></script>
 
 
 <div style="margin-left: 20px;margin-right: 20px;">
@@ -16,6 +16,7 @@
 
     <form id="search-form" role="form" class="form-horizontal">
         <input type="hidden" value="1" name="pageNo" id="js-bootpag-num">
+        <input type="hidden" value="$!showDelBtn" name="showDelBtn" >
         <div class="col-md-12">
             <label >门派:</label>
 
@@ -344,6 +345,9 @@
             </label>
             <label class="checkbox-inline duiqi">
                 <input type="checkbox" value="1" name="changong">蟾宫折桂
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="checkbox" value="1" name="fengyuzihuang">凤羽紫凰
             </label>
         </div>
         <div class="col-md-12">

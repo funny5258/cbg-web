@@ -10,13 +10,13 @@
   </resultMap>
   
   <select id="findByCondition" resultMap="extResultMap" parameterType="com.funny.txstack.entity.cbg.RoleSearch" >
-    select r.name,r.url,r.price,r.jiahu,
+    select r.id,r.name,r.url,r.price,r.jiahu,
     lv,xiuwei,equ_xiuwei,sch,pattack_max,mattack_max,pattack_min,mattack_min,
     hit,modadd,cri_add_p,cri_sub_p,mdef,pdef,inprotect,avoid,critical,sex,
     attackhuman,movespeed,castspeed,lianhu,qinghua,xuansu,guhong,
     xiangyun,tinglan,haitang,feihuhuaqiu,tianhulishang,xianhucaijue,canghaisangtian,yeyujiangnan,
     huikanfanghu,duncifanghu,huoyuanfanghu,shuifengdufanghu,wanfeng,huxin,
-    taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui,haizi_tiayu,vip9,bihai,changong,changkong
+    taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui,haizi_tiayu,vip9,bihai,changong,changkong,fengyuzihuang
     from role r left join role_data d on r.id =d.role_id
     where r.yn =1
     <if test="lv_level != null " >
@@ -312,5 +312,9 @@
     <if test="changong != null " >
       and changong =1
     </if>
+    <if test="fengyuzihuang != null " >
+      and fengyuzihuang =1
+    </if>
+
   </select>
 </mapper>

@@ -38,12 +38,48 @@ var RoleJS = function(){
             submitForm();
         });
     };
+    var soldOut = function(id){
+        if(window.confirm("确定要删除吗？")){
+            $.ajax({
+                type:'post',
+                url:'/delete',
+                data:{'id':id},
+                dataType:'json',
+                success:function (data) {
+                    if(data.returncode==0){
+                        submitForm();
+                    }else{
+                        alert(data.message);
+                    }
+                },
+                error:function (XMLHttpRequest, textStatus, errorThrown) {
+                    alert(errorThrown)
+                    return false;
+                }
+            });
+        }
+
+
+    };
+    var detail = function(name,level,school){
+        if(level>80){
+            level=80;
+        }
+        var url = "http://bang.tx3.163.com/bang/search#name="+name+"&school="+school+"&level="+level
+        window.open(url);
+    };
     return {
         init: function () {
             init();
         },
-        initPage:function(totalPage, pageNum){
+        initPage: function (totalPage, pageNum) {
             pageAjax(totalPage, pageNum);
+        },
+        soldOut: function (id) {
+            soldOut(id);
+        },
+        detail: function (name, level, school) {
+            detail(name, level, school);
         }
     }
 }();

@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface RoleMapper extends BaseMapper<RoleEntity> {
     List<RoleEntity> findByCondition();
+
+    int deleteRole(Long id);
 }

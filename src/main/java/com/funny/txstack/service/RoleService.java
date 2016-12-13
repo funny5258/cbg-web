@@ -9,4 +9,6 @@ import com.github.pagehelper.PageInfo;
  */
 public interface RoleService {
     PageInfo<RoleDataEntity> findByCondition(RoleSearch roleSearch);
+
+    int deleteRole(Long id);
 }
