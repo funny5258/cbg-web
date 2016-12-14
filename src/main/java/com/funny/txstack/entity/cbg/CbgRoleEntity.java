@@ -4,7 +4,7 @@ import com.funny.txstack.common.BaseEntity;
 
 import java.util.Date;
 
-public class RoleEntity extends BaseEntity {
+public class CbgRoleEntity extends BaseEntity {
     private static final long serialVersionUID = 1480294569860L;
 
     /**

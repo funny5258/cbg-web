@@ -3,7 +3,7 @@
         vertical-align: initial;
     }
 </style>
-<script src="/assets/js/role.js?v=444" type="text/javascript"></script>
+<script src="/assets/js/cbg.js?v=555" type="text/javascript"></script>
 
 
 <div style="margin-left: 20px;margin-right: 20px;">
@@ -380,6 +380,6 @@
 
 
     <script type="text/javascript">
-        RoleJS.init();
+        CbgJS.init();
     </script>
 </div>

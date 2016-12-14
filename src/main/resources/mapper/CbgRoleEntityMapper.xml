@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.funny.txstack.dao.cbg.RoleMapper" >
-  <resultMap id="BaseResultMap" type="com.funny.txstack.entity.cbg.RoleEntity" >
+<mapper namespace="com.funny.txstack.dao.cbg.CbgRoleMapper" >
+  <resultMap id="BaseResultMap" type="com.funny.txstack.entity.cbg.CbgRoleEntity" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="role_id" property="roleId" jdbcType="VARCHAR" />
     <result column="jiahu" property="jiahu" jdbcType="INTEGER" />
@@ -17,7 +17,7 @@
   <sql id="Base_Column_List" >
     id, role_id, jiahu, name, server_id, price, url, create_time, exp_time, yn, craw
   </sql>
-  <insert id="insert" parameterType="com.funny.txstack.entity.cbg.RoleEntity" >
+  <insert id="insert" parameterType="com.funny.txstack.entity.cbg.CbgRoleEntity" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -28,7 +28,7 @@
       #{serverId,jdbcType=VARCHAR}, #{price,jdbcType=INTEGER}, #{url,jdbcType=VARCHAR}, 
       now(), #{expTime,jdbcType=TIMESTAMP}, 1, #{craw,jdbcType=INTEGER})
   </insert>
-  <update id="updateByIdSelected" parameterType="com.funny.txstack.entity.cbg.RoleEntity" >
+  <update id="updateByIdSelected" parameterType="com.funny.txstack.entity.cbg.CbgRoleEntity" >
     update cbg_role
     <set >
       <if test="roleId != null" >
@@ -62,7 +62,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateById" parameterType="com.funny.txstack.entity.cbg.RoleEntity" >
+  <update id="updateById" parameterType="com.funny.txstack.entity.cbg.CbgRoleEntity" >
     update cbg_role
     set role_id = #{roleId,jdbcType=VARCHAR},
       jiahu = #{jiahu,jdbcType=INTEGER},

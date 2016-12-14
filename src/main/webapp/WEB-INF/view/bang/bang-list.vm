@@ -1,0 +1,93 @@
+<style>
+    .duiqi {
+        vertical-align: initial;
+    }
+</style>
+<script src="/assets/js/bang.js?v=444" type="text/javascript"></script>
+
+
+<div style="margin-left: 20px;margin-right: 20px;">
+
+    <div class="col-md-12" align="right">
+        <label><a href="#">author@方小栈</a></label>
+        <br>
+        <label>广告招商问题建议QQ群:524580307</label>
+    </div>
+
+    <form id="search-form" role="form" class="form-horizontal">
+        <input type="hidden" value="1" name="pageNo" id="js-bootpag-num">
+        <div class="col-md-12">
+            <label >门派:</label>
+
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="1" name="school">荒火教
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="2" name="school">天机营
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="3" name="school">翎羽山庄
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="4" name="school">魍魉
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="5" name="school">太虚观
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="6" name="school">云麓仙居
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="7" name="school">冰心堂
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="8" name="school">奕剑听雨阁
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="9" name="school">鬼墨
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="10" name="school">龙巫宫
+            </label>
+            <label class="checkbox-inline duiqi">
+                <input type="radio" value="11" name="school">幽篁国
+            </label>
+        </div>
+
+        <div class="col-md-12">
+            <div style="display: inline-block">
+                <label>等级:</label>
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="69" name="level">69战场
+                </label>
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="74" name="level">74战场
+                </label>
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="79" name="level">79战场
+                </label>
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="85" name="level">地魂
+                </label>
+                <label class="checkbox-inline duiqi">
+                    <input type="radio" value="90" name="level">天魂
+                </label>
+            </div>
+        </div>
+
+        <div class="col-md-12" align="center">
+            <input type="reset" class="btn btn-default">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="btn btn-info green" id="js-query-btn"><i class="fa fa-search"></i>搜索</a>
+        </div>
+    </form>
+
+
+    <div class="col-md-12" id="js-page-body">
+    </div>
+
+
+    <script type="text/javascript">
+        BangJS.init();
+    </script>
+</div>

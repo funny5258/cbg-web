@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.funny.txstack.dao.cbg.RoleDataMapper" >
-  <resultMap id="extResultMap" extends="BaseResultMap" type="com.funny.txstack.entity.cbg.RoleDataEntity">
+<mapper namespace="com.funny.txstack.dao.cbg.CbgDataMapper" >
+  <resultMap id="extResultMap" extends="BaseResultMap" type="com.funny.txstack.entity.cbg.CbgDataEntity">
     <result column="name" property="name" jdbcType="VARCHAR" />
     <result column="url" property="url" jdbcType="VARCHAR" />
     <result column="price" property="price" jdbcType="INTEGER" />
@@ -9,7 +9,7 @@
     <result column="exp_time" property="expTime" jdbcType="VARCHAR" />
   </resultMap>
   
-  <select id="findByCondition" resultMap="extResultMap" parameterType="com.funny.txstack.entity.cbg.RoleSearch" >
+  <select id="findByCondition" resultMap="extResultMap" parameterType="com.funny.txstack.entity.cbg.CbgSearch" >
     select r.id,r.name,r.url,r.price,r.jiahu,
     lv,xiuwei,equ_xiuwei,sch,pattack_max,mattack_max,pattack_min,mattack_min,
     hit,modadd,cri_add_p,cri_sub_p,mdef,pdef,inprotect,avoid,critical,sex,

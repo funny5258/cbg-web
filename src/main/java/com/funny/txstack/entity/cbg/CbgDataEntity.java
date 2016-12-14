@@ -2,7 +2,7 @@ package com.funny.txstack.entity.cbg;
 
 import com.funny.txstack.common.BaseEntity;
 
-public class RoleDataEntity extends BaseEntity {
+public class CbgDataEntity extends BaseEntity {
     private static final long serialVersionUID = 1480294573373L;
 
     /**

@@ -33,9 +33,9 @@
                         $!role.other
                 <td style="text-align: center;">
                     <a class="btn btn-primary" onclick="window.open('$!role.url')">购买</a>
-                    <a class="btn btn-info" onclick="RoleJS.detail('$!role.name','$!role.lv','$!role.sch')">英雄榜</a>
+                    <a class="btn btn-info" onclick="CbgJS.detail('$!role.name','$!role.lv','$!role.sch')">英雄榜</a>
                     #if($!showDelBtn==1)
-                        <a class="btn btn-danger" onclick="RoleJS.soldOut('$!role.id')">下架</a>
+                        <a class="btn btn-danger" onclick="CbgJS.soldOut('$!role.id')">下架</a>
                     #end
                 </td>
             </tr>
@@ -57,7 +57,7 @@
     <div class="col-md-6 pull-right" id="js-bootpag" style="text-align: right;"></div>
 
     <script type="text/javascript">
-        RoleJS.initPage('$!pageBean.pages', '$!pageBean.pageNum');
+        CbgJS.initPage('$!pageBean.pages', '$!pageBean.pageNum');
     </script>
 </div>
 #end

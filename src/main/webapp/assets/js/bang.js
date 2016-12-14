@@ -1,8 +1,8 @@
-var RoleJS = function(){
+var BangJS = function(){
     var submitForm = function(){
         $("#search-form").ajaxSubmit({
             type: 'post', // 提交方式 get/post
-            url: "/page",
+            url: "/getBangPage",
             success: function(data) { // data 保存提交后返回的数据，一般为 json 数据
                 // 此处可对 data 作相关处理
                 $("#js-page-body").html(data);
