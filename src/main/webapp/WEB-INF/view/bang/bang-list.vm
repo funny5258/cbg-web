@@ -66,12 +66,6 @@
                 <label class="checkbox-inline duiqi">
                     <input type="radio" value="79" name="level">79战场
                 </label>
-                <label class="checkbox-inline duiqi">
-                    <input type="radio" value="85" name="level">地魂
-                </label>
-                <label class="checkbox-inline duiqi">
-                    <input type="radio" value="90" name="level">天魂
-                </label>
             </div>
         </div>
 
