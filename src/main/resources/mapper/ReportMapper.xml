@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.funny.txstack.dao.cbg.ReportMapper">
+    <resultMap id="extResultMap" type="com.funny.txstack.entity.cbg.ReportEntity">
+        <result column="family" property="family" jdbcType="VARCHAR"/>
+        <result column="server" property="server" jdbcType="VARCHAR"/>
+        <result column="equXiuwei" property="equXiuwei" jdbcType="INTEGER"/>
+        <result column="equ" property="equ" jdbcType="INTEGER"/>
+        <result column="xiuwei" property="xiuwei" jdbcType="INTEGER"/>
+        <result column="school" property="school" jdbcType="INTEGER"/>
+        <result column="count" property="count" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <select id="getSchoolCount" resultMap="extResultMap">
+        select school,count(1) as count from bang_role t where `level`=79 group by t.school order by t.school
+    </select>
+
+    <select id="getXiuweiCount" resultMap="extResultMap">
+        <![CDATA[
+        select a.xiuwei_level xiuwei,count(1) as count from (
+        select case when t.xiuwei < 30000 then 1
+        when t.xiuwei >=30000 and t.xiuwei < 35000 then 2
+        when t.xiuwei >=35000 and t.xiuwei < 40000 then 3
+        when t.xiuwei >=40000 and t.xiuwei < 45000 then 4
+        when t.xiuwei >=45000 and t.xiuwei < 50000 then 5
+        when t.xiuwei >=50000 and t.xiuwei < 55000 then 6
+        when t.xiuwei >=55000 and t.xiuwei < 60000 then 7
+        when t.xiuwei >=6000 then 8 end xiuwei_level
+        from bang_role t where `level`=79 ) a  group by a.xiuwei_level ]]>
+    </select>
+
+    <select id="getEquCount" resultMap="extResultMap">
+        <![CDATA[
+         select a.xiuwei_level as equ,count(1) as count from (
+        select case when t.equ_xiuwei< 60000 then 1
+        when t.equ_xiuwei >=60000 and t.equ_xiuwei < 65000 then 2
+        when t.equ_xiuwei >=65000 and t.equ_xiuwei < 70000 then 3
+        when t.equ_xiuwei >=70000 and t.equ_xiuwei < 75000 then 4
+        when t.equ_xiuwei >=75000 and t.equ_xiuwei < 80000 then 5
+        when t.equ_xiuwei >=80000 and t.equ_xiuwei < 85000 then 6
+        when t.equ_xiuwei >=85000 and t.equ_xiuwei < 90000 then 7
+        when t.equ_xiuwei >=90000 and t.equ_xiuwei < 95000 then 8
+        when t.equ_xiuwei >=95000 and t.equ_xiuwei < 100000 then 9
+        when t.equ_xiuwei >=100000 then 10 end xiuwei_level
+        from bang_role t where `level`=79 ) a  group by a.xiuwei_level ]]>
+    </select>
+
+
+    <select id="getEquXiuweiCount" resultMap="extResultMap">
+        <![CDATA[        ]]>
+    </select>
+
+    <select id="getServerCount" resultMap="extResultMap">
+        <![CDATA[      ]]>
+    </select>
+
+    <select id="getFamilyCount" resultMap="extResultMap">
+        <![CDATA[     ]]>
+    </select>
+</mapper>

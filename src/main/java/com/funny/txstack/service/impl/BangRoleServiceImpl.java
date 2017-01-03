@@ -28,6 +28,13 @@ public class BangRoleServiceImpl implements BangRoleService {
     @Override
     public PageInfo<BangRoleEntity> findByCondition(BangSearch cbgSearch) {
         PageHelper.startPage(cbgSearch.getPageNo(), cbgSearch.getPageSize());
+        if(cbgSearch.getType()==1){
+            PageHelper.orderBy(" xiuwei+equ_xiuwei desc ");
+        }else if(cbgSearch.getType()==2){
+            PageHelper.orderBy(" xiuwei desc ");
+        }else if(cbgSearch.getType()==3){
+            PageHelper.orderBy(" equ_xiuwei desc ");
+        }
         List<BangRoleEntity> roleDataEntities = bangRoleMapper.findByCondition(cbgSearch);
         return new PageInfo<>(roleDataEntities);
     }

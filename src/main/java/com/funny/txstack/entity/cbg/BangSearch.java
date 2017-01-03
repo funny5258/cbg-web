@@ -7,7 +7,7 @@ import com.funny.txstack.common.PageCondition;
  */
 public class BangSearch extends PageCondition{
     private Integer school;
-    private Integer level;
+    private Integer type;
 
     public Integer getSchool() {
         return school;
@@ -17,11 +17,11 @@ public class BangSearch extends PageCondition{
         this.school = school;
     }
 
-    public Integer getLevel() {
-        return level;
+    public Integer getType() {
+        return type;
     }
 
-    public void setLevel(Integer level) {
-        this.level = level;
+    public void setType(Integer type) {
+        this.type = type;
     }
 }

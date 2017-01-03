@@ -56,15 +56,15 @@
 
         <div class="col-md-12">
             <div style="display: inline-block">
-                <label>等级:</label>
+                <label>修为:</label>
                 <label class="checkbox-inline duiqi">
-                    <input type="radio" value="69" name="level">69战场
+                    <input type="radio" value="1" name="type" checked >总修为
                 </label>
                 <label class="checkbox-inline duiqi">
-                    <input type="radio" value="74" name="level">74战场
+                    <input type="radio" value="2" name="type">人物修为
                 </label>
                 <label class="checkbox-inline duiqi">
-                    <input type="radio" value="79" name="level">79战场
+                    <input type="radio" value="3" name="type">装备评价
                 </label>
             </div>
         </div>
