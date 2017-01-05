@@ -13,8 +13,16 @@ public class ReportEntity extends BaseEntity {
     private Integer equXiuwei;
 
     private String server;
-
+    private String area;
     private String family;
+
+    public String getArea() {
+        return area;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
 
     public Integer getCount() {
         return count;

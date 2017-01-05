@@ -39,4 +39,46 @@ public class ReportController {
         jsonResult.setSuccess(reportEntityList);
         return jsonResult;
     }
+    @RequestMapping("/report/equxiuwei")
+    @ResponseBody
+    public JsonResult equxiuwei() {
+        JsonResult jsonResult = new JsonResult();
+        List<ReportEntity>  reportEntityList =  reportService.getEquXiuweiCount();
+        jsonResult.setSuccess(reportEntityList);
+        return jsonResult;
+    }
+    @RequestMapping("/report/equ")
+    @ResponseBody
+    public JsonResult equ() {
+        JsonResult jsonResult = new JsonResult();
+        List<ReportEntity>  reportEntityList =  reportService.getEquCount();
+        jsonResult.setSuccess(reportEntityList);
+        return jsonResult;
+    }
+    @RequestMapping("/report/xiuwei")
+    @ResponseBody
+    public JsonResult xiuwei() {
+        JsonResult jsonResult = new JsonResult();
+        List<ReportEntity>  reportEntityList =  reportService.getXiuweiCount();
+        jsonResult.setSuccess(reportEntityList);
+        return jsonResult;
+    }
+
+    @RequestMapping("/report/server")
+    @ResponseBody
+    public JsonResult server() {
+        JsonResult jsonResult = new JsonResult();
+        List<ReportEntity>  reportEntityList =  reportService.getServerCount();
+        jsonResult.setSuccess(reportEntityList);
+        return jsonResult;
+    }
+
+    @RequestMapping("/report/family")
+    @ResponseBody
+    public JsonResult family() {
+        JsonResult jsonResult = new JsonResult();
+        List<ReportEntity>  reportEntityList =  reportService.getFamilyCount();
+        jsonResult.setSuccess(reportEntityList);
+        return jsonResult;
+    }
 }
