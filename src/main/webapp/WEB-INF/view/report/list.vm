@@ -1,29 +1,31 @@
+#set($page_title="【天下客栈】79等级数据")
 <style>
     .duiqi {
         vertical-align: initial;
     }
 </style>
-<script src="/assets/js/echarts.common.min.js" type="text/javascript"></script>
-<script src="/assets/js/report.js?v=12" type="text/javascript"></script>
+<script src="/assets/js/echarts.min.js" type="text/javascript"></script>
+<script src="/assets/js/shine.js" type="text/javascript"></script>
+<script src="/assets/js/report.js?v=2323" type="text/javascript"></script>
 
 <div>
     <div style="text-align: center">
-        <h1>79等级分析</h1>
-        <h3>数据来源:<a href="http://bang.tx3.163.com/bang">天下3英雄榜</a></h3>
+        <h1>【天下客栈】79等级数据</h1>
+        <h5>说明:无双服人口基础太大,修为装评不在前500的无法统计</h5>
     </div>
 
     <div class="col-md-12">
-        <div id="map_zhiye" class="col-md-6" style="width: 600px;height:400px;">>
+        <div id="map_zhiye" class="col-md-6" style="width: 600px;height:400px;">
 
         </div>
 
-        <div id="map_zongxiuwei_fenbu" class="col-md-6" style="width: 700px;height:400px;">>
+        <div id="map_zongxiuwei_fenbu" class="col-md-6" style="width: 700px;height:400px;">
 
         </div>
     </div>
 
     <div class="col-md-12">
-        <div id="map_xiuwei_fenbu" class="col-md-6" style="width: 600px;height:400px;">>
+        <div id="map_xiuwei_fenbu" class="col-md-6" style="width: 600px;height:400px;">
 
         </div>
 
@@ -33,12 +35,12 @@
     </div>
 
 
-    <div id="server_fenbu" class="col-md-12" style="width: 1000px;height:400px;">>
+    <div id="server_fenbu" class="col-md-12" style="width: 1000px;height:400px;">
 
     </div>
 
 
-    <div id="shili_fenbu" class="col-md-12" style="width: 1000px;height:400px;">>
+    <div id="shili_fenbu" class="col-md-12" style="width: 1000px;height:400px;">
 
     </div>
 

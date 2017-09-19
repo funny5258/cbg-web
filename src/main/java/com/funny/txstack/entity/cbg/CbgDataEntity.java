@@ -4,419 +4,429 @@ import com.funny.txstack.common.BaseEntity;
 
 public class CbgDataEntity extends BaseEntity {
     private static final long serialVersionUID = 1480294573373L;
-
     /**
-    * 角色id
-    */
+     * 角色id
+     */
     private String roleId;
 
     /**
-    * 炼护
-    */
+     * 炼护
+     */
     private Integer lianhu;
 
     /**
-    * 性别
-    */
+     * 性别
+     */
     private Integer sex;
-
+    private String lvText;
     /**
-    * 等级
-    */
+     * 等级
+     */
     private Integer lv;
 
     /**
-    * 神启境界
-    */
+     * 神启境界
+     */
     private Integer flySoulPhase;
 
     /**
-    * 神启等级
-    */
+     * 神启等级
+     */
     private String flySoulLv;
 
     /**
-    * 修为
-    */
+     * 修为
+     */
     private Integer xiuwei;
 
     /**
-    * 装备评价
-    */
+     * 装备评价
+     */
     private Integer equXiuwei;
 
     /**
-    * 门派
-    */
+     * 门派
+     */
     private Integer sch;
 
     /**
-    * 生命值
-    */
+     * 生命值
+     */
     private Integer mhp;
 
     /**
-    * 蓝值
-    */
+     * 蓝值
+     */
     private Integer msp;
 
     /**
-    * 最大物攻
-    */
+     * 最大物攻
+     */
     private Integer pattackMax;
 
     /**
-    * 最大法攻
-    */
+     * 最大法攻
+     */
     private Integer mattackMax;
 
     /**
-    * 最小物攻
-    */
+     * 最小物攻
+     */
     private Integer pattackMin;
 
     /**
-    * 最小法攻
-    */
+     * 最小法攻
+     */
     private Integer mattackMin;
 
     /**
-    * 命中
-    */
+     * 命中
+     */
     private Integer hit;
 
     /**
-    * 重击
-    */
+     * 重击
+     */
     private Integer modadd;
 
     /**
-    * 会心一击
-    */
+     * 会心一击
+     */
     private Integer critical;
 
     /**
-    * 附伤
-    */
+     * 附伤
+     */
     private Integer attadd;
 
     /**
-    * 诛心
-    */
+     * 诛心
+     */
     private Integer criAddP;
 
     /**
-    * 御心
-    */
+     * 御心
+     */
     private Integer criSubP;
 
     /**
-    * 法防
-    */
+     * 法防
+     */
     private Integer mdef;
 
     /**
-    * 物防
-    */
+     * 物防
+     */
     private Integer pdef;
 
     /**
-    * 破阵
-    */
+     * 破阵
+     */
     private Integer absolutelyAttack;
 
     /**
-    * 磐石
-    */
+     * 磐石
+     */
     private Integer absolutelyDefence;
 
     /**
-    * 神明
-    */
+     * 神明
+     */
     private Integer inprotect;
 
     /**
-    * 回避
-    */
+     * 回避
+     */
     private Integer avoid;
 
     /**
-    * 化解
-    */
+     * 化解
+     */
     private Integer attdef;
 
     /**
-    * 知彼
-    */
+     * 知彼
+     */
     private Integer defhuman;
 
     /**
-    * 人祸
-    */
+     * 人祸
+     */
     private Integer attackhuman;
 
     /**
-    * 身份
-    */
+     * 身份
+     */
     private Integer sract;
 
     /**
-    * 坚韧
-    */
+     * 坚韧
+     */
     private Integer srbody;
 
     /**
-    * 定力
-    */
+     * 定力
+     */
     private Integer srmind;
 
     /**
-    * 追电
-    */
+     * 追电
+     */
     private Integer movespeed;
 
     /**
-    * 疾语
-    */
+     * 疾语
+     */
     private Integer castspeed;
 
     /**
-    * 骤雨
-    */
+     * 骤雨
+     */
     private Integer attackspeed;
 
     /**
-    * 万钧
-    */
+     * 万钧
+     */
     private Integer thumpAddP;
 
     /**
-    * 铁壁
-    */
+     * 铁壁
+     */
     private Integer thumpSubP;
 
     /**
-    * 力
-    */
+     * 力
+     */
     private Integer strong;
 
     /**
-    * 体
-    */
+     * 体
+     */
     private Integer body;
 
     /**
-    * 敏
-    */
+     * 敏
+     */
     private Integer quick;
 
     /**
-    * 疾
-    */
+     * 疾
+     */
     private Integer dodge;
 
     /**
-    * 魂
-    */
+     * 魂
+     */
     private Integer soul;
 
     /**
-    * 念
-    */
+     * 念
+     */
     private Integer mind;
 
     /**
-    * 孩子最大等级
-    */
+     * 孩子最大等级
+     */
     private Integer haiziLv;
 
     /**
-    * 孩子最大资质
-    */
+     * 孩子最大资质
+     */
     private Integer haiziZizhi;
 
     /**
-    * 孩子最大武学
-    */
+     * 孩子最大武学
+     */
     private Integer haiziWuxue;
 
     /**
-    * 御风行等级
-    */
+     * 御风行等级
+     */
     private Integer lightMenpai;
 
     /**
-    * 觉醒等级
-    */
+     * 觉醒等级
+     */
     private Integer awakeLv;
 
     /**
-    * 封禁之力等级
-    */
+     * 封禁之力等级
+     */
     private Integer releaseLv;
 
     /**
-    * 觉醒度
-    */
+     * 觉醒度
+     */
     private Integer awakeValue;
 
     /**
-    * 溟炼值
-    */
+     * 溟炼值
+     */
     private Integer minglian;
 
     /**
-    * 黛染青花
-    */
+     * 黛染青花
+     */
     private Integer qinghua;
 
     /**
-    * 玄素天成
-    */
+     * 玄素天成
+     */
     private Integer xuansu;
 
     /**
-    * 孤鸿月影
-    */
+     * 孤鸿月影
+     */
     private Integer guhong;
 
     /**
-    * 降云思暖
-    */
+     * 降云思暖
+     */
     private Integer xiangyun;
 
     /**
-    * 岸芷汀兰
-    */
+     * 岸芷汀兰
+     */
     private Integer tinglan;
 
     /**
-    * 海棠未雨
-    */
+     * 海棠未雨
+     */
     private Integer haitang;
 
     /**
-    * 飞天华裘
-    */
+     * 飞天华裘
+     */
     private Integer feihuhuaqiu;
 
     /**
-    * 天狐霓裳
-    */
+     * 天狐霓裳
+     */
     private Integer tianhulishang;
 
     /**
-    * 仙狐彩诀
-    */
+     * 仙狐彩诀
+     */
     private Integer xianhucaijue;
 
     /**
-    * 沧海桑田
-    */
+     * 沧海桑田
+     */
     private Integer canghaisangtian;
 
     /**
-    * 夜雨江南
-    */
+     * 夜雨江南
+     */
     private Integer yeyujiangnan;
 
     /**
-    * 挥砍防护
-    */
+     * 挥砍防护
+     */
     private Integer huikanfanghu;
 
     /**
-    * 盾刺防护
-    */
+     * 盾刺防护
+     */
     private Integer duncifanghu;
 
     /**
-    * 火元防护
-    */
+     * 火元防护
+     */
     private Integer huoyuanfanghu;
 
     /**
-    * 水风毒防护
-    */
+     * 水风毒防护
+     */
     private Integer shuifengdufanghu;
 
     /**
-    * 完封
-    */
+     * 完封
+     */
     private Integer wanfeng;
 
     /**
-    * 护心
-    */
+     * 护心
+     */
     private Integer huxin;
 
     /**
-    * 是否有太初
-    */
+     * 是否有太初
+     */
     private Integer taichu;
 
     /**
-    * 是否有势力副手
-    */
+     * 是否有势力副手
+     */
     private Integer shilifushou;
 
     /**
-    * 喜洋洋
-    */
+     * 喜洋洋
+     */
     private Integer xiyangyang;
 
     /**
-    * 马王爷
-    */
+     * 马王爷
+     */
     private Integer mawangye;
 
     /**
-    * 万胜天尊
-    */
+     * 万胜天尊
+     */
     private Integer wanshengtianzun;
 
     /**
-    * 业火
-    */
+     * 业火
+     */
     private Integer yehuo;
 
     /**
-    * 毒浪鬼
-    */
+     * 毒浪鬼
+     */
     private Integer dulanggui;
 
     /**
-    * 是否vip9
-    */
+     * 是否vip9
+     */
     private Integer vip9;
 
     /**
-    * 孩子天域
-    */
+     * 孩子天域
+     */
     private Integer haiziTiayu;
 
     /**
-    * 碧海惊涛
-    */
+     * 碧海惊涛
+     */
     private Integer bihai;
 
     /**
-    * 蟾宫折桂
-    */
+     * 蟾宫折桂
+     */
     private Integer changong;
 
     /**
-    * 鹰击长空
-    */
+     * 鹰击长空
+     */
     private Integer changkong;
     /**
      * 凤羽紫凰
      */
     private Integer fengyuzihuang;
 
+    private Integer shuyinghengxie;
+    private Integer tianyu;
+    private Integer jinbi;
+    private Integer junzi;
+    private Integer dayu;
+    private Integer yuanbao;
 
-    /**--------------------------
-     * 时装
+    private Integer haiziJiahu;
+    private Integer renwuTianyu;
+    private Integer maorixingguan;
+    private Integer zhanying;
+
+    /**
+     * -------------------------- 时装
      */
     private String shizhuang;
     /**
@@ -436,21 +446,38 @@ public class CbgDataEntity extends BaseEntity {
      */
     private String url;
     /**
-     *价格
+     * 价格
      */
     private Integer price;
     /**
-     *加护值
+     * 加护值
      */
     private Integer jiahu;
     /**
-     *过期时间
+     * 过期时间
      */
     private String expTime;
     /**
      * 角色名
      */
     private String name;
+
+    private Integer honglian;
+
+    private Integer leizuan;
+
+
+    public String getLvText() {
+        switch (flySoulPhase) {
+            case 0:
+                return lv + "";
+            case 1:
+            case 2:
+                return flySoulLv;
+            default:
+                return lv + "";
+        }
+    }
 
     public Integer getFengyuzihuang() {
         return fengyuzihuang;
@@ -1178,5 +1205,101 @@ public class CbgDataEntity extends BaseEntity {
 
     public Integer getChangkong() {
         return changkong;
+    }
+
+    public Integer getShuyinghengxie() {
+        return shuyinghengxie;
+    }
+
+    public void setShuyinghengxie(Integer shuyinghengxie) {
+        this.shuyinghengxie = shuyinghengxie;
+    }
+
+    public Integer getTianyu() {
+        return tianyu;
+    }
+
+    public void setTianyu(Integer tianyu) {
+        this.tianyu = tianyu;
+    }
+
+    public Integer getJinbi() {
+        return jinbi;
+    }
+
+    public void setJinbi(Integer jinbi) {
+        this.jinbi = jinbi;
+    }
+
+    public Integer getJunzi() {
+        return junzi;
+    }
+
+    public void setJunzi(Integer junzi) {
+        this.junzi = junzi;
+    }
+
+    public Integer getDayu() {
+        return dayu;
+    }
+
+    public void setDayu(Integer dayu) {
+        this.dayu = dayu;
+    }
+
+    public Integer getYuanbao() {
+        return yuanbao;
+    }
+
+    public void setYuanbao(Integer yuanbao) {
+        this.yuanbao = yuanbao;
+    }
+
+    public Integer getHaiziJiahu() {
+        return haiziJiahu;
+    }
+
+    public void setHaiziJiahu(Integer haiziJiahu) {
+        this.haiziJiahu = haiziJiahu;
+    }
+
+    public Integer getRenwuTianyu() {
+        return renwuTianyu;
+    }
+
+    public void setRenwuTianyu(Integer renwuTianyu) {
+        this.renwuTianyu = renwuTianyu;
+    }
+
+    public Integer getMaorixingguan() {
+        return maorixingguan;
+    }
+
+    public void setMaorixingguan(Integer maorixingguan) {
+        this.maorixingguan = maorixingguan;
+    }
+
+    public Integer getZhanying() {
+        return zhanying;
+    }
+
+    public void setZhanying(Integer zhanying) {
+        this.zhanying = zhanying;
+    }
+
+    public Integer getHonglian() {
+        return honglian;
+    }
+
+    public void setHonglian(Integer honglian) {
+        this.honglian = honglian;
+    }
+
+    public Integer getLeizuan() {
+        return leizuan;
+    }
+
+    public void setLeizuan(Integer leizuan) {
+        this.leizuan = leizuan;
     }
 }

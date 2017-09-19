@@ -6,11 +6,9 @@ $(function () {
     init_server_fenbu();
     init_shili_fenbu();
 });
-
-
 function init_zhiye() {
     // 基于准备好的dom，初始化echarts实例
-    var map_zhiye = echarts.init(document.getElementById('map_zhiye'));
+    var map_zhiye = echarts.init(document.getElementById('map_zhiye'),'shine');
     var school_count = new Array();
     $.ajax({
         type: 'get',
@@ -77,11 +75,9 @@ function init_zhiye() {
     // 使用刚指定的配置项和数据显示图表。
     map_zhiye.setOption(map_zhiye_option);
 }
-
-
 function init_xiuwei() {
     // 基于准备好的dom，初始化echarts实例
-    var map_xiuwei_fenbu = echarts.init(document.getElementById('map_xiuwei_fenbu'));
+    var map_xiuwei_fenbu = echarts.init(document.getElementById('map_xiuwei_fenbu'),'shine');
     var xiuwei_count = new Array();
     $.ajax({
         type: 'get',
@@ -144,11 +140,9 @@ function init_xiuwei() {
     // 使用刚指定的配置项和数据显示图表。
     map_xiuwei_fenbu.setOption(map_xiuwei_fenbu_option);
 }
-
-
 function init_zhuangbei() {
     // 基于准备好的dom，初始化echarts实例
-    var map_zhuangbei_fenbu = echarts.init(document.getElementById('map_zhuangbei_fenbu'));
+    var map_zhuangbei_fenbu = echarts.init(document.getElementById('map_zhuangbei_fenbu'),'shine');
     var equ_count = new Array();
     $.ajax({
         type: 'get',
@@ -213,11 +207,9 @@ function init_zhuangbei() {
     // 使用刚指定的配置项和数据显示图表。
     map_zhuangbei_fenbu.setOption(map_zhuangbei_fenbu_option);
 }
-
-
 function init_zongxiuwei() {
     // 基于准备好的dom，初始化echarts实例
-    var map_zongxiuwei_fenbu = echarts.init(document.getElementById('map_zongxiuwei_fenbu'));
+    var map_zongxiuwei_fenbu = echarts.init(document.getElementById('map_zongxiuwei_fenbu'),'shine');
     var equxiuwei_count = new Array();
     $.ajax({
         type: 'get',
@@ -282,12 +274,9 @@ function init_zongxiuwei() {
     // 使用刚指定的配置项和数据显示图表。
     map_zongxiuwei_fenbu.setOption(map_zongxiuwei_fenbu_option);
 }
-
-
 function init_server_fenbu() {
     // 基于准备好的dom，初始化echarts实例
-    var server_fenbu = echarts.init(document.getElementById('server_fenbu'));
-
+    var server_fenbu = echarts.init(document.getElementById('server_fenbu'),'shine');
     var server_name_count = new Array();
     var server_count = new Array();
     $.ajax({
@@ -310,7 +299,6 @@ function init_server_fenbu() {
             return false;
         }
     });
-
     // 指定图表的配置项和数据
     var server_fenbu_option = {
         title: {
@@ -337,12 +325,9 @@ function init_server_fenbu() {
     // 使用刚指定的配置项和数据显示图表。
     server_fenbu.setOption(server_fenbu_option);
 }
-
-
 function init_shili_fenbu() {
     // 基于准备好的dom，初始化echarts实例
-    var shili_fenbu = echarts.init(document.getElementById('shili_fenbu'));
-
+    var shili_fenbu = echarts.init(document.getElementById('shili_fenbu'),'shine');
     var family_name_count = new Array();
     var family_count = new Array();
     $.ajax({
@@ -391,4 +376,3 @@ function init_shili_fenbu() {
     // 使用刚指定的配置项和数据显示图表。
     shili_fenbu.setOption(shili_fenbu_option);
 }
-

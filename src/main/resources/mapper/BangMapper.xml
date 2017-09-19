@@ -13,7 +13,7 @@
   
   <select id="findByCondition" resultMap="extResultMap" parameterType="com.funny.txstack.entity.cbg.BangSearch" >
     select t.role_id,t.`name`,t.`level`,t.school,CONCAT(t.area,'-',t.`server`) server,t.equ_xiuwei,t.xiuwei
-    from bang_role t where level = 79
+    from bang_role t where level = 79 and t.xiuwei &gt;= 30000 and t.equ_xiuwei &gt;= 60000
     <if test="school != null " >
       and school =  #{school}
     </if>

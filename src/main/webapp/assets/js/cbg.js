@@ -37,6 +37,14 @@ var CbgJS = function(){
         $("#js-query-btn").click(function(){
             submitForm();
         });
+        $("#js-reset-btn").click(function () {
+            $('#search-form')[0].reset()
+        })
+        submitForm();
+    };
+    var buy = function(id,url){
+        update(id);
+        window.open(url);
     };
     var soldOut = function(id){
         if(window.confirm("确定要删除吗？")){
@@ -61,10 +69,23 @@ var CbgJS = function(){
 
 
     };
-    var detail = function(name,level,school){
-        if(level>80){
-            level=80;
-        }
+    var update = function (id) {
+        $.ajax({
+            type:'post',
+            url:'/update',
+            data:{'id':id},
+            dataType:'json',
+            success:function (data) {
+            },
+            error:function (XMLHttpRequest, textStatus, errorThrown) {
+                alert(errorThrown)
+                return false;
+            }
+        });
+    }
+
+    var detail = function(id,name,level,school){
+        update(id);
         var url = "http://bang.tx3.163.com/bang/search#name="+name+"&school="+school+"&level="+level
         window.open(url);
     };
@@ -72,14 +93,17 @@ var CbgJS = function(){
         init: function () {
             init();
         },
+        buy: function (id,url) {
+            buy(id,url);
+        },
         initPage: function (totalPage, pageNum) {
             pageAjax(totalPage, pageNum);
         },
         soldOut: function (id) {
             soldOut(id);
         },
-        detail: function (name, level, school) {
-            detail(name, level, school);
+        detail: function (id,name, level, school) {
+            detail(id,name, level, school);
         }
     }
 }();

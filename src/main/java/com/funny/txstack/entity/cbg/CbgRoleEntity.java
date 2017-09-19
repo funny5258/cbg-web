@@ -36,6 +36,10 @@ public class CbgRoleEntity extends BaseEntity {
     * cbg链接
     */
     private String url;
+    /**
+     * json数据
+     */
+    private String dataUrl;
 
     /**
     * 
@@ -109,5 +113,13 @@ public class CbgRoleEntity extends BaseEntity {
 
     public Integer getCraw() {
         return craw;
+    }
+
+    public String getDataUrl() {
+        return dataUrl;
+    }
+
+    public void setDataUrl(String dataUrl) {
+        this.dataUrl = dataUrl;
     }
 }

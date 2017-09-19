@@ -33,26 +33,29 @@ public class CbgController {
     public ModelAndView index(Integer showDelBtn) {
         ModelAndView modelAndView = new ModelAndView("/cbg/cbg-list");
         modelAndView.addObject("showDelBtn", showDelBtn == null ? 0 : showDelBtn);
+
+        String lastDate = cbgRoleService.findLatestUpdate();
+        modelAndView.addObject("lastDate", lastDate);
         return modelAndView;
     }
 
-    @RequestMapping("/api/query")
-    @ResponseBody
-    public JsonResult query(CbgSearch cbgSearch) {
-        JsonResult jsonResult = new JsonResult();
-        try {
-            makeSearch(cbgSearch);
-            PageInfo<CbgDataEntity> pageInfo = cbgRoleService.findByCondition(cbgSearch);
-            List<CbgDataEntity> roleList = pageInfo.getList();
-            makeResult(roleList);
-            pageInfo.setList(roleList);
-            jsonResult.setSuccess(pageInfo);
-        } catch (Exception e) {
-            logger.error("查询异常,cbgSearch={}", JSON.toJSONString(cbgSearch), e);
-            jsonResult.setFail("查询异常");
-        }
-        return jsonResult;
-    }
+    // @RequestMapping("/api/query")
+    // @ResponseBody
+    // public JsonResult query(CbgSearch cbgSearch) {
+    // JsonResult jsonResult = new JsonResult();
+    // try {
+    // makeSearch(cbgSearch);
+    // PageInfo<CbgDataEntity> pageInfo = cbgRoleService.findByCondition(cbgSearch);
+    // List<CbgDataEntity> roleList = pageInfo.getList();
+    // makeResult(roleList);
+    // pageInfo.setList(roleList);
+    // jsonResult.setSuccess(pageInfo);
+    // } catch (Exception e) {
+    // logger.error("查询异常,cbgSearch={}", JSON.toJSONString(cbgSearch), e);
+    // jsonResult.setFail("查询异常");
+    // }
+    // return jsonResult;
+    // }
 
     @RequestMapping("/delete")
     @ResponseBody
@@ -68,16 +71,35 @@ public class CbgController {
         return jsonResult;
     }
 
+    @RequestMapping("/update")
+    @ResponseBody
+    public JsonResult update(Long id) {
+        JsonResult jsonResult = new JsonResult();
+        try {
+            cbgRoleService.updateStatus(id);
+            jsonResult.setSuccess();
+        } catch (Exception e) {
+            logger.error("更新角色状态失败,id={}", id, e);
+            jsonResult.setFail("更新角色状态失败");
+        }
+        return jsonResult;
+    }
+
     @RequestMapping("/getCbgPage")
     public ModelAndView page(CbgSearch cbgSearch) throws Exception {
         ModelAndView modelAndView = new ModelAndView("/cbg/cbg-page");
-        makeSearch(cbgSearch);
-        PageInfo<CbgDataEntity> pageInfo = cbgRoleService.findByCondition(cbgSearch);
-        modelAndView.addObject("pageBean", pageInfo);
-        List<CbgDataEntity> roleList = pageInfo.getList();
-        makeResult(roleList);
-        modelAndView.addObject("roleList", roleList);
-        modelAndView.addObject("showDelBtn", cbgSearch.getShowDelBtn());
+        try {
+            makeSearch(cbgSearch);
+            PageInfo<CbgDataEntity> pageInfo = cbgRoleService.findByCondition(cbgSearch);
+            modelAndView.addObject("pageBean", pageInfo);
+            List<CbgDataEntity> roleList = pageInfo.getList();
+            makeResult(roleList);
+            modelAndView.addObject("roleList", roleList);
+            modelAndView.addObject("showDelBtn", cbgSearch.getShowDelBtn());
+        } catch (Exception e) {
+            e.printStackTrace();
+            logger.error("查询角色异常,cbgSearch={}", JSON.toJSONString(cbgSearch), e);
+        }
         return modelAndView;
     }
 
@@ -100,13 +122,13 @@ public class CbgController {
             for (CbgDataEntity entity : roleList) {
                 StringBuffer shizhuang = new StringBuffer();
                 if (entity.getQinghua() != null && entity.getQinghua() == 1) {
-                    shizhuang.append("青花;");
+                    shizhuang.append("<font color='red'>青花;</font>");
                 }
                 if (entity.getXuansu() != null && entity.getXuansu() == 1) {
-                    shizhuang.append("玄素;");
+                    shizhuang.append("<font color='red'>玄素;</font>");
                 }
                 if (entity.getHaitang() != null && entity.getHaitang() == 1) {
-                    shizhuang.append("海棠;");
+                    shizhuang.append("<font color='red'>海棠;</font>");
                 }
                 if (entity.getGuhong() != null && entity.getGuhong() == 1) {
                     shizhuang.append("孤鸿;");
@@ -144,12 +166,15 @@ public class CbgController {
                 if (entity.getFengyuzihuang() == 1) {
                     shizhuang.append("凤羽紫凰;");
                 }
+                if (entity.getShuyinghengxie() == 1) {
+                    shizhuang.append("疏影横斜;");
+                }
                 StringBuffer teji = new StringBuffer();
                 if (entity.getHuxin() == 1) {
-                    teji.append("护心;");
+                    teji.append("<font color='red'>护心;</font>");
                 }
                 if (entity.getWanfeng() == 1) {
-                    teji.append("完封;");
+                    teji.append("<font color='red'>完封;</font>");
                 }
                 if (entity.getHuikanfanghu() == 1) {
                     teji.append("挥砍防护;");
@@ -168,10 +193,13 @@ public class CbgController {
                     other.append("太初;");
                 }
                 if (entity.getShilifushou() == 1) {
-                    other.append("势力副手;");
+                    other.append("<font color='red'>势力副手;</font>");
+                }
+                if (entity.getRenwuTianyu() == 1) {
+                    other.append("天域四代;");
                 }
                 if (entity.getLightMenpai() != null && entity.getLightMenpai() == 1) {
-                    other.append("门派轻功;");
+                    other.append("<font color='red'>门派轻功;</font>");
                 }
                 if (entity.getVip9() == 1) {
                     other.append("vip9;");
@@ -194,6 +222,17 @@ public class CbgController {
                 }
                 if (entity.getDulanggui() == 1) {
                     yuanhun.append("毒浪鬼;");
+                }
+                if (entity.getMaorixingguan() == 1) {
+                    yuanhun.append("昴日星官;");
+                }
+
+                if (entity.getLeizuan() != null && entity.getLeizuan() > 1) {
+                    yuanhun.append("雷钻" + entity.getLeizuan() + ";");
+                }
+
+                if (entity.getHonglian() != null && entity.getHonglian() > 1) {
+                    yuanhun.append("红莲" + entity.getHonglian() + ";");
                 }
                 entity.setShizhuang(shizhuang.toString());
                 entity.setTeji(teji.toString());

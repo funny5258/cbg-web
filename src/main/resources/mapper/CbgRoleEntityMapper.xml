@@ -9,13 +9,14 @@
     <result column="server_id" property="serverId" jdbcType="VARCHAR" />
     <result column="price" property="price" jdbcType="INTEGER" />
     <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="data_url" property="dataUrl" jdbcType="VARCHAR" />
     <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
     <result column="exp_time" property="expTime" jdbcType="TIMESTAMP" />
     <result column="yn" property="yn" jdbcType="VARCHAR" />
     <result column="craw" property="craw" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
-    id, role_id, jiahu, name, server_id, price, url, create_time, exp_time, yn, craw
+    id, role_id, jiahu, name, server_id, price, url,data_url, create_time, exp_time, yn, craw
   </sql>
   <insert id="insert" parameterType="com.funny.txstack.entity.cbg.CbgRoleEntity" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
@@ -53,12 +54,11 @@
         exp_time = #{expTime,jdbcType=TIMESTAMP},
       </if>
       <if test="yn != null" >
-        yn = #{yn,jdbcType=VARCHAR},
+        yn = #{yn,jdbcType=INTEGER},
       </if>
       <if test="craw != null" >
-        craw = #{craw,jdbcType=INTEGER},
+        craw = #{craw,jdbcType=INTEGER}
       </if>
-      UPDATE_TIME =  now()
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>

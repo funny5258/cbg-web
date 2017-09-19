@@ -9,7 +9,6 @@ var BangJS = function(){
             }
         });
     };
-
     var pageAjax = function(totalPage, pageNum){
         $('#js-bootpag').bootpag({
             total: totalPage,
@@ -32,10 +31,33 @@ var BangJS = function(){
             $("#js-bootpag-num").val("1");
         });
     };
-
     var init = function(){
         $("#js-query-btn").click(function(){
             submitForm();
+        });
+        $("#js-add-btn").click(function() {
+            var bang_url = $('#bang_url').val();
+            if (bang_url == null || bang_url == 0) {
+                alert("英雄榜链接不能为空!");
+                return;
+            }
+            $.ajax({
+                url: "/bang/add",
+                type: "post",
+                data:{'bang_url':bang_url},
+                dataType:'json',
+                success: function (r) {
+                    if (r.returncode == 0) {
+                        $("#ajax-modal").modal("hide");
+                        submitForm();
+                    } else {
+                        alert(r.message);
+                    }
+                },
+                error: function (msg, textStatus) {
+                    alert(msg);
+                }
+            });
         });
     };
     var soldOut = function(id){
@@ -58,8 +80,6 @@ var BangJS = function(){
                 }
             });
         }
-
-
     };
     var detail = function(name,level,school){
         if(level>80){

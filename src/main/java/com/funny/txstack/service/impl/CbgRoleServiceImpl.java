@@ -1,7 +1,12 @@
 package com.funny.txstack.service.impl;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.funny.txstack.dao.cbg.CbgRoleMapper;
+import com.funny.txstack.entity.cbg.CbgRoleEntity;
+import com.funny.txstack.utils.HttpClientUtil;
 import com.github.pagehelper.PageHelper;
+import com.google.common.base.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +16,7 @@ import com.funny.txstack.entity.cbg.CbgSearch;
 import com.funny.txstack.service.CbgRoleService;
 import com.github.pagehelper.PageInfo;
 
+import java.net.URL;
 import java.util.List;
 
 /**
@@ -29,10 +35,10 @@ public class CbgRoleServiceImpl implements CbgRoleService {
         if (cbgSearch.getPrice_des() == null) {
             PageHelper.orderBy("r.id desc");
         } else {
-            if (cbgSearch.getPrice_des() == 1) {
-                PageHelper.orderBy("r.price asc");
-            } else if (cbgSearch.getPrice_des() == 2) {
+            if (cbgSearch.getPrice_des() == 2) {
                 PageHelper.orderBy("r.price desc");
+            }else{
+                PageHelper.orderBy("r.id desc");
             }
         }
         List<CbgDataEntity> roleDataEntities = cbgDataMapper.findByCondition(cbgSearch);
@@ -42,5 +48,34 @@ public class CbgRoleServiceImpl implements CbgRoleService {
     @Override
     public int deleteRole(Long id) {
         return cbgRoleMapper.deleteRole(id);
+    }
+
+    @Override
+    public String findLatestUpdate() {
+        return cbgDataMapper.findLatestUpdate();
+    }
+
+    @Override
+    public void updateStatus(Long id) {
+        CbgRoleEntity cbgRoleEntity = cbgRoleMapper.findById(id);
+        if (cbgRoleEntity != null && !Strings.isNullOrEmpty(cbgRoleEntity.getDataUrl())) {
+            String httpResult = HttpClientUtil.get(cbgRoleEntity.getDataUrl());
+            JSONObject jsonObject = JSON.parseObject(httpResult);
+            String json_status = jsonObject.getString("status");
+            if (json_status == null || !json_status.equals("1")) {
+                return;
+            }
+            JSONObject equip = jsonObject.getJSONObject("equip");
+            if (equip == null) {
+                return;
+            }
+            String equip_status = equip.getString("status");
+            if (!"2".equals(equip_status)) {
+                CbgRoleEntity updateRole = new CbgRoleEntity();
+                updateRole.setYn(0);
+                updateRole.setId(cbgRoleEntity.getId());
+                cbgRoleMapper.updateByIdSelected(updateRole);
+            }
+        }
     }
 }

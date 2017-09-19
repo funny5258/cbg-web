@@ -10,13 +10,14 @@
   </resultMap>
   
   <select id="findByCondition" resultMap="extResultMap" parameterType="com.funny.txstack.entity.cbg.CbgSearch" >
-    select r.id,r.name,r.url,r.price,r.jiahu,
+    select r.id,r.name,r.url,r.price,r.jiahu,fly_soul_phase, fly_soul_lv,
     lv,xiuwei,equ_xiuwei,sch,pattack_max,mattack_max,pattack_min,mattack_min,
     hit,modadd,cri_add_p,cri_sub_p,mdef,pdef,inprotect,avoid,critical,sex,
     attackhuman,movespeed,castspeed,lianhu,qinghua,xuansu,guhong,
     xiangyun,tinglan,haitang,feihuhuaqiu,tianhulishang,xianhucaijue,canghaisangtian,yeyujiangnan,
     huikanfanghu,duncifanghu,huoyuanfanghu,shuifengdufanghu,wanfeng,huxin,
-    taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui,haizi_tiayu,vip9,bihai,changong,changkong,fengyuzihuang
+    taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui,haizi_tiayu,vip9,bihai,changong,changkong,fengyuzihuang,
+    shuyinghengxie,tianyu,jinbi,junzi,dayu,yuanbao,haizi_jiahu,renwu_tianyu,mourixingguan,zhanying,leizuan,honglian
     from cbg_role r left join cbg_data d on r.id =d.role_id
     where r.yn =1
     <if test="lv_level != null " >
@@ -31,10 +32,10 @@
           and lv &gt;= 75 and lv &lt;= 79
         </when>
         <when test="lv_level == 4">
-          and lv &gt;= 80 and lv &lt;= 85
+          and lv = 80 and fly_soul_phase =1
         </when>
         <when test="lv_level == 5">
-          and lv &gt;= 86 and lv &lt;= 90
+          and lv = 80 and fly_soul_phase =2
         </when>
         <otherwise>
           and lv &gt;= 69
@@ -316,5 +317,68 @@
       and fengyuzihuang =1
     </if>
 
+    <if test="maorixingguan != null " >
+      and mourixingguan =1
+    </if>
+
+    <if test="renwuTianyu != null " >
+      and renwu_tianyu =1
+    </if>
+
+    <if test="shuyinghengxie != null " >
+      and shuyinghengxie =1
+    </if>
+
+    <if test="zhanying != null " >
+      and zhanying =1
+    </if>
+
+    <if test="haiziJiahu != null " >
+      and haizi_jiahu &gt;= #{haiziJiahu}
+    </if>
+
+    <if test="tianyu != null " >
+      and tianyu &gt;= #{tianyu}
+    </if>
+
+    <if test="junzi != null " >
+      and junzi &gt;= #{junzi}
+    </if>
+
+    <if test="jinbi != null " >
+      and jinbi &gt;= #{jinbi}
+    </if>
+
+    <if test="yuanbao != null " >
+      and yuanbao &gt;= #{yuanbao}
+    </if>
+
+    <if test="dayu != null " >
+      and dayu &gt;= #{dayu}
+    </if>
+
+    <if test="qianyang != null " >
+      and qianyang =1
+    </if>
+
+    <if test="moyinli != null " >
+      and moyinli =1
+    </if>
+
+    <if test="mudanyuan != null " >
+      and mudanyuan =1
+    </if>
+
+    <if test="yinglongya != null " >
+      and yinglongya =1
+    </if>
+
+    <if test="xuelongya != null " >
+      and xuelongya =1
+    </if>
+  </select>
+
+  <select id="findLatestUpdate" resultType="string" >
+    select  max(create_time)  from cbg_role
   </select>
 </mapper>

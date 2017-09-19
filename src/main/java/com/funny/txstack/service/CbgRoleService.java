@@ -11,4 +11,8 @@ public interface CbgRoleService {
     PageInfo<CbgDataEntity> findByCondition(CbgSearch cbgSearch);
 
     int deleteRole(Long id);
+
+    String findLatestUpdate();
+
+    void updateStatus(Long id);
 }

@@ -1,385 +1,612 @@
-<style>
-    .duiqi {
-        vertical-align: initial;
-    }
-</style>
-<script src="/assets/js/cbg.js?v=555" type="text/javascript"></script>
+#set($layout="layout/none.vm")
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天下客栈</title>
+    <meta name="description" content="提供天下3周边的游戏查询服务"/>
+    <meta name="keywords" content="天下客栈,天下3藏宝阁高级查询,79战场排行榜,天下3英雄榜,天下3"/>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/index.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<header>
+    <section class="container">
+        <div class="row">
+          <span class="pull-left clearfix">
+            <a href="javascript:;"><img src="/assets/images/qq.png" alt="">官方QQ群：524580307</a>
+          </span>
 
-
-<div style="margin-left: 20px;margin-right: 20px;">
-
-    <div class="col-md-12" align="right">
-        <label><a href="#">author@方小栈</a></label>
+            <span class="pull-right">
+            <span class="header-divider"></span>
+            <a href="#" class="heart" onclick="addToFavorites(this,'天下客栈-藏宝阁高级查询','http://txstack.com/')">收藏</a>
+          </span>
+        </div>
+    </section>
+</header>
+<section class="container">
+    <div class="row logo">
+        <img src="/assets/images/logo.png" alt="">
         <br>
-        <label>广告招商问题建议QQ群:524580307</label>
+        <a target="_blank" class="btn" href="/bang" >79英雄榜
+        <a target="_blank" class="btn" href="/report" >79数据分析
+        <a target="_blank" class="btn" href="http://tx3.163.com/index.html">天下3官网</a>
+        <a target="_blank" class="btn" href="http://tx3.netease.com/">天下3论坛</a>
+        <a target="_blank" class="btn" href="http://tx3.cbg.163.com/cgi-bin/equipquery.py?act=show_overall_search">天下3藏宝阁</a>
+        <a target="_blank" class="btn" href="http://bang.tx3.163.com/bang">天下3英雄榜</a>
+        <a target="_blank" class="btn" href="http://zxadmin.zhuyux.com/Demo/GetCBGIndex">藏宝阁查询</a>
+        <a target="_blank" class="btn" href="http://zxadmin.zhuyux.com/Demo/GetGMIndex">改名查询</a>
+        <a target="_blank" class="btn" href="http://zxadmin.zhuyux.com/Demo/GetZFIndex">转服查询</a>
+        <a target="_blank" class="btn" href="http://zxadmin.zhuyux.com/Demo/GetYHZIndex">幻化排行榜</a>
     </div>
-
-    <form id="search-form" role="form" class="form-horizontal">
+    <form id="search-form">
         <input type="hidden" value="1" name="pageNo" id="js-bootpag-num">
-        <input type="hidden" value="$!showDelBtn" name="showDelBtn" >
-        <div class="col-md-12">
-            <label >门派:</label>
+        <input type="hidden" value="$!showDelBtn" name="showDelBtn">
+        <div class="row top">
+            <div class="col-md-1 col-xs-12 title top-title">
+                <label>门 派</label>
+            </div>
+            <div class="col-md-11 col-xs-12 top-labels">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="school">
+                    <i></i>
+                    荒火
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="2" name="school">
+                    <i></i>
+                    天机
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="3" name="school">
+                    <i></i>
+                    翎羽
+                </label>
 
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="school">荒火教
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="2" name="school">天机营
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="3" name="school">翎羽山庄
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="4" name="school">魍魉
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="5" name="school">太虚观
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="6" name="school">云麓仙居
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="7" name="school">冰心堂
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="8" name="school">奕剑听雨阁
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="9" name="school">鬼墨
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="10" name="school">龙巫宫
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="11" name="school">幽篁国
-            </label>
-        </div>
-
-        <div class="col-md-12">
-            <div style="display: inline-block">
-                <label>基础属性:</label>
-                <label for="mhxiuweip" class="control-label">修为>=</label>
-                <input type="text" name="xiuwei" size="5">
-
-                <label for="equXiuwei" class="control-label">装评>=</label>
-                <input type="text" name="equXiuwei" size="5">
-
-                <label for="mhp" class="control-label">生命值>=</label>
-                <input type="text" name="mhp" size="5">
-
-                <label for="msp" class="control-label">技力值>=</label>
-                <input type="text" name="msp" size="5">
-
-                <label for="quick" class="control-label">敏>=</label>
-                <input type="text" name="quick" size="5">
-
-                <label for="strong" class="control-label">力>=</label>
-                <input type="text" name="strong" size="5">
-
-                <label for="soul" class="control-label">魂>=</label>
-                <input type="text" name="soul" size="5">
-
-                <label for="mind" class="control-label">念>=</label>
-                <input type="text" name="mind" size="5">
-
-                <label for="dodge" class="control-label">疾>=</label>
-                <input type="text" name="dodge" size="5">
-
-                <label for="body" class="control-label">体>=</label>
-                <input type="text" name="body" size="5">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="4" name="school">
+                    <i></i>
+                    魍魉
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="5" name="school">
+                    <i></i>
+                    太虚
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="6" name="school">
+                    <i></i>
+                    云麓
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="7" name="school">
+                    <i></i>
+                    冰心
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="8" name="school">
+                    <i></i>
+                    弈剑
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="9" name="school">
+                    <i></i>
+                    鬼墨
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="10" name="school">
+                    <i></i>
+                    龙巫
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="11" name="school">
+                    <i></i>
+                    幽篁
+                </label>
             </div>
         </div>
-
-        <div class="col-md-12">
-            <div style="display: inline-block">
-                <label>攻击属性:</label>
-
-                <label for="hit" class="control-label">命中>=</label>
-                <input type="text" name="hit" size="5">
-
-                <label for="modadd" class="control-label">重击>=</label>
-                <input type="text" name="modadd" size="5">
-
-                <label for="critical" class="control-label">会心>=</label>
-                <input type="text" name="critical" size="5">
-
-                <label for="attadd" class="control-label">附伤>=</label>
-                <input type="text" name="attadd" size="5">
-
-                <label for="pattackMax" class="control-label">最大物攻>=</label>
-                <input type="text" name="pattackMax" size="5">
-
-                <label for="pattackMin" class="control-label">最小物攻>=</label>
-                <input type="text" name="pattackMin" size="5">
-
-                <label for="mattackMax" class="control-label">最大法攻>=</label>
-                <input type="text" name="mattackMax" size="5">
-
-                <label for="mattackMin" class="control-label">最小法攻>=</label>
-                <input type="text" name="mattackMin" size="5">
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>基础属性</label>
             </div>
-        </div>
-        <div class="col-md-12">
-            <div style="display: inline-block">
-                <label>防御属性:</label>
-
-                <label for="pdef" class="control-label">防御>=</label>
-                <input type="text" name="pdef" size="5">
-
-                <label for="avoid" class="control-label">回避>=</label>
-                <input type="text" name="avoid" size="5">
-
-                <label for="mdef" class="control-label">法防>=</label>
-                <input type="text" name="mdef" size="5">
-
-                <label for="inprotect" class="control-label">神明>=</label>
-                <input type="text" name="inprotect" size="5">
-
-                <label for="inprotect" class="control-label">化解>=</label>
-                <input type="text" name="attdef" size="5">
-
-                <label for="sract" class="control-label">身法>=</label>
-                <input type="text" name="sract" size="5">
-
-                <label for="srmind" class="control-label">定力>=</label>
-                <input type="text" name="srmind" size="5">
-
-                <label for="srbody" class="control-label">坚韧>=</label>
-                <input type="text" name="srbody" size="5">
-            </div>
-        </div>
-
-
-        <div class="col-md-12">
-            <div style="display: inline-block">
-                <label>高级属性:</label>
-
-                <label for="movespeed" class="control-label">追电>=</label>
-                <input type="text" name="movespeed" size="5">
-
-                <label for="attackspeed" class="control-label">骤雨>=</label>
-                <input type="text" name="attackspeed" size="5">
-
-                <label for="castspeed" class="control-label">疾语>=</label>
-                <input type="text" name="castspeed" size="5">
-
-                <label for="attackhuman" class="control-label">人祸>=</label>
-                <input type="text" name="attackhuman" size="5">
-
-                <label for="defhuman" class="control-label">知彼>=</label>
-                <input type="text" name="defhuman" size="5">
-
-                <label for="criAddP" class="control-label">诛心>=</label>
-                <input type="text" name="criAddP" size="5">
-
-                <label for="criSubP" class="control-label">御心>=</label>
-                <input type="text" name="criSubP" size="5">
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label>修为≥<input type="number" name="xiuwei"></label>
+                <label>装评≥<input type="number" name="equXiuwei"></label>
+                <label>生命值≥<input type="number" name="mhp"></label>
+                <label>技力值≥<input type="number" name="msp"></label>
                 <br>
-                <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <label for="thumpAddP" class="control-label">万钧>=</label>
-                <input type="text" name="thumpAddP" size="5">
-
-                <label for="thumpSubP" class="control-label">铁壁>=</label>
-                <input type="text" name="thumpSubP" size="5">
-
-                <label for="xiaogong" class="control-label">大攻-小攻<=</label>
-                <input type="text" name="xiaogong" size="4">
-
-                <label for="xiaofa" class="control-label">大法-小法<=</label>
-                <input type="text" name="xiaofa" size="4">
+                <label>敏≥<input type="number" name="quick"></label>
+                <label>力≥<input type="number" name="strong"></label>
+                <label>魂≥<input type="number" name="soul"></label>
+                <label>念≥<input type="number" name="mind"></label>
+                <label>疾≥<input type="number" name="dodge"></label>
+                <label>体≥<input type="number" name="body"></label>
             </div>
         </div>
-
-        <div class="col-md-12">
-            <div style="display: inline-block">
-                <label>真有钱:</label>
-
-                <input type="text" name="lvmin" size="2" value="69">
-                <label class="control-label"><=等级<=</label>
-                <input type="text" name="lvmax" size="2">
-                &nbsp;&nbsp;
-                <input type="text" name="pricemin" size="4">
-                <label class="control-label"><=价钱<=</label>
-                <input type="text" name="pricemax" size="4">
-
-                <label for="jiahu" class="control-label">加护>=</label>
-                <input type="text" name="jiahu" size="4">
-
-                <label for="lianhu" class="control-label">炼护>=</label>
-                <input type="text" name="lianhu" size="4">
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>防御属性</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label>物防≥<input type="number" name="pdef"></label>
+                <label>法防≥<input type="number" name="mdef"></label>
+                <label>神明≥<input type="number" name="inprotect"></label>
+                <label>回避≥<input type="number" name="avoid"></label>
+                <label>化解≥<input type="number" name="attdef"></label>
+            </div>
+        </div>
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>高级属性</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label>追电≥<input type="number" name="movespeed"></label>
+                <label>疾语≥<input type="number" name="castspeed"></label>
+                <label>骤雨≥<input type="number" name="attackspeed"></label>
+                <label>人祸≥<input type="number" name="attackhuman"></label>
+                <label>知彼≥<input type="number" name="defhuman"></label>
                 <br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <label class="checkbox-inline duiqi">
-                    <input type="radio" value="1" name="lv_level">69战场
+                <label>诛心≥<input type="number" name="criAddP"></label>
+                <label>御心≥<input type="number" name="criSubP"></label>
+                <label>万均≥<input type="number" name="thumpAddP"></label>
+                <label>铁壁≥<input type="number" name="thumpSubP"></label>
+            </div>
+        </div>
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>攻击属性</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label>命中≥<input type="number" name="hit"></label>
+                <label>重击≥<input type="number" name="modadd"></label>
+                <label>会心≥<input type="number" name="critical"></label>
+                <label>附伤≥<input type="number" name="attadd"></label>
+                <label>大攻-小攻<=<input type="number" name="xiaogong"></label>
+                <label>大法-小法<=<input type="number" name="xiaofa"></label>
+                <br>
+                <label>最大物攻≥<input type="number" name="pattackMax"></label>
+                <label>最小物攻≥<input type="number" name="pattackMin"></label>
+                <label>最大法攻≥<input type="number" name="mattackMax"></label>
+                <label>最小法攻≥<input type="number" name="mattackMin"></label>
+            </div>
+        </div>
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>加护属性</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label>总加护值≥<input type="number" name="jiahu"></label>
+                <label>总炼护值≥<input type="number" name="lianhu"></label>
+            </div>
+        </div>
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>孩子属性</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell cell-labels">
+                <label>孩子等级≥<input type="number" name="haiziLv"></label>
+                <label>孩子资质≥<input type="number" name="haiziZizhi"></label>
+                <label>孩子武学≥<input type="number" name="haiziWuxue"></label>
+                <label>孩子加护≥<input type="number" name="haiziJiahu"></label>
+            </div>
+        </div>
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>觉醒属性</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label>觉醒等级≥<input type="number" name="awakeLv"></label>
+                <label>封禁之力≥<input type="number" name="releaseLv"></label>
+                <label>觉醒度≥<input type="number" name="awakeValue"></label>
+                <label>溟禅值≥<input type="number" name="minglian"></label>
+            </div>
+        </div>
+
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>声望</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label>天域声望≥<input type="number" name="tianyu"></label>
+                <label>王朝军姿≥<input type="number" name="junzi"></label>
+                <label>大禹声望≥<input type="number" name="dayu"></label>
+                <label>元宝≥<input type="number" name="yuanbao"></label>
+                <label>金币≥<input type="number" name="jinbi"></label>
+            </div>
+        </div>
+
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>元魂珠</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="xiyangyang">
+                    <i></i>
+                    喜气洋洋
                 </label>
-                <label class="checkbox-inline duiqi">
-                    <input type="radio" value="2" name="lv_level">74战场
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="wanshengtianzun">
+                    <i></i>
+                    万胜天尊
                 </label>
-                <label class="checkbox-inline duiqi">
-                    <input type="radio" value="3" name="lv_level">79战场
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="mawangye">
+                    <i></i>
+                    马王爷
                 </label>
-                <label class="checkbox-inline duiqi">
-                    <input type="radio" value="4" name="lv_level">地魂
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="yehuo">
+                    <i></i>
+                    业火
                 </label>
-                <label class="checkbox-inline duiqi">
-                    <input type="radio" value="5" name="lv_level">天魂
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="dulanggui">
+                    <i></i>
+                    毒浪鬼
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="maorixingguan">
+                    <i></i>
+                    昴日星官
                 </label>
             </div>
         </div>
-        <div class="col-md-12">
-            <div style="display: inline-block">
-                <label>孩子:</label>
-                <label class="checkbox-inline duiqi">
-                    <input type="checkbox" value="1" name="haiziTianyu">孩子天域
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>特效</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="wanfeng">
+                    <i></i>
+                    完封
                 </label>
-                &nbsp;&nbsp;&nbsp;
-
-                <label for="haiziLv" class="control-label">孩子等级>=</label>
-                <input type="text" name="haiziLv" size="4">
-
-                <label for="haiziZizhi" class="control-label">孩子资质>=</label>
-                <input type="text" name="haiziZizhi" size="4">
-
-                <label for="haiziWuxue" class="control-label">孩子武学>=</label>
-                <input type="text" name="haiziWuxue" size="4">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="huxin">
+                    <i></i>
+                    护心
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="duncifanghu">
+                    <i></i>
+                    盾刺防护
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="huikanfanghu">
+                    <i></i>
+                    挥砍防护
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="huoyuanfanghu">
+                    <i></i>
+                    火元防护
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="shuifengdufanghu">
+                    <i></i>
+                    水风毒防护
+                </label>
             </div>
         </div>
-        <div class="col-md-12">
-            <div style="display: inline-block">
-                <label>觉醒:</label>
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>时装</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="xuansu">
+                    <i></i>
+                    玄素天成
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="qinghua">
+                    <i></i>
+                    黛染青花
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="guhong">
+                    <i></i>
+                    孤鸿月影
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="haitang">
+                    <i></i>
+                    海棠未雨
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="tinglan">
+                    <i></i>
+                    岸芷汀兰
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="xiangyun">
+                    <i></i>
+                    绛云思暖
+                </label>
 
-                <label for="awakeLv" class="control-label">觉醒等级>=</label>
-                <input type="text" name="awakeLv" size="4">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="feihuhuaqiu">
+                    <i></i>
+                    飞狐华裘
+                </label>
 
-                <label for="releaseLv" class="control-label">封禁之力>=</label>
-                <input type="text" name="releaseLv" size="4">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="tianhulishang">
+                    <i></i>
+                    天狐霓裳
+                </label>
 
-                <label for="awakeValue" class="control-label">觉醒度>=</label>
-                <input type="text" name="awakeValue" size="4">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="xianhucaijue">
+                    <i></i>
+                    仙狐彩袂
+                </label>
 
-                <label for="minglian" class="control-label">溟炼值>=</label>
-                <input type="text" name="minglian" size="4">
+
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="canghaisangtian">
+                    <i></i>
+                    沧海桑田
+                </label>
+
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="yeyujiangnan">
+                    <i></i>
+                    夜雨江南
+                </label>
+
+
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="changong">
+                    <i></i>
+                    蟾宫折桂
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="bihai">
+                    <i></i>
+                    碧海惊涛
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="changkong">
+                    <i></i>
+                    鹰击长空
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="changkong">
+                    <i></i>
+                    鹰击长空
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="fengyuzihuang">
+                    <i></i>
+                    凤羽紫凰
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="shuyinghengxie">
+                    <i></i>
+                    疏影横斜
+                </label>
             </div>
         </div>
-        <div class="col-md-12">
-            <label>特技:</label>
-            <label class="checkbox-inline duiqi ">
-                <input type="checkbox" value="1" name="huxin">护心
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="wanfeng">完封
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="huoyuanfanghu">火元防护
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="shuifengdufanghu">水风毒防护
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="huikanfanghu">挥砍防护
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="duncifanghu">钝刺防护
-            </label>
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>其他</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="taichu">
+                    <i></i>
+                    太初
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="renwuTianyu">
+                    <i></i>
+                    人物天域
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="haiziTianyu">
+                    <i></i>
+                    孩子天域
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="haiziTaichu">
+                    <i></i>
+                    孩子太初
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="shilifushou">
+                    <i></i>
+                    势力副手
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="ligntMenpai">
+                    <i></i>
+                    门派轻功
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="vip9">
+                    <i></i>
+                    VIP9
+                </label>
+            </div>
         </div>
-        <div class="col-md-12">
-            <label>元魂珠:</label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="mawangye">马王爷
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>等级</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label class="cell-labels-radio">
+                    <input type="radio" value="1" name="lv_level">
+                    <i></i>
+                    69级
+                </label>
+                <label class="cell-labels-radio">
+                    <input type="radio" value="2" name="lv_level">
+                    <i></i>
+                    74级
+                </label>
+                <label class="cell-labels-radio">
+                    <input type="radio" value="3" name="lv_level">
+                    <i></i>
+                    79级
+                </label>
+                <label class="cell-labels-radio">
+                    <input type="radio" value="4" name="lv_level">
+                    <i></i>
+                    地魂
+                </label>
+                <label class="cell-labels-radio">
+                    <input type="radio" value="5" name="lv_level">
+                    <i></i>
+                    天魂
+                </label>
+                <span class="cell-labels-right">
+            <label>自由选择
+                <input type="number" name="lvmin" value="69"> - <input type="number" name="lvmax">
             </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="xiyangyang">喜气洋洋
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="wanshengtianzun">万胜天尊
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="yehuo">业火
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="dulanggui">毒浪鬼
-            </label>
+          </span>
+            </div>
         </div>
-        <div class="col-md-12">
-            <label>时装:</label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="xuansu">玄素天成
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="qinghua">黛染青花
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="guhong">孤鸿月影
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="haitang">海棠未雨
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="tinglan">岸芷汀兰
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="xiangyun">绛云思暖
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="feihuhuaqiu">飞狐华裘
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="tianhulishang">天狐霓裳
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="xianhucaijue">仙狐彩袂
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="canghaisangtian">沧海桑田
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="yeyujiangnan">夜雨江南
-            </label>
-            <br>
-            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="bihai">碧海惊涛
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="changkong">鹰击长空
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="changong">蟾宫折桂
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="fengyuzihuang">凤羽紫凰
-            </label>
-        </div>
-        <div class="col-md-12">
-            <label>其他:</label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="taichu">太初
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="shilifushou">势力副手
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="ligntMenpai">门派轻功
-            </label>
-            <label class="checkbox-inline duiqi">
-                <input type="checkbox" value="1" name="vip9">vip9
-            </label>
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>副本首饰</label>
+            </div>
+            <div class="col-md-11 col-xs-12 cell-labels">
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="qianyang">
+                    <i></i>
+                    乾阳
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="yinglongya">
+                    <i></i>
+                    墨罂粟
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="mudanyuan">
+                    <i></i>
+                    牡丹怨
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="yinglongya">
+                    <i></i>
+                    影龙牙
+                </label>
+                <label class="cell-labels-checkbox">
+                    <input type="checkbox" value="1" name="xuelongya">
+                    <i></i>
+                    血龙牙
+                </label>
 
+            </div>
         </div>
-
-        <div class="col-md-12" align="center">
-            <input type="reset" class="btn btn-default">
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <a class="btn btn-info green" id="js-query-btn"><i class="fa fa-search"></i>搜索</a>
+        <div class="row cell">
+            <div class="col-md-1 col-xs-12 title cell-title">
+                <label>价格</label>
+            </div>
+            <div class="col-md-5 col-xs-12 cell-labels">
+                <label>
+                    <input type="number" name="pricemin"> - <input type="number" name="pricemax">
+                </label>
+            </div>
+            <div class="col-md-6 col-xs-12 cell-labels">
+                <label class="cell-labels-radio">
+                    <input type="radio" value="1"  checked name="price_des">
+                    <i></i>
+                    按时间排序
+                </label>
+                <label class="cell-labels-radio">
+                    <input type="radio" value="2" name="price_des">
+                    <i></i>
+                    按价格排序
+                </label>
+            </div>
+        </div>
+        <div style="text-align: right">最后更新时间:<span style="color: red">$!lastDate</span></div>
+        <div class="row row-search" style="text-align: center">
+            <a href="javascript:;" id="js-reset-btn" class="btn btn-circle btn-go">重置</a>
+            <a href="javascript:;" id="js-query-btn" class="btn btn-search">搜索</a>
         </div>
     </form>
+    <div class="row row-table" id="js-page-body">
 
-
-    <div class="col-md-12" id="js-page-body">
     </div>
 
+    <div class="row" style="text-align: center">
+        <div class="col-md-12" style="margin: 10px">
+            <a target="_blank" href="http://tx3.163.com/index.html">天下3官网</a>
+            <a target="_blank" href="http://tx3.netease.com/">天下3论坛</a>
+            <a target="_blank" href="http://tx3.cbg.163.com/cgi-bin/equipquery.py?act=show_overall_search">天下3藏宝阁</a>
+            <a target="_blank" href="http://bang.tx3.163.com/bang">天下3英雄榜</a>
+            <a target="_blank" href="http://zxadmin.zhuyux.com/Demo/GetCBGIndex">藏宝阁查询</a>
+            <a target="_blank" href="http://zxadmin.zhuyux.com/Demo/GetGMIndex">改名查询</a>
+            <a target="_blank" href="http://zxadmin.zhuyux.com/Demo/GetZFIndex">转服查询</a>
+            <a target="_blank" href="http://zxadmin.zhuyux.com/Demo/GetYHZIndex">幻化排行榜</a>
+        </div>
+    </div>
 
-    <script type="text/javascript">
-        CbgJS.init();
-    </script>
-</div>
+    <div class="row" style="text-align: center">
+        <div class="col-md-12">
+            <p class="fh5co-left">
+                <small>&copy; 2017 天下客栈.All Rights Reserved. <a href='http://www.miibeian.gov.cn' target='_blank'>京ICP备15057167号-2</a>
+                </small>
+                <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+                document.write(unescape("%3Cspan id='cnzz_stat_icon_1261504736'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1261504736%26show%3Dpic2' type='text/javascript'%3E%3C/script%3E"));</script>
+            </p>
+        </div>
+    </div>
+</section>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.form/3.51/jquery.form.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="/assets/js/jquery.bootpag.js" type="text/javascript"></script>
+<script src="/assets/js/cbg.js?v=123" type="text/javascript"></script>
+<script type="text/javascript">
+    CbgJS.init();
+    function hotKeys() {
+        var ua = navigator.userAgent.toLowerCase();
+        var str = '';
+        var isWebkit = (ua.indexOf('webkit') != -1);
+        var isMac = (ua.indexOf('mac') != -1);
+
+        if (ua.indexOf('konqueror') != -1) {
+            str = 'CTRL + B'; // Konqueror
+        } else if (window.home || isWebkit || isMac) {
+            str = (isMac ? 'Command/Cmd' : 'CTRL') + ' + D'; // Netscape, Safari, iCab, IE5/Mac
+        }
+        return ((str) ? '按 ' + str + '添加收藏.' : str);
+    }
+
+    function addToFavorites(a, title, url) {
+        title = title || document.title;
+        url = url || location.href;
+        if (window.sidebar) // Firefox
+            window.sidebar.addPanel(title, url, '');
+        else if (window.opera && window.print) // Opera
+        {
+            var elem = document.createElement('a');
+            elem.setAttribute('href', url);
+            elem.setAttribute('title', title);
+            elem.setAttribute('rel', 'sidebar'); // required to work in opera 7+
+            elem.click();
+        }
+        else if (document.all) // IE
+            window.external.AddFavorite(url, title);
+        else {
+            alert(hotKeys());
+        }
+    }
+</script>
+</body>
+</html>

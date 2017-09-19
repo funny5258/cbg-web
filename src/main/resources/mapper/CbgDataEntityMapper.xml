@@ -85,6 +85,19 @@
     <result column="changong" property="changong" jdbcType="INTEGER" />
     <result column="changkong" property="changkong" jdbcType="INTEGER" />
     <result column="fengyuzihuang" property="fengyuzihuang" jdbcType="INTEGER" />
+
+    <result column="shuyinghengxie" property="shuyinghengxie" jdbcType="INTEGER" />
+    <result column="tianyu" property="tianyu" jdbcType="INTEGER" />
+    <result column="jinbi" property="jinbi" jdbcType="INTEGER" />
+    <result column="junzi" property="junzi" jdbcType="INTEGER" />
+    <result column="dayu" property="fengyuzihuang" jdbcType="INTEGER" />
+    <result column="yuanbao" property="yuanbao" jdbcType="INTEGER" />
+    <result column="haizi_jiahu" property="haiziJiahu" jdbcType="INTEGER" />
+    <result column="renwu_tianyu" property="renwuTianyu" jdbcType="INTEGER" />
+    <result column="mourixingguan" property="maorixingguan" jdbcType="INTEGER" />
+    <result column="zhanying" property="zhanying" jdbcType="INTEGER" />
+    <result column="leizuan" property="leizuan" jdbcType="INTEGER" />
+    <result column="honglian" property="honglian" jdbcType="INTEGER" />
   </resultMap>
   <sql id="Base_Column_List" >
     id, role_id, lianhu, sex, lv, fly_soul_phase, fly_soul_lv, xiuwei, equ_xiuwei, sch, 
@@ -96,7 +109,7 @@
     minglian, qinghua, xuansu, guhong, xiangyun, tinglan, haitang, feihuhuaqiu, tianhulishang, 
     xianhucaijue, canghaisangtian, yeyujiangnan, huikanfanghu, duncifanghu, huoyuanfanghu, 
     shuifengdufanghu, wanfeng, huxin, taichu, shilifushou, xiyangyang, mawangye, wanshengtianzun, 
-    yehuo, dulanggui, vip9, haizi_tiayu, bihai, changong, changkong,fengyuzihuang
+    yehuo, dulanggui, vip9, haizi_tiayu, bihai, changong, changkong,fengyuzihuang,leizuan,honglian
   </sql>
 
   <update id="updateByIdSelected" parameterType="com.funny.txstack.entity.cbg.CbgDataEntity" >

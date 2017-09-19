@@ -400,13 +400,32 @@ public class CbgSearch extends PageCondition{
      */
     private List<Integer> schoolList;
     /**
-     * 1(升序),2(降序)
+     * 1(时间),2(价钱)
      */
     private Integer price_des;
     /**
      * 1：69战场 2：74战场 3：79战场 4：地魂 5：天魂
      */
     private Integer lv_level;
+
+    private Integer shuyinghengxie;
+    private Integer tianyu;
+    private Integer jinbi;
+    private Integer junzi;
+    private Integer dayu;
+    private Integer yuanbao;
+
+    private Integer haiziJiahu;
+    private Integer renwuTianyu;
+    private Integer maorixingguan;
+    private Integer zhanying;
+
+
+    private Integer qianyang;
+    private Integer moyinli;
+    private Integer mudanyuan;
+    private Integer yinglongya;
+    private Integer xuelongya;
 
     public Integer getLv_level() {
         return lv_level;
@@ -1094,5 +1113,125 @@ public class CbgSearch extends PageCondition{
 
     public void setShowDelBtn(Integer showDelBtn) {
         this.showDelBtn = showDelBtn;
+    }
+
+    public Integer getShuyinghengxie() {
+        return shuyinghengxie;
+    }
+
+    public void setShuyinghengxie(Integer shuyinghengxie) {
+        this.shuyinghengxie = shuyinghengxie;
+    }
+
+    public Integer getTianyu() {
+        return tianyu;
+    }
+
+    public void setTianyu(Integer tianyu) {
+        this.tianyu = tianyu;
+    }
+
+    public Integer getJinbi() {
+        return jinbi;
+    }
+
+    public void setJinbi(Integer jinbi) {
+        this.jinbi = jinbi;
+    }
+
+    public Integer getJunzi() {
+        return junzi;
+    }
+
+    public void setJunzi(Integer junzi) {
+        this.junzi = junzi;
+    }
+
+    public Integer getDayu() {
+        return dayu;
+    }
+
+    public void setDayu(Integer dayu) {
+        this.dayu = dayu;
+    }
+
+    public Integer getYuanbao() {
+        return yuanbao;
+    }
+
+    public void setYuanbao(Integer yuanbao) {
+        this.yuanbao = yuanbao;
+    }
+
+    public Integer getHaiziJiahu() {
+        return haiziJiahu;
+    }
+
+    public void setHaiziJiahu(Integer haiziJiahu) {
+        this.haiziJiahu = haiziJiahu;
+    }
+
+    public Integer getRenwuTianyu() {
+        return renwuTianyu;
+    }
+
+    public void setRenwuTianyu(Integer renwuTianyu) {
+        this.renwuTianyu = renwuTianyu;
+    }
+
+    public Integer getMaorixingguan() {
+        return maorixingguan;
+    }
+
+    public void setMaorixingguan(Integer maorixingguan) {
+        this.maorixingguan = maorixingguan;
+    }
+
+    public Integer getZhanying() {
+        return zhanying;
+    }
+
+    public void setZhanying(Integer zhanying) {
+        this.zhanying = zhanying;
+    }
+
+    public Integer getQianyang() {
+        return qianyang;
+    }
+
+    public void setQianyang(Integer qianyang) {
+        this.qianyang = qianyang;
+    }
+
+    public Integer getMoyinli() {
+        return moyinli;
+    }
+
+    public void setMoyinli(Integer moyinli) {
+        this.moyinli = moyinli;
+    }
+
+    public Integer getMudanyuan() {
+        return mudanyuan;
+    }
+
+    public void setMudanyuan(Integer mudanyuan) {
+        this.mudanyuan = mudanyuan;
+    }
+
+    public Integer getYinglongya() {
+        return yinglongya;
+    }
+
+    public void setYinglongya(Integer yinglongya) {
+        this.yinglongya = yinglongya;
+    }
+
+    public Integer getXuelongya() {
+        return xuelongya;
+    }
+
+    public void setXuelongya(Integer xuelongya) {
+        this.xuelongya = xuelongya;
     }
 }

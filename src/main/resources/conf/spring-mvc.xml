@@ -25,16 +25,9 @@
         </mvc:message-converters>
     </mvc:annotation-driven>
 
-    <mvc:default-servlet-handler/>
-    <!--<mvc:resources mapping="/assets/**" location="/assets/"/>-->
-
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <mvc:mapping path="/**"/>
-            <bean class="com.funny.txstack.web.interceptor.BasePathInterceptor"></bean>
-        </mvc:interceptor>
-    </mvc:interceptors>
-
+    <mvc:resources mapping="/assets/**" location="/assets/"/>
+    
+    <mvc:view-controller path="/" view-name="redirect:/cbg"/>
 
     <bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
         <property name="resourceLoaderPath" value="/WEB-INF/view/"/>

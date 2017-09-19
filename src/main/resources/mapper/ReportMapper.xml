@@ -49,22 +49,26 @@
 
     <select id="getEquXiuweiCount" resultMap="extResultMap">
         <![CDATA[
-        select a.xiuwei_level as equ_xiuwei,count(1) as count from (
-        select case when t.equ_xiuwei+t.xiuwei >=100000 and t.equ_xiuwei+t.xiuwei < 110000 then 1
-        when t.equ_xiuwei+t.xiuwei >=110000 and t.equ_xiuwei+t.xiuwei < 120000 then 2
-		when t.equ_xiuwei+t.xiuwei >=120000 and t.equ_xiuwei+t.xiuwei < 130000 then 3
-        when t.equ_xiuwei+t.xiuwei >=130000 and t.equ_xiuwei+t.xiuwei < 140000 then 4
-        when t.equ_xiuwei+t.xiuwei >=140000 and t.equ_xiuwei+t.xiuwei < 150000 then 5
-        when t.equ_xiuwei+t.xiuwei >=150000 and t.equ_xiuwei+t.xiuwei < 160000 then 6
-        when t.equ_xiuwei+t.xiuwei >=160000 then 7 end xiuwei_level
-        from bang_role t where `level`=79 ) a where a.xiuwei_level is not null group by a.xiuwei_level
+        select a.xiuwei_level as equ,count(1) as count from (
+        select case
+		when t.equ_xiuwei < 60000 then 1
+        when t.equ_xiuwei >=60000 and t.equ_xiuwei < 65000 then 2
+        when t.equ_xiuwei >=65000 and t.equ_xiuwei < 70000 then 3
+        when t.equ_xiuwei >=70000 and t.equ_xiuwei < 75000 then 4
+        when t.equ_xiuwei >=75000 and t.equ_xiuwei < 80000 then 5
+        when t.equ_xiuwei >=80000 and t.equ_xiuwei < 85000 then 6
+        when t.equ_xiuwei >=85000 and t.equ_xiuwei < 90000 then 7
+        when t.equ_xiuwei >=90000 and t.equ_xiuwei < 95000 then 8
+        when t.equ_xiuwei >=95000 and t.equ_xiuwei < 100000 then 9
+        when t.equ_xiuwei >=100000 then 10 end xiuwei_level
+        from bang_role t where `level`=79 ) a  group by a.xiuwei_level
         ]]>
     </select>
 
     <select id="getFamilyCount" resultMap="extResultMap">
         <![CDATA[
           select t.`server`,t.family,count(1) as COUNT from  bang_role t where t.`level`=79 and  t.family!=''
-          GROUP BY t.`server`,t.family order by count(1) desc limit 20
+          GROUP BY t.`server`,t.family order by count(1) desc limit 30
       ]]>
     </select>
 
