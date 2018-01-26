@@ -7,6 +7,7 @@ import com.funny.txstack.entity.cbg.CbgRoleEntity;
 import com.funny.txstack.utils.HttpClientUtil;
 import com.github.pagehelper.PageHelper;
 import com.google.common.base.Strings;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -60,6 +61,9 @@ public class CbgRoleServiceImpl implements CbgRoleService {
         CbgRoleEntity cbgRoleEntity = cbgRoleMapper.findById(id);
         if (cbgRoleEntity != null && !Strings.isNullOrEmpty(cbgRoleEntity.getDataUrl())) {
             String httpResult = HttpClientUtil.get(cbgRoleEntity.getDataUrl());
+            if(StringUtils.isEmpty(httpResult)){
+                return;
+            }
             JSONObject jsonObject = JSON.parseObject(httpResult);
             String json_status = jsonObject.getString("status");
             if (json_status == null || !json_status.equals("1")) {
