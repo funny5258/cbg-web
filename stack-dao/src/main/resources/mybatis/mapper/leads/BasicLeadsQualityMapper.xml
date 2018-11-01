@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.funny.txstack.dao.leads.LeadsQualityMapper">
+  <sql id="Base_Column_List">
+    id, name_encrypt, buy_car_type, phone_encrypt, phone_hash, phone_id, allot_id, leads_id, 
+    sale_leads_id, spec_id, spec_name, series_id, series_name, brand_id, brand_name, 
+    pick_city_id, pick_city_name, pick_province_id, pick_province_name, buy_car_intention, 
+    orgin_type, clean_source, allot_status, lock_status, task_id, allot_time, allot_seller_id, 
+    cdr_id, call_id, call_hangupcause, call_bill_sec, call_wheeltime, call_starttime, 
+    call_endtime, call_unconnectcause, call_intention, call_record_filename, created, 
+    modified
+  </sql>
+  <sql id="Blob_Column_List">
+    call_dialog
+  </sql>
+  <resultMap id="BaseResultMap" type="com.funny.txstack.model.bo.LeadsQualityEntity">
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="name_encrypt" jdbcType="VARCHAR" property="nameEncrypt" />
+    <result column="buy_car_type" jdbcType="INTEGER" property="buyCarType" />
+    <result column="phone_encrypt" jdbcType="VARCHAR" property="phoneEncrypt" />
+    <result column="phone_hash" jdbcType="VARCHAR" property="phoneHash" />
+    <result column="phone_id" jdbcType="BIGINT" property="phoneId" />
+    <result column="allot_id" jdbcType="BIGINT" property="allotId" />
+    <result column="leads_id" jdbcType="BIGINT" property="leadsId" />
+    <result column="sale_leads_id" jdbcType="BIGINT" property="saleLeadsId" />
+    <result column="spec_id" jdbcType="INTEGER" property="specId" />
+    <result column="spec_name" jdbcType="VARCHAR" property="specName" />
+    <result column="series_id" jdbcType="INTEGER" property="seriesId" />
+    <result column="series_name" jdbcType="VARCHAR" property="seriesName" />
+    <result column="brand_id" jdbcType="INTEGER" property="brandId" />
+    <result column="brand_name" jdbcType="VARCHAR" property="brandName" />
+    <result column="pick_city_id" jdbcType="INTEGER" property="pickCityId" />
+    <result column="pick_city_name" jdbcType="VARCHAR" property="pickCityName" />
+    <result column="pick_province_id" jdbcType="INTEGER" property="pickProvinceId" />
+    <result column="pick_province_name" jdbcType="VARCHAR" property="pickProvinceName" />
+    <result column="buy_car_intention" jdbcType="VARCHAR" property="buyCarIntention" />
+    <result column="orgin_type" jdbcType="INTEGER" property="orginType" />
+    <result column="clean_source" jdbcType="VARCHAR" property="cleanSource" />
+    <result column="allot_status" jdbcType="INTEGER" property="allotStatus" />
+    <result column="lock_status" jdbcType="INTEGER" property="lockStatus" />
+    <result column="task_id" jdbcType="INTEGER" property="taskId" />
+    <result column="allot_time" jdbcType="TIMESTAMP" property="allotTime" />
+    <result column="allot_seller_id" jdbcType="INTEGER" property="allotSellerId" />
+    <result column="cdr_id" jdbcType="BIGINT" property="cdrId" />
+    <result column="call_id" jdbcType="VARCHAR" property="callId" />
+    <result column="call_hangupcause" jdbcType="VARCHAR" property="callHangupcause" />
+    <result column="call_bill_sec" jdbcType="VARCHAR" property="callBillSec" />
+    <result column="call_wheeltime" jdbcType="INTEGER" property="callWheeltime" />
+    <result column="call_starttime" jdbcType="INTEGER" property="callStarttime" />
+    <result column="call_endtime" jdbcType="INTEGER" property="callEndtime" />
+    <result column="call_unconnectcause" jdbcType="VARCHAR" property="callUnconnectcause" />
+    <result column="call_intention" jdbcType="VARCHAR" property="callIntention" />
+    <result column="call_record_filename" jdbcType="VARCHAR" property="callRecordFilename" />
+    <result column="created" jdbcType="TIMESTAMP" property="created" />
+    <result column="modified" jdbcType="TIMESTAMP" property="modified" />
+    <result column="call_dialog" jdbcType="LONGVARCHAR" property="callDialog" />
+  </resultMap>
+  <insert id="insert" parameterType="com.funny.txstack.model.bo.LeadsQualityEntity">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into leads_quality
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="nameEncrypt != null">
+        name_encrypt,
+      </if>
+      <if test="buyCarType != null">
+        buy_car_type,
+      </if>
+      <if test="phoneEncrypt != null">
+        phone_encrypt,
+      </if>
+      <if test="phoneHash != null">
+        phone_hash,
+      </if>
+      <if test="phoneId != null">
+        phone_id,
+      </if>
+      <if test="allotId != null">
+        allot_id,
+      </if>
+      <if test="leadsId != null">
+        leads_id,
+      </if>
+      <if test="saleLeadsId != null">
+        sale_leads_id,
+      </if>
+      <if test="specId != null">
+        spec_id,
+      </if>
+      <if test="specName != null">
+        spec_name,
+      </if>
+      <if test="seriesId != null">
+        series_id,
+      </if>
+      <if test="seriesName != null">
+        series_name,
+      </if>
+      <if test="brandId != null">
+        brand_id,
+      </if>
+      <if test="brandName != null">
+        brand_name,
+      </if>
+      <if test="pickCityId != null">
+        pick_city_id,
+      </if>
+      <if test="pickCityName != null">
+        pick_city_name,
+      </if>
+      <if test="pickProvinceId != null">
+        pick_province_id,
+      </if>
+      <if test="pickProvinceName != null">
+        pick_province_name,
+      </if>
+      <if test="buyCarIntention != null">
+        buy_car_intention,
+      </if>
+      <if test="orginType != null">
+        orgin_type,
+      </if>
+      <if test="cleanSource != null">
+        clean_source,
+      </if>
+      <if test="allotStatus != null">
+        allot_status,
+      </if>
+      <if test="lockStatus != null">
+        lock_status,
+      </if>
+      <if test="taskId != null">
+        task_id,
+      </if>
+      <if test="allotTime != null">
+        allot_time,
+      </if>
+      <if test="allotSellerId != null">
+        allot_seller_id,
+      </if>
+      <if test="cdrId != null">
+        cdr_id,
+      </if>
+      <if test="callId != null">
+        call_id,
+      </if>
+      <if test="callHangupcause != null">
+        call_hangupcause,
+      </if>
+      <if test="callBillSec != null">
+        call_bill_sec,
+      </if>
+      <if test="callWheeltime != null">
+        call_wheeltime,
+      </if>
+      <if test="callStarttime != null">
+        call_starttime,
+      </if>
+      <if test="callEndtime != null">
+        call_endtime,
+      </if>
+      <if test="callUnconnectcause != null">
+        call_unconnectcause,
+      </if>
+      <if test="callIntention != null">
+        call_intention,
+      </if>
+      <if test="callRecordFilename != null">
+        call_record_filename,
+      </if>
+      <if test="created != null">
+        created,
+      </if>
+      <if test="modified != null">
+        modified,
+      </if>
+      <if test="callDialog != null">
+        call_dialog,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="nameEncrypt != null">
+        #{nameEncrypt,jdbcType=VARCHAR},
+      </if>
+      <if test="buyCarType != null">
+        #{buyCarType,jdbcType=INTEGER},
+      </if>
+      <if test="phoneEncrypt != null">
+        #{phoneEncrypt,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneHash != null">
+        #{phoneHash,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneId != null">
+        #{phoneId,jdbcType=BIGINT},
+      </if>
+      <if test="allotId != null">
+        #{allotId,jdbcType=BIGINT},
+      </if>
+      <if test="leadsId != null">
+        #{leadsId,jdbcType=BIGINT},
+      </if>
+      <if test="saleLeadsId != null">
+        #{saleLeadsId,jdbcType=BIGINT},
+      </if>
+      <if test="specId != null">
+        #{specId,jdbcType=INTEGER},
+      </if>
+      <if test="specName != null">
+        #{specName,jdbcType=VARCHAR},
+      </if>
+      <if test="seriesId != null">
+        #{seriesId,jdbcType=INTEGER},
+      </if>
+      <if test="seriesName != null">
+        #{seriesName,jdbcType=VARCHAR},
+      </if>
+      <if test="brandId != null">
+        #{brandId,jdbcType=INTEGER},
+      </if>
+      <if test="brandName != null">
+        #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="pickCityId != null">
+        #{pickCityId,jdbcType=INTEGER},
+      </if>
+      <if test="pickCityName != null">
+        #{pickCityName,jdbcType=VARCHAR},
+      </if>
+      <if test="pickProvinceId != null">
+        #{pickProvinceId,jdbcType=INTEGER},
+      </if>
+      <if test="pickProvinceName != null">
+        #{pickProvinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="buyCarIntention != null">
+        #{buyCarIntention,jdbcType=VARCHAR},
+      </if>
+      <if test="orginType != null">
+        #{orginType,jdbcType=INTEGER},
+      </if>
+      <if test="cleanSource != null">
+        #{cleanSource,jdbcType=VARCHAR},
+      </if>
+      <if test="allotStatus != null">
+        #{allotStatus,jdbcType=INTEGER},
+      </if>
+      <if test="lockStatus != null">
+        #{lockStatus,jdbcType=INTEGER},
+      </if>
+      <if test="taskId != null">
+        #{taskId,jdbcType=INTEGER},
+      </if>
+      <if test="allotTime != null">
+        #{allotTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="allotSellerId != null">
+        #{allotSellerId,jdbcType=INTEGER},
+      </if>
+      <if test="cdrId != null">
+        #{cdrId,jdbcType=BIGINT},
+      </if>
+      <if test="callId != null">
+        #{callId,jdbcType=VARCHAR},
+      </if>
+      <if test="callHangupcause != null">
+        #{callHangupcause,jdbcType=VARCHAR},
+      </if>
+      <if test="callBillSec != null">
+        #{callBillSec,jdbcType=VARCHAR},
+      </if>
+      <if test="callWheeltime != null">
+        #{callWheeltime,jdbcType=INTEGER},
+      </if>
+      <if test="callStarttime != null">
+        #{callStarttime,jdbcType=INTEGER},
+      </if>
+      <if test="callEndtime != null">
+        #{callEndtime,jdbcType=INTEGER},
+      </if>
+      <if test="callUnconnectcause != null">
+        #{callUnconnectcause,jdbcType=VARCHAR},
+      </if>
+      <if test="callIntention != null">
+        #{callIntention,jdbcType=VARCHAR},
+      </if>
+      <if test="callRecordFilename != null">
+        #{callRecordFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null">
+        #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null">
+        #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="callDialog != null">
+        #{callDialog,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateById" parameterType="com.funny.txstack.model.bo.LeadsQualityEntity">
+    update leads_quality
+    <set>
+      <if test="nameEncrypt != null">
+        name_encrypt = #{nameEncrypt,jdbcType=VARCHAR},
+      </if>
+      <if test="buyCarType != null">
+        buy_car_type = #{buyCarType,jdbcType=INTEGER},
+      </if>
+      <if test="phoneEncrypt != null">
+        phone_encrypt = #{phoneEncrypt,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneHash != null">
+        phone_hash = #{phoneHash,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneId != null">
+        phone_id = #{phoneId,jdbcType=BIGINT},
+      </if>
+      <if test="allotId != null">
+        allot_id = #{allotId,jdbcType=BIGINT},
+      </if>
+      <if test="leadsId != null">
+        leads_id = #{leadsId,jdbcType=BIGINT},
+      </if>
+      <if test="saleLeadsId != null">
+        sale_leads_id = #{saleLeadsId,jdbcType=BIGINT},
+      </if>
+      <if test="specId != null">
+        spec_id = #{specId,jdbcType=INTEGER},
+      </if>
+      <if test="specName != null">
+        spec_name = #{specName,jdbcType=VARCHAR},
+      </if>
+      <if test="seriesId != null">
+        series_id = #{seriesId,jdbcType=INTEGER},
+      </if>
+      <if test="seriesName != null">
+        series_name = #{seriesName,jdbcType=VARCHAR},
+      </if>
+      <if test="brandId != null">
+        brand_id = #{brandId,jdbcType=INTEGER},
+      </if>
+      <if test="brandName != null">
+        brand_name = #{brandName,jdbcType=VARCHAR},
+      </if>
+      <if test="pickCityId != null">
+        pick_city_id = #{pickCityId,jdbcType=INTEGER},
+      </if>
+      <if test="pickCityName != null">
+        pick_city_name = #{pickCityName,jdbcType=VARCHAR},
+      </if>
+      <if test="pickProvinceId != null">
+        pick_province_id = #{pickProvinceId,jdbcType=INTEGER},
+      </if>
+      <if test="pickProvinceName != null">
+        pick_province_name = #{pickProvinceName,jdbcType=VARCHAR},
+      </if>
+      <if test="buyCarIntention != null">
+        buy_car_intention = #{buyCarIntention,jdbcType=VARCHAR},
+      </if>
+      <if test="orginType != null">
+        orgin_type = #{orginType,jdbcType=INTEGER},
+      </if>
+      <if test="cleanSource != null">
+        clean_source = #{cleanSource,jdbcType=VARCHAR},
+      </if>
+      <if test="allotStatus != null">
+        allot_status = #{allotStatus,jdbcType=INTEGER},
+      </if>
+      <if test="lockStatus != null">
+        lock_status = #{lockStatus,jdbcType=INTEGER},
+      </if>
+      <if test="taskId != null">
+        task_id = #{taskId,jdbcType=INTEGER},
+      </if>
+      <if test="allotTime != null">
+        allot_time = #{allotTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="allotSellerId != null">
+        allot_seller_id = #{allotSellerId,jdbcType=INTEGER},
+      </if>
+      <if test="cdrId != null">
+        cdr_id = #{cdrId,jdbcType=BIGINT},
+      </if>
+      <if test="callId != null">
+        call_id = #{callId,jdbcType=VARCHAR},
+      </if>
+      <if test="callHangupcause != null">
+        call_hangupcause = #{callHangupcause,jdbcType=VARCHAR},
+      </if>
+      <if test="callBillSec != null">
+        call_bill_sec = #{callBillSec,jdbcType=VARCHAR},
+      </if>
+      <if test="callWheeltime != null">
+        call_wheeltime = #{callWheeltime,jdbcType=INTEGER},
+      </if>
+      <if test="callStarttime != null">
+        call_starttime = #{callStarttime,jdbcType=INTEGER},
+      </if>
+      <if test="callEndtime != null">
+        call_endtime = #{callEndtime,jdbcType=INTEGER},
+      </if>
+      <if test="callUnconnectcause != null">
+        call_unconnectcause = #{callUnconnectcause,jdbcType=VARCHAR},
+      </if>
+      <if test="callIntention != null">
+        call_intention = #{callIntention,jdbcType=VARCHAR},
+      </if>
+      <if test="callRecordFilename != null">
+        call_record_filename = #{callRecordFilename,jdbcType=VARCHAR},
+      </if>
+      <if test="created != null">
+        created = #{created,jdbcType=TIMESTAMP},
+      </if>
+      <if test="modified != null">
+        modified = #{modified,jdbcType=TIMESTAMP},
+      </if>
+      <if test="callDialog != null">
+        call_dialog = #{callDialog,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <select id="findById" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from leads_quality
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <select id="findList" parameterType="com.funny.txstack.model.bo.LeadsQualityEntity" resultMap="BaseResultMap">
+    SELECT 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    FROM leads_quality where 1 = 1
+  </select>
+  <select id="count" parameterType="com.funny.txstack.model.bo.LeadsQualityEntity" resultMap="BaseResultMap">
+    SELECT count(1) FROM leads_quality where 1 = 1
+  </select>
+</mapper>

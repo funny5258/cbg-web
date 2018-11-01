@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: "@activatedProperties@"
+
+mybatis:
+  mapperLocations: classpath:mybatis/mapper/*.xml
+  config-location: classpath:mybatis/mybatis-config.xml
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+logging:
+#  path: /data/order/logs
+  config: classpath:log4j2.xml
+

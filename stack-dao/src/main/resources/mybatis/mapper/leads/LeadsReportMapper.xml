@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.funny.txstack.dao.leads.LeadsReportMapper">
+
+
+    <resultMap id="reportMap" type="com.funny.txstack.model.bo.LeadsReport">
+        <result column="auto_rate" jdbcType="DECIMAL" property="autoRate"/>
+        <result column="boost_rate" jdbcType="DECIMAL" property="boostRate"/>
+        <result column="total_rate" jdbcType="DECIMAL" property="totalRate"/>
+
+        <result column="plan_count" jdbcType="INTEGER" property="planCount"/>
+        <result column="contract_count" jdbcType="INTEGER" property="contractCount"/>
+        <result column="free_count" jdbcType="INTEGER" property="freeCount"/>
+
+        <result column="auto_leads_count" jdbcType="INTEGER" property="autoLeadsCount"/>
+        <result column="auto_boost_count" jdbcType="INTEGER" property="autoBoostCount"/>
+        <result column="manual_leads_count" jdbcType="INTEGER" property="manualLeadsCount"/>
+        <result column="task_boost_count" jdbcType="INTEGER" property="boostLeadsCount"/>
+    </resultMap>
+
+    <select id="getTodayMealPlan" resultMap="reportMap">
+                select sum(t.allot_phone_count)/sum(t.phone_count) auto_rate,
+        SUM(t.allot_boost_count)/sum(t.boost_count) boost_rate,
+        sum(t.allot_phone_count+t.allot_boost_count)/sum(t.phone_count+boost_count) total_rate,
+        count(t.plan_id) plan_count,
+        sum(CASE when t.meal_type=0 then 1 when t.meal_type=0 then 0 end) contract_count,
+        sum(CASE when t.meal_type=2 then 1 when t.meal_type=2 then 0 end) free_count,
+        sum(phone_count) auto_leads_count,
+        sum(boost_count) auto_boost_count
+        from provider_meal_plan t where DATE(plan_date) = DATE(NOW()) and is_delete = 0
+    </select>
+
+    <resultMap id="todayTaskInfoMap" type="com.funny.txstack.model.response.TodayTaskInfoResult">
+        <result column="manual_count" jdbcType="INTEGER" property="manualCount"/>
+        <result column="boost_count" jdbcType="INTEGER" property="boostCount"/>
+        <result column="manual_leads_count" jdbcType="INTEGER" property="manualLeadsCount"/>
+        <result column="task_boost_count" jdbcType="INTEGER" property="taskBoostCount"/>
+    </resultMap>
+
+
+    <select id="getTodayTaskInfo" resultMap="todayTaskInfoMap">
+        select SUM(CASE when task_type=0 then 1 else 0 end) manual_count,
+               SUM(CASE when task_type=1 then 1 else 0 end) boost_count,
+               SUM(CASE when task_type=0 then total_num else 0 end) manual_leads_count,
+               SUM(CASE when task_type=1 then total_num else 0 end) task_boost_count
+        from leads_task t WHERE t.task_status=2
+        and t.start_time &lt;=now() and t.end_time &gt;=now() and total_num &lt;1000
+    </select>
+
+    <select id="getTaskAllotRate" resultType="java.util.Map">
+        select sum(b.total_num) as total_num,sum(b.count) as count from
+        (select t.task_id,t.total_num,(case when t.allot_dim=1 then count(a.leads_id) else count(DISTINCT a.phone_id) end) as count,"0" as tag
+        from leads_task t
+        left join leads_allot a on  t.task_id=a.task_id
+        where t.task_type=0 and t.task_status=2 and t.total_num>0 and t.total_num <![CDATA[ < ]]>5000 and DATE(a.created)=DATE(NOW())
+        GROUP BY t.task_id ) b group by b.tag
+    </select>
+</mapper>
