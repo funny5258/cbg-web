@@ -1,0 +1,614 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.insight-head {
+    background-color: #000;
+    height: 70px;
+    width: 100%;
+    overflow: hidden
+}
+
+.insight-head__box {
+    width: 1200px;
+    margin: 0 auto
+}
+
+.insight-head__logo {
+    height: 70px;
+    width: 271px;
+    transform: scale(1.5);
+    margin-right: 50px;
+}
+
+.insight-head__navitem {
+    height: 70px;
+    display: inline-block;
+    line-height: 70px;
+    width: 110px;
+    text-align: center
+}
+
+.insight-head__navitem > a {
+    color: #fff;
+    font-size: 14px
+}
+
+.insight-banner {
+    text-align: center;
+    position: relative;
+    height: 430px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: #000
+}
+
+.insight-banner > .img1 {
+    width: 904px;
+    height: auto;
+    top: -650px;
+    left: 50%;
+    margin-left: -450px;
+    -webkit-animation: circleRoate 100s linear infinite;
+    animation: circleRoate 100s linear infinite;
+    position: absolute
+}
+
+.insight-banner > .img2 {
+    width: 608px;
+    height: auto;
+    bottom: -500px;
+    left: 50%;
+    margin-left: -300px;
+    -webkit-animation: circleRoatt 100s linear infinite;
+    animation: circleRoatt 100s linear infinite;
+    position: absolute
+}
+
+.insight-banner > .img3 {
+    width: 736px;
+    height: 180px;
+    top: 130px;
+    left: 50%;
+    margin-left: -368px;
+    position: absolute
+}
+
+.particles {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+input:-webkit-autofill {
+    box-shadow: 0 0 0 1000px #f9f9f9 inset !important
+}
+
+body {
+    color: #333;
+    background: #f5f5f5;
+    font-size: 12px;
+    font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+.plus, .reduce {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+ol, ul {
+    margin: 0;
+    padding: 0
+}
+
+li, ul {
+    list-style: none
+}
+
+a {
+    color: #333
+}
+
+a:hover {
+    text-decoration: none
+}
+
+input, textarea {
+    outline: 0;
+    border: none
+}
+
+::-webkit-input-placeholder {
+    color: #999
+}
+
+::-moz-placeholder {
+    color: #999
+}
+
+:-moz-placeholder {
+    color: #999
+}
+
+::-ms-input-placeholder {
+    color: #999
+}
+
+.iconfont {
+    vertical-align: middle
+}
+
+button {
+    border: none
+}
+
+.indexHeader {
+    background-color: rgba(13, 15, 28, .8);
+    height: 70px
+}
+
+.indexHeader .logo img {
+    width: 180px;
+    height: auto
+}
+
+.indexHeader .w1190 {
+    padding-top: 15px
+}
+
+.indexHeader ul {
+    float: left;
+    margin-left: 60px
+}
+
+.indexHeader ul > li {
+    float: left;
+    padding: 10px 20px
+}
+
+.indexHeader ul > li.active > a {
+    border-bottom: 1px solid #fff;
+    color: #fff
+}
+
+.indexHeader ul > li > a {
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(0, 0, 0, .8)
+}
+
+.indexHeader ul > li > a:hover {
+    color: #257bff;
+    border-bottom: none
+}
+
+.w1190 {
+    width: 1190px;
+    margin: 0 auto
+}
+
+.indexBtn {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #257bff;
+    border-radius: 0;
+    font-size: 14px;
+    color: #fff;
+    padding: 0
+}
+
+.indexBtn:hover {
+    color: #fff;
+    background-color: #0465e6
+}
+
+@-webkit-keyframes circleRoate {
+    from {
+        -webkit-transform: rotate(50deg) infinite;
+        transform: rotate(50deg) infinite
+    }
+    to {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+}
+
+@keyframes circleRoate {
+    from {
+        -webkit-transform: rotate(50deg) infinite;
+        transform: rotate(50deg) infinite
+    }
+    to {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+}
+
+@-webkit-keyframes circleRoatt {
+    from {
+        -webkit-transform: rotate(0deg) infinite;
+        transform: rotate(0deg) infinite
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+@keyframes circleRoatt {
+    from {
+        -webkit-transform: rotate(0deg) infinite;
+        transform: rotate(0deg) infinite
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+.banner > .w1190 {
+    text-align: center;
+    position: relative;
+    height: 430px;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.banner > .w1190 > img {
+    position: absolute
+}
+
+.banner > .w1190 > .img1 {
+    width: 904px;
+    height: auto;
+    top: -650px;
+    left: 50%;
+    margin-left: -450px;
+    -webkit-animation: circleRoate 100s linear infinite;
+    animation: circleRoate 100s linear infinite
+}
+
+.banner > .w1190 > .img2 {
+    width: 608px;
+    height: auto;
+    bottom: -500px;
+    left: 50%;
+    margin-left: -300px;
+    -webkit-animation: circleRoatt 100s linear infinite;
+    animation: circleRoatt 100s linear infinite
+}
+
+.banner > .w1190 > .img3 {
+    width: 736px;
+    height: 180px;
+    top: 130px;
+    left: 50%;
+    margin-left: -368px
+}
+
+.testBtn {
+    color: #fff;
+    font-size: 20px;
+    width: 220px;
+    height: 60px;
+    line-height: 42px;
+    border-color: #176eff;
+    border-radius: 0;
+    -webkit-border-image: -webkit-linear-gradient(right, #176eff, #00ffd2) 2;
+    -o-border-image: linear-gradient(to left, #176eff, #00ffd2) 2;
+    border-image: linear-gradient(to left, #176eff, #00ffd2) 2
+}
+
+.testBtn:hover {
+    color: #fff;
+    border-color: #00ffd2;
+    -webkit-border-image: -webkit-linear-gradient(left, #176eff, #00ffd2) 2;
+    -o-border-image: linear-gradient(to right, #176eff, #00ffd2) 2;
+    border-image: linear-gradient(to right, #176eff, #00ffd2) 2
+}
+
+.box1 {
+    background: #f5f5f5;
+    padding-top: 10px;
+    position: relative
+}
+
+.box1 > .w1190 > div {
+    text-align: center
+}
+
+.box1 .subBox {
+    display: inline-block;
+    width: 290px;
+    height: 110px;
+    text-align: left;
+    vertical-align: top;
+    padding: 20px 0 0 30px;
+    background: url(../images/insight/06.png) right no-repeat;
+    position: relative
+}
+
+.box1 .subBox p {
+    font-size: 18px
+}
+
+.box1 .subBox div {
+    font-size: 12px;
+    color: #666
+}
+
+.box1 .subBox > .line {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    height: 100px;
+    border-right: 1px solid #ddd
+}
+
+.boxTitle {
+    font-size: 24px;
+    line-height: 24px;
+    padding: 50px 0 30px;
+    margin: 0;
+    text-align: center
+}
+
+.boxTitle > small {
+    font-size: 12px;
+    line-height: 12px
+}
+
+.box2 {
+    background: #fff;
+    padding-bottom: 20px
+}
+
+.box2 .subBox {
+    width: 290px;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    margin-bottom: 30px;
+    padding-left: 30px
+}
+
+.box2 .subBox > p {
+    font-size: 18px
+}
+
+.box2 .subBox > p > i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ffe400;
+    margin-right: 10px;
+    margin-top: 5px;
+    vertical-align: text-top
+}
+
+.box2 .subBox > div {
+    margin-left: 20px
+}
+
+.box2 .subBox > div > i {
+    font-style: normal;
+    font-size: 48px;
+    color: #257bff;
+    line-height: 38px
+}
+
+.box2 .subBox > div > em {
+    font-style: normal;
+    color: #257bff;
+    margin-right: 10px
+}
+
+.box3 {
+    padding-bottom: 50px
+}
+
+.box3 .subBox {
+    display: inline-block;
+    width: 220px;
+    height: 220px;
+    background: #fff;
+    border-top: solid 1px #ddd;
+    border-bottom: solid 1px #ddd;
+    border-left: solid 1px #ddd;
+    text-align: center;
+    vertical-align: top;
+    overflow: hidden;
+    padding-top: 60px
+}
+
+.box3 .subBox p {
+    font-size: 16px;
+    margin: 20px 0
+}
+
+.box3 .subBox div {
+    width: 156px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 20px;
+    color: #666;
+    display: none
+}
+
+.box4 {
+    padding-top: 20px;
+    background: #fff
+}
+
+.box4 .subBox {
+    width: 380px;
+    height: 360px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    margin-bottom: 40px
+}
+
+.box4 .subBox.active, .box4 .subBox:hover {
+    box-shadow: 0 0 10px 0 #ddd
+}
+
+.box4 .subBox > img {
+    width: auto;
+    height: 58px;
+    margin-top: 20px
+}
+
+.box4 .subBox > p {
+    font-size: 16px;
+    margin: 15px 0
+}
+
+.box4 .subBox.active .box4 .subBox:hover > p, .box4 .subBox.active > p {
+    color: #257bff
+}
+
+.box4 .subBox > i {
+    display: inline-block;
+    width: 120px;
+    border-bottom: 1px solid #ddd;
+    transition: All 1s ease-in-out;
+    -webkit-transition: All 1s ease-in-out;
+    -moz-transition: All 1s ease-in-out;
+    -o-transition: All 1s ease-in-out
+}
+
+.box4 .subBox.active > i, .box4 .subBox:hover > i {
+    width: 240px;
+    border-bottom: 1px solid #257bff
+}
+
+.box4 .subBox > div.tab1 {
+    font-size: 36px;
+    color: #257bff
+}
+
+.box4 .subBox.active > div.tab1 {
+    display: none
+}
+
+.box4 .subBox > div.tab2 {
+    font-size: 14px;
+    color: #666;
+    line-height: 20px;
+    margin-top: 15px;
+    display: none
+}
+
+.box4 .subBox.active > div.tab2 {
+    display: block
+}
+
+.box4 .indexBtn {
+    margin-top: 30px
+}
+
+.box6 {
+    height: 320px;
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    line-height: 320px;
+    background: #333;
+    position: relative
+}
+
+.box6 img {
+    position: absolute;
+    z-index: 5
+}
+
+.box6 img.pull-left {
+    left: 0;
+    top: 0;
+    height: 320px;
+    width: auto
+}
+
+.box6 img.pull-right {
+    right: 0;
+    top: 0;
+    height: 320px;
+    width: auto
+}
+
+.box6 .subBox1, .box6 .subBox2, .box6 .subBox3, .box6 .subBox4 {
+    display: inline-block;
+    width: 285px;
+    height: 320px;
+    vertical-align: top;
+    position: relative;
+    z-index: 10
+}
+
+.box6 .subBox1 {
+    background: url(//x.autoimg.cn/mall/2015/pc/images/insight/14-f5c87.png)
+}
+
+.box6 .subBox2 {
+    background: url(../images/insight/16.png)
+}
+
+.box6 .subBox3 {
+    background: url(../images/insight/17.png)
+}
+
+.box6 .subBox4 {
+    background: url(../images/insight/18.png)
+}
+
+.box7 {
+    background: #fff
+}
+
+.box7 img {
+    margin: 10px 60px 60px 5px
+}
+
+.box8 {
+    background: #333;
+    color: #aaa;
+    padding: 30px 0 20px
+}
+
+.box8 ul {
+    display: inline-block;
+    width: 280px;
+    vertical-align: top
+}
+
+.box8 ul li {
+    line-height: 20px
+}
+
+.box8 ul .name {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #fff
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #333;
+    text-align: center;
+    color: #aaa;
+    border-top: 1px solid #444
+}

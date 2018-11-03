@@ -1,7 +1,8 @@
 package com.funny.txstack.dao.stat;
 
-import com.funny.txstack.common.BaseMapper;
-import com.funny.txstack.entity.cbg.CbgRoleEntity;
+
+import com.funny.txstack.base.BaseMapper;
+import com.funny.txstack.model.entity.CbgRoleEntity;
 
 import java.util.List;
 

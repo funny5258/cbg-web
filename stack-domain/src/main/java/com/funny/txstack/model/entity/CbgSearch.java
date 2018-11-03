@@ -1,12 +1,13 @@
 package com.funny.txstack.model.entity;
 
-import com.funny.txstack.common.PageCondition;
 
 import java.util.List;
 
 /**
  */
-public class CbgSearch extends PageCondition{
+public class CbgSearch {
+    private Integer pageNo = 1;
+    private Integer pageSize = 20;
 
     private Integer showDelBtn = 0;
     /**
@@ -425,6 +426,22 @@ public class CbgSearch extends PageCondition{
     private Integer mudanyuan;
     private Integer yinglongya;
     private Integer xuelongya;
+
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
 
     public Integer getLv_level() {
         return lv_level;

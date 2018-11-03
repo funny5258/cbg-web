@@ -1,6 +1,7 @@
 package com.funny.txstack.model.entity;
 
-import com.funny.txstack.common.BaseEntity;
+
+import com.funny.txstack.base.BaseEntity;
 
 public class CbgDataEntity extends BaseEntity {
     private static final long serialVersionUID = 1480294573373L;
@@ -468,6 +469,9 @@ public class CbgDataEntity extends BaseEntity {
 
 
     public String getLvText() {
+        if(flySoulPhase == null){
+            return lv + "";
+        }
         switch (flySoulPhase) {
             case 0:
                 return lv + "";

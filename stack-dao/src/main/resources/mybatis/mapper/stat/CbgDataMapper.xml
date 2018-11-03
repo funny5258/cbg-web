@@ -9,7 +9,7 @@
     <result column="exp_time" property="expTime" jdbcType="VARCHAR" />
   </resultMap>
   
-  <select id="findByCondition" resultMap="extResultMap" parameterType="com.funny.txstack.model.entity.CbgSearch" >
+  <select id="findListByCondition" resultMap="extResultMap" parameterType="com.funny.txstack.model.entity.CbgSearch" >
     select r.id,r.name,r.url,r.price,r.jiahu,fly_soul_phase, fly_soul_lv,
     lv,xiuwei,equ_xiuwei,sch,pattack_max,mattack_max,pattack_min,mattack_min,
     hit,modadd,cri_add_p,cri_sub_p,mdef,pdef,inprotect,avoid,critical,sex,
@@ -20,6 +20,17 @@
     shuyinghengxie,tianyu,jinbi,junzi,dayu,yuanbao,haizi_jiahu,renwu_tianyu,mourixingguan,zhanying,leizuan,honglian
     from cbg_role r left join cbg_data d on r.id =d.role_id
     where r.yn =1
+  </select>
+
+
+  <select id="findCountByCondition" resultType="java.lang.Integer" parameterType="com.funny.txstack.model.entity.CbgSearch" >
+    select count(1)
+    from cbg_role r left join cbg_data d on r.id =d.role_id
+    where r.yn =1
+  </select>
+
+  <sql id="query_where_sql">
+
     <if test="lv_level != null " >
       <choose>
         <when test="lv_level == 1">
@@ -376,7 +387,7 @@
     <if test="xuelongya != null " >
       and xuelongya =1
     </if>
-  </select>
+  </sql>
 
   <select id="findLatestUpdate" resultType="string" >
     select  max(create_time)  from cbg_role

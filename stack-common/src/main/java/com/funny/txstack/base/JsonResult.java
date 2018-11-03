@@ -22,11 +22,6 @@ public class JsonResult<T> implements Serializable {
      * 返回编码
      */
     private Integer returncode;
-
-    /**
-     * 返回编码
-     */
-    private Integer code;
     /**
      * 提示信息
      */
@@ -35,11 +30,6 @@ public class JsonResult<T> implements Serializable {
      * 业务对象
      */
     private T result;
-
-    /**
-     * 业务对象
-     */
-    private T data;
 
     public Integer getReturncode() {
         return returncode;
@@ -65,11 +55,11 @@ public class JsonResult<T> implements Serializable {
         this.result = result;
     }
 
-    public boolean isSuccess() {
+    public boolean successStatus() {
         return returncode != null && returncode.equals(CODE_SUCCESS) ? true : false;
     }
 
-    public void setSuccess() {
+    public void success() {
         this.returncode = CODE_SUCCESS;
     }
 
@@ -87,21 +77,5 @@ public class JsonResult<T> implements Serializable {
         this.returncode = CODE_SUCCESS;
         this.message = "成功";
         this.result = result;
-    }
-
-    public Integer getCode() {
-        return code;
-    }
-
-    public void setCode(Integer code) {
-        this.code = code;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
     }
 }

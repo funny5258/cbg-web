@@ -1,6 +1,7 @@
 package com.funny.txstack.model.entity;
 
-import com.funny.txstack.common.BaseEntity;
+
+import com.funny.txstack.base.BaseEntity;
 
 import java.util.Date;
 
@@ -8,33 +9,33 @@ public class CbgRoleEntity extends BaseEntity {
     private static final long serialVersionUID = 1480294569860L;
 
     /**
-    * 角色id
-    */
+     * 角色id
+     */
     private String roleId;
 
     /**
-    * 加护
-    */
+     * 加护
+     */
     private Integer jiahu;
 
     /**
-    * 角色名
-    */
+     * 角色名
+     */
     private String name;
 
     /**
-    * 服务器
-    */
+     * 服务器
+     */
     private String serverId;
 
     /**
-    * 价钱
-    */
+     * 价钱
+     */
     private Integer price;
 
     /**
-    * cbg链接
-    */
+     * cbg链接
+     */
     private String url;
     /**
      * json数据
@@ -42,14 +43,23 @@ public class CbgRoleEntity extends BaseEntity {
     private String dataUrl;
 
     /**
-    * 
-    */
+     *
+     */
     private Date expTime;
 
     /**
-    * 
-    */
+     *
+     */
     private Integer craw;
+    private Integer yn;
+
+    public Integer getYn() {
+        return yn;
+    }
+
+    public void setYn(Integer yn) {
+        this.yn = yn;
+    }
 
     public void setRoleId(String roleId) {
         this.roleId = roleId == null ? null : roleId.trim();

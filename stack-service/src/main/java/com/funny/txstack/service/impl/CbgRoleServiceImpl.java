@@ -2,18 +2,18 @@ package com.funny.txstack.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.funny.txstack.dao.cbg.CbgRoleMapper;
-import com.funny.txstack.entity.cbg.CbgRoleEntity;
-import com.funny.txstack.utils.HttpClientUtil;
+import com.funny.txstack.dao.stat.CbgDataMapper;
+import com.funny.txstack.dao.stat.CbgRoleMapper;
+import com.funny.txstack.model.entity.CbgDataEntity;
+import com.funny.txstack.model.entity.CbgRoleEntity;
+import com.funny.txstack.model.entity.CbgSearch;
+import com.funny.txstack.utils.RequestHelper;
 import com.github.pagehelper.PageHelper;
 import com.google.common.base.Strings;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.funny.txstack.dao.cbg.CbgDataMapper;
-import com.funny.txstack.entity.cbg.CbgDataEntity;
-import com.funny.txstack.entity.cbg.CbgSearch;
 import com.funny.txstack.service.CbgRoleService;
 import com.github.pagehelper.PageInfo;
 
@@ -41,7 +41,7 @@ public class CbgRoleServiceImpl implements CbgRoleService {
                 PageHelper.orderBy("r.id desc");
             }
         }
-        List<CbgDataEntity> roleDataEntities = cbgDataMapper.findByCondition(cbgSearch);
+        List<CbgDataEntity> roleDataEntities = cbgDataMapper.findListByCondition(cbgSearch);
         return new PageInfo<>(roleDataEntities);
     }
 
@@ -59,7 +59,7 @@ public class CbgRoleServiceImpl implements CbgRoleService {
     public void updateStatus(Long id) {
         CbgRoleEntity cbgRoleEntity = cbgRoleMapper.findById(id);
         if (cbgRoleEntity != null && !Strings.isNullOrEmpty(cbgRoleEntity.getDataUrl())) {
-            String httpResult = HttpClientUtil.get(cbgRoleEntity.getDataUrl());
+            String httpResult = RequestHelper.get(cbgRoleEntity.getDataUrl());
             if(StringUtils.isEmpty(httpResult)){
                 return;
             }
@@ -77,7 +77,7 @@ public class CbgRoleServiceImpl implements CbgRoleService {
                 CbgRoleEntity updateRole = new CbgRoleEntity();
                 updateRole.setYn(0);
                 updateRole.setId(cbgRoleEntity.getId());
-                cbgRoleMapper.updateByIdSelected(updateRole);
+                cbgRoleMapper.updateById(updateRole);
             }
         }
     }

@@ -34,6 +34,7 @@ header a {
     border: 1px solid #009abf;
     border-top: 2px solid #009abf;
     color: #009abf;
+    margin-top: 10px;
 }
 
 .title {
@@ -143,7 +144,6 @@ input[type='checkbox'], input[type='radio'] {
 }
 
 .btn-search {
-    margin: 10px 0;
     background-color: #59bfe0;
     width: 90px;
     color: #fff;
@@ -182,8 +182,8 @@ input[type='checkbox'], input[type='radio'] {
         border-left: none;
     }
     .top {
-        border-left: none;
-        border-right: none;
+        border-left: 20px;
+        border-right: 20px;
     }
     .top .top-title {
         border-bottom: 1px solid #009abf;

@@ -1,13 +1,21 @@
 package com.funny.txstack.dao.stat;
 
-import com.funny.txstack.common.BaseMapper;
-import com.funny.txstack.entity.cbg.CbgDataEntity;
-import com.funny.txstack.entity.cbg.CbgSearch;
+
+import com.funny.txstack.base.BaseMapper;
+import com.funny.txstack.model.entity.CbgDataEntity;
+import com.funny.txstack.model.entity.CbgSearch;
 
 import java.util.List;
 
+/**
+ * @author fangli
+ */
 public interface CbgDataMapper extends BaseMapper<CbgDataEntity> {
-    List<CbgDataEntity> findByCondition(CbgSearch cbgSearch);
+
+    List<CbgDataEntity> findListByCondition(CbgSearch cbgSearch);
+
+    int findCountByCondition(CbgSearch cbgSearch);
+
 
     String findLatestUpdate();
 }
