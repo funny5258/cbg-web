@@ -30,11 +30,8 @@ hs_err_pid*
 # maven package default input path
 target/*
 .idea/
-mall-real-canal/target/
-mall-real-common/target/
-mall-real-dao/target/
-mall-real-domain/target/
-mall-real-service/target/
-mall-real-web/target/
-configuration_client.log
-*/configuration_client.log
+stack-api/target/
+stack-common/target/
+stack-dao/target/
+stack-domain/target/
+stack-service/target/
