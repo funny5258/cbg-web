@@ -6,7 +6,7 @@ spring:
     druid:
       stat:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://rm-m5efb44hv3t9d86bn.mysql.rds.aliyuncs.com:3306/txstack?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL
+        url: jdbc:mysql://txstack0809.mysql.rds.aliyuncs.com:3306/txstack?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL
         username: txstack
         password: Stack!@#$
         max-active: 30
