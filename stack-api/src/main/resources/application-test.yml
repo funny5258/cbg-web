@@ -6,11 +6,11 @@ spring:
     druid:
       stat:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/txstack?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL
-        username: root
-        password: root
-        max-active: 50
-        initial-size: 10
+        url: jdbc:mysql://txstack0809.mysql.rds.aliyuncs.com:3306/txstack?useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&zeroDateTimeBehavior=CONVERT_TO_NULL
+        username: txstack
+        password: stack!@#$
+        max-active: 30
+        initial-size: 5
         max-wait: 60000
         max-idle: 20
         min-idle: 10
