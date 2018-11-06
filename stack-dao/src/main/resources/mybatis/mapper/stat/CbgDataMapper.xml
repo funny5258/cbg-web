@@ -18,7 +18,7 @@
     huikanfanghu,duncifanghu,huoyuanfanghu,shuifengdufanghu,wanfeng,huxin,
     taichu,shilifushou,xiyangyang,mawangye,wanshengtianzun,yehuo,dulanggui,haizi_tiayu,vip9,bihai,changong,changkong,fengyuzihuang,
     shuyinghengxie,tianyu,jinbi,junzi,dayu,yuanbao,haizi_jiahu,renwu_tianyu,mourixingguan,zhanying,leizuan,honglian
-    from cbg_role r left join cbg_data d on r.id =d.role_id
+    from cbg_data d  left join cbg_role r on r.id =d.role_id
     where r.yn =1
   </select>
 
