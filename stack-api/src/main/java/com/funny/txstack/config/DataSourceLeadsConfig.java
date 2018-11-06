@@ -45,7 +45,7 @@ public class DataSourceLeadsConfig {
         bean.setDataSource(dataSource);
         bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath*:mybatis/mapper/stat/*.xml"));
         org.apache.ibatis.session.Configuration configuration = new org.apache.ibatis.session.Configuration();
-        if(profile.equalsIgnoreCase("dev")){
+        if(!profile.equalsIgnoreCase("product")){
             configuration.setLogImpl(StdOutImpl.class);
         }
         return bean.getObject();

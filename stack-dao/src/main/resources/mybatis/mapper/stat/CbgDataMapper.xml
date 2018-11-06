@@ -20,6 +20,7 @@
     shuyinghengxie,tianyu,jinbi,junzi,dayu,yuanbao,haizi_jiahu,renwu_tianyu,mourixingguan,zhanying,leizuan,honglian
     from cbg_data d  left join cbg_role r on r.id =d.role_id
     where r.yn =1
+    <include refid="query_where_sql"/>
   </select>
 
 
@@ -27,6 +28,7 @@
     select count(1)
     from cbg_role r left join cbg_data d on r.id =d.role_id
     where r.yn =1
+    <include refid="query_where_sql"/>
   </select>
 
   <sql id="query_where_sql">
