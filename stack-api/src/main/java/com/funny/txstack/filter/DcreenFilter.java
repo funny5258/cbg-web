@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @Component
 @ServletComponentScan
-@WebFilter(filterName = "dcreenFilter", urlPatterns = "/api/*")
+//@WebFilter(filterName = "dcreenFilter", urlPatterns = "/api/*")
 public class DcreenFilter implements Filter{
 
     private Logger logger = LoggerFactory.getLogger(DcreenFilter.class);

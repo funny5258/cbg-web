@@ -76,9 +76,7 @@ public class CbgController {
         JsonResult jsonResult = new JsonResult();
         try {
             makeSearch(cbgSearch);
-            long start = System.currentTimeMillis();
             PageInfo<CbgDataEntity> pageInfo = cbgRoleService.findByCondition(cbgSearch);
-            logger.info("query used time={}s", (System.currentTimeMillis() - start));
             makeResult(pageInfo.getList());
             jsonResult.successBody(pageInfo);
         } catch (Exception e) {
