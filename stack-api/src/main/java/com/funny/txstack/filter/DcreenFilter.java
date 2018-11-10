@@ -11,12 +11,12 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
-@Component
-@ServletComponentScan
+//@Component
+//@ServletComponentScan
 //@WebFilter(filterName = "dcreenFilter", urlPatterns = "/api/*")
 public class DcreenFilter implements Filter{
 
-    private Logger logger = LoggerFactory.getLogger(DcreenFilter.class);
+    private static Logger logger = LoggerFactory.getLogger(DcreenFilter.class);
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
