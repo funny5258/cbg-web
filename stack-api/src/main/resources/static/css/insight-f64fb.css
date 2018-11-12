@@ -18,10 +18,11 @@
 }
 
 .insight-head__logo {
-    height: 70px;
-    width: 271px;
+    height: 83px;
+    width: 220px;
     transform: scale(1.5);
     margin-right: 50px;
+    margin-top: 10px;
 }
 
 .insight-head__navitem {
