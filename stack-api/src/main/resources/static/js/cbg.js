@@ -52,11 +52,8 @@ var CbgJS = function () {
                     $.each(role_list, function (index, value) {
                         var img_url = value.sch + "" + value.sex;
                         var level_desc = "";
-                        if(value.flySoulPhase == 1 ){
-                            level_desc ='<span class="label label-info pull-right">地魂</span>';
-                        }
-                        else if(value.flySoulPhase == 2 ){
-                            level_desc ='<span class="label label-warning pull-right">天魂</span>';
+                        if(value.flySoulPhase == 2 ){
+                            level_desc ='<span class="label label-inverse pull-right">天魂</span>';
                         }
                         table_html += '<tr>' +
                             '                    <td style="text-align: center;">' +

@@ -109,14 +109,31 @@ public class CbgController {
             if (entity.getLv() == null) {
                 continue;
             }
+
+            if(entity.getFlySoulPhase() == null){
+                entity.setLvText(entity.getLv()+"");
+            }else{
+                switch (entity.getFlySoulPhase()) {
+                    case 0:
+                        entity.setLvText(entity.getLv()+"");
+                        break;
+                    case 1:
+                    case 2:
+                        entity.setLvText(entity.getFlySoulLv()+"");
+                        break;
+                    default:
+                        entity.setLvText(entity.getLv()+"");
+                }
+            }
+
             if (entity.getQinghua() != null && entity.getQinghua() == 1) {
-                shizhuang.append("<font color='red'>青花;</font>");
+                shizhuang.append("<span class='label label-info pull-right'>青花</span>");
             }
             if (entity.getXuansu() != null && entity.getXuansu() == 1) {
-                shizhuang.append("<font color='red'>玄素;</font>");
+                shizhuang.append("<span class='label label-success'>玄素</span>");
             }
             if (entity.getHaitang() != null && entity.getHaitang() == 1) {
-                shizhuang.append("<font color='red'>海棠;</font>");
+                shizhuang.append("<span class='label label-warning'>海棠</span>");
             }
             if (entity.getGuhong() != null && entity.getGuhong() == 1) {
                 shizhuang.append("孤鸿;");
@@ -159,10 +176,10 @@ public class CbgController {
             }
             StringBuffer teji = new StringBuffer();
             if (entity.getHuxin() == 1) {
-                teji.append("<font color='red'>护心;</font>");
+                teji.append("<span class='label label-info pull-right'>护心</span>");
             }
             if (entity.getWanfeng() == 1) {
-                teji.append("<font color='red'>完封;</font>");
+                teji.append("<span class='label label-success pull-right'>完封</span>");
             }
             if (entity.getHuikanfanghu() == 1) {
                 teji.append("挥砍防护;");
@@ -181,13 +198,13 @@ public class CbgController {
                 other.append("太初;");
             }
             if (entity.getShilifushou() == 1) {
-                other.append("<font color='red'>势力副手;</font>");
+                other.append("<span class='label label-warning pull-right'>势力副手</span>");
             }
             if (entity.getRenwuTianyu() == 1) {
                 other.append("天域四代;");
             }
             if (entity.getLightMenpai() != null && entity.getLightMenpai() == 1) {
-                other.append("<font color='red'>门派轻功;</font>");
+                other.append("<span class='label label-info pull-right'>门派轻功</span>");
             }
             if (entity.getVip9() == 1) {
                 other.append("vip9;");

@@ -467,20 +467,22 @@ public class CbgDataEntity extends BaseEntity {
 
     private Integer leizuan;
 
+    private String swingText;
+
+    public void setLvText(String lvText) {
+        this.lvText = lvText;
+    }
+
+    public String getSwingText() {
+        return swingText;
+    }
+
+    public void setSwingText(String swingText) {
+        this.swingText = swingText;
+    }
 
     public String getLvText() {
-        if(flySoulPhase == null){
-            return lv + "";
-        }
-        switch (flySoulPhase) {
-            case 0:
-                return lv + "";
-            case 1:
-            case 2:
-                return flySoulLv;
-            default:
-                return lv + "";
-        }
+        return this.lvText;
     }
 
     public Integer getFengyuzihuang() {
