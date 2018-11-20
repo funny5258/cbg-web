@@ -427,6 +427,25 @@ public class CbgSearch {
     private Integer yinglongya;
     private Integer xuelongya;
 
+    private Integer qihui;
+    private Integer tianling;
+
+    public Integer getQihui() {
+        return qihui;
+    }
+
+    public void setQihui(Integer qihui) {
+        this.qihui = qihui;
+    }
+
+    public Integer getTianling() {
+        return tianling;
+    }
+
+    public void setTianling(Integer tianling) {
+        this.tianling = tianling;
+    }
+
     public Integer getPageNo() {
         return pageNo;
     }

@@ -389,6 +389,14 @@
     <if test="xuelongya != null " >
       and xuelongya =1
     </if>
+
+    <if test="qihui != null " >
+      and pve_lv &gt;= #{qihui}
+    </if>
+
+    <if test="tianling != null " >
+      and pve_talent_point &gt;= #{tianling}
+    </if>
   </sql>
 
   <select id="findLatestUpdate" resultType="string" >
