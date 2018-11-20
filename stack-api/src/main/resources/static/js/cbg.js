@@ -36,12 +36,12 @@ var CbgJS = function () {
                     '                <tr>' +
                     '                    <th style="text-align: center;width: 5%;">角色</th>' +
                     '                    <th style="text-align: center;width: 12%;">名字</th>' +
-                    '                    <th style="text-align: center;width: 10%;">等级</th>' +
+                    '                    <th style="text-align: center;width: 12%;">等级</th>' +
                     '                    <th style="text-align: center;width: 7%;">价格</th>' +
                     '                    <th class="hidden-sm hidden-xs" style="text-align: center;width: 8%;">装评/修为</th>' +
                     '                    <th class="hidden-sm hidden-xs" style="text-align: center;width: 8%;">加护/炼护</th>' +
                     '                    <th class="hidden-sm hidden-xs" style="text-align: center;width: 8%;">追电/疾语</th>' +
-                    '                    <th style="text-align: center;width: 25%;">您关注的</th>' +
+                    '                    <th style="text-align: center;width: 25%;">亮点</th>' +
                     '                    <th style="text-align: center;width: 14%;">购买</th>' +
                     '                </tr>' +
                     '             </thead>' +
@@ -51,12 +51,19 @@ var CbgJS = function () {
                 } else {
                     $.each(role_list, function (index, value) {
                         var img_url = value.sch + "" + value.sex;
+                        var level_desc = "";
+                        if(value.flySoulPhase == 1 ){
+                            level_desc ='<span class="label label-info pull-right">地魂</span>';
+                        }
+                        else if(value.flySoulPhase == 2 ){
+                            level_desc ='<span class="label label-warning pull-right">天魂</span>';
+                        }
                         table_html += '<tr>' +
                             '                    <td style="text-align: center;">' +
                             '                        <img src="http://res.tx3.cbg.163.com/images/role/smallface/' + img_url + '.jpg">' +
                             '                    </td>' +
                             '                    <td style="text-align: center;">' + value.name + '</td>' +
-                            '                    <td style="text-align: center;">' + value.lvText + '</td>' +
+                            '                    <td style="text-align: center;">' + value.lvText + level_desc +'</td>' +
                             '                    <td style="text-align: center;">¥ <font color="red">' + value.price + '</font></td>' +
                             '                    <td class="hidden-sm hidden-xs" style="text-align: center;">' + value.equXiuwei + '<br>' + value.xiuwei + '</td>' +
                             '                    <td class="hidden-sm hidden-xs" style="text-align: center;">' + value.jiahu + '/' + value.lianhu + '</td>' +
