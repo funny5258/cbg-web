@@ -400,6 +400,6 @@
   </sql>
 
   <select id="findLatestUpdate" resultType="string" >
-    select  max(create_time)  from cbg_role
+    select  max(created)  from cbg_data
   </select>
 </mapper>

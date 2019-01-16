@@ -57,7 +57,7 @@ var CbgJS = function () {
                         }
                         table_html += '<tr>' +
                             '                    <td style="text-align: center;">' +
-                            '                        <img src="http://res.tx3.cbg.163.com/images/role/smallface/' + img_url + '.jpg">' +
+                            '                        <img src="/images/' + img_url + '.jpg">' +
                             '                    </td>' +
                             '                    <td style="text-align: center;">' + value.name + '</td>' +
                             '                    <td style="text-align: center;">' + value.lvText + level_desc +'</td>' +
