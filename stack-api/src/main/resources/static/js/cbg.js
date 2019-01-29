@@ -74,9 +74,9 @@ var CbgJS = function () {
                         '                </tr>';
                     });
                 }
-                table_html += '  </tbody>';
+                table_html += '  </tbody><script  type="text/javascript">CbgJS.initPage(pages,pageNum);</script>';
                 $("#js-page-body").html(table_html);
-                CbgJS.initPage(pages,pageNum);
+
             }
         });
     }
