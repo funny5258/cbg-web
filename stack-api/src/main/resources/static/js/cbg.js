@@ -1,5 +1,7 @@
 var CbgJS = function () {
     var submitForm = function () {
+        console.log('submit form')
+
         $("#search-form").ajaxSubmit({
             type: 'post', // 提交方式 get/post
             url: "/api/getCbgPage",
@@ -21,14 +23,12 @@ var CbgJS = function () {
                     alert("维护中,请稍后重试")
                     return;
                 }
-                var role_list = data.result.list
-                var total = data.result.total;
-                var pages = data.result.pages;
-                var pageNum = data.result.pageNum;
+                // it is a bug ,This seems like a bug in the jquery event code, not the bootpag code
+                $('#js-bootpag').unbind("page");
 
-                $("#span-total").html(total);
-                $("#span-cur-page").html(pageNum);
-                $("#span-total-page").html(pages);
+                $("#span-total").html(data.result.total);
+                $("#span-cur-page").html(data.result.pageNum);
+                $("#span-total-page").html(data.result.pages);
                 $("#span-page-size").html(data.result.pageSize);
 
                 var table_html = '<table class="table table-hover table-striped margin-bottom-5">' +
@@ -46,6 +46,8 @@ var CbgJS = function () {
                     '                </tr>' +
                     '             </thead>' +
                     '             <tbody>';
+
+                var role_list = data.result.list;
                 if (role_list == null || role_list == '' || role_list == undefined || role_list.length == 0) {
                     table_html += '<tr><td colspan="10" style="text-align: center">搜索无结果</td></tr>';
                 } else {
@@ -74,7 +76,7 @@ var CbgJS = function () {
                         '                </tr>';
                     });
                 }
-                table_html += '  </tbody><script  type="text/javascript">CbgJS.initPage('+pages+','+pageNum+');</script>';
+                table_html += '  </tbody><script  type="text/javascript">CbgJS.initPage('+data.result.pages+','+data.result.pageNum+');</script>';
                 $("#js-page-body").html(table_html);
 
             }
@@ -98,9 +100,10 @@ var CbgJS = function () {
             lastClass: 'last',
             firstClass: 'first'
         }).on("page", function (event, num) {
+            console.log(event)
             $("#js-bootpag-num").val(num);
             submitForm();
-            $("#js-bootpag-num").val("1");
+            $("#js-bootpag-num").val(1);
         });
     };
 
